@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-04-11T12:31:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teste" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13acf49e-4913-4d1b-bccc-113817ad15d1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cvs - escolas"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="URG" class="java.lang.String"/>
+	<field name="N" class="java.lang.String"/>
+	<field name="C�digo do INEP" class="java.lang.String"/>
+	<field name="Escola" class="java.lang.String"/>
+	<field name="Tel 1 Escola" class="java.lang.String"/>
+	<field name="Tel 2 Escola" class="java.lang.String"/>
+	<field name="Endere�o" class="java.lang.String"/>
+	<field name="N�mero" class="java.lang.String"/>
+	<field name="Bairro" class="java.lang.String"/>
+	<field name="Matr�cula do Diretor" class="java.lang.String"/>
+	<field name="Diretor Geral" class="java.lang.String"/>
+	<field name="Tel 1 Diretor" class="java.lang.String"/>
+	<field name="Tel 2 Diretor" class="java.lang.String"/>
+	<field name="E-mail do Diretor" class="java.lang.String"/>
+	<field name="Matr�cula Adjunto 1" class="java.lang.String"/>
+	<field name="Diretor Adjunto" class="java.lang.String"/>
+	<field name="Tel  Adjunto 1" class="java.lang.String"/>
+	<field name="Tel 2  Adjunto 1" class="java.lang.String"/>
+	<field name="E-mail Diretor Adjunto 1" class="java.lang.String"/>
+	<field name="Matr�cula Adjunto 2" class="java.lang.String"/>
+	<field name="Diretor Adjunto 2" class="java.lang.String"/>
+	<field name="Tel  Adjunto 2" class="java.lang.String"/>
+	<field name="E-mail do Adjunto 2" class="java.lang.String"/>
+	<field name="Matr�cula do Secret�rio" class="java.lang.String"/>
+	<field name="Secret�rio Escolar" class="java.lang.String"/>
+	<field name="Tel do Secret�rio" class="java.lang.String"/>
+	<field name="E-mail do Secret�rio" class="java.lang.String"/>
+	<field name="Matr�cula OE 1" class="java.lang.String"/>
+	<field name="Orientador Educacional 1" class="java.lang.String"/>
+	<field name="Tel OE 1" class="java.lang.String"/>
+	<field name="E-mail OE 1" class="java.lang.String"/>
+	<field name="Matr�cula OE 2" class="java.lang.String"/>
+	<field name="Orientador Educacional 2" class="java.lang.String"/>
+	<field name="Tel OE 2" class="java.lang.String"/>
+	<field name="E-mail OE 2" class="java.lang.String"/>
+	<field name="Matr�cula OE 3" class="java.lang.String"/>
+	<field name="Orientador Educacional 3" class="java.lang.String"/>
+	<field name="Tel OE 3" class="java.lang.String"/>
+	<field name="E-mail OE 3" class="java.lang.String"/>
+	<field name="Matr�cula OP 1" class="java.lang.String"/>
+	<field name="Nome" class="java.lang.String"/>
+	<field name="Tel OP 1" class="java.lang.String"/>
+	<field name="Tel 2 OP 1" class="java.lang.String"/>
+	<field name="E-mail" class="java.lang.String"/>
+	<field name="Matr�cula OP 2" class="java.lang.String"/>
+	<field name="Orientador Pedag�gico 2" class="java.lang.String"/>
+	<field name="Tel OP 2" class="java.lang.String"/>
+	<field name="E-mail OP 2" class="java.lang.String"/>
+	<field name="Matr�cula OP 3" class="java.lang.String"/>
+	<field name="Orientador Pedag�gico 3" class="java.lang.String"/>
+	<field name="Tel OP 3" class="java.lang.String"/>
+	<field name="E-mail OP 3" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{URG}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<frame>
+					<reportElement mode="Opaque" x="0" y="7" width="555" height="24" forecolor="#B89F7D" backcolor="#000000" uuid="0a5fc4ac-2e39-4b7a-8f96-59f8eb2df66d"/>
+					<textField isStretchWithOverflow="true">
+						<reportElement style="SubTitle" isPrintRepeatedValues="false" x="2" y="0" width="479" height="24" forecolor="#FFFFFF" uuid="4fbebfd3-a184-45af-b7d9-5c3faaf087b5"/>
+						<textElement>
+							<font isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{URG}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<image>
+				<reportElement x="456" y="0" width="99" height="132" uuid="97705585-a0b5-4ec7-86f3-ae10c220e6af"/>
+				<imageExpression><![CDATA["cherry.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="451" height="95" backcolor="#000000" uuid="6c6ca4e1-17cd-4913-93d6-5e670ea9ae8a"/>
+				<staticText>
+					<reportElement style="Title" x="0" y="0" width="370" height="66" uuid="a2a2cac8-5a7d-4487-8c54-dab235ce4e21"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry Title]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="157" y="66" width="249" height="29" uuid="8978eac3-c578-41c9-837e-48d2b0184642"/>
+					<textElement>
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry SubTitle]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="100" width="451" height="32" forecolor="#000000" backcolor="#CC0000" uuid="e3c14156-5b51-4201-918b-97fdc012e5d4"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="307" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="5c3301e7-a737-4c59-8a2f-a6c79fd1adb8"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="0" y="7" width="10" height="18" forecolor="#000000" uuid="6a0d6979-67bb-4b5a-a6ca-317ce4dd8b2a"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="10" y="7" width="10" height="18" forecolor="#000000" uuid="cd7edf16-a14d-4f19-9afa-c46122b4d003"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[C�digo do INEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="20" y="7" width="10" height="18" forecolor="#000000" uuid="71940d64-3086-45c5-a8d3-9dba0b451129"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Escola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="30" y="7" width="10" height="18" forecolor="#000000" uuid="9a8bab03-95c7-45c6-8de6-fff03174f04d"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel 1 Escola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="40" y="7" width="10" height="18" forecolor="#000000" uuid="05d568fa-817b-4655-a9c2-b83c6cd0b3e9"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel 2 Escola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="50" y="7" width="10" height="18" forecolor="#000000" uuid="8fd5ada4-c342-4ae7-a115-8773a87152e2"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Endere�o]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="60" y="7" width="10" height="18" forecolor="#000000" uuid="4981680f-e014-48e5-b67f-f56439158fcd"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[N�mero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="70" y="7" width="10" height="18" forecolor="#000000" uuid="6fb3c1e9-3f10-465a-9964-79d3b3820c16"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bairro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="80" y="7" width="10" height="18" forecolor="#000000" uuid="224b9fd6-d6fe-4399-8cf8-2a835edfb79c"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula do Diretor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="90" y="7" width="10" height="18" forecolor="#000000" uuid="20ebf873-8a05-4382-ae89-304ab3cd9ad1"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Diretor Geral]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="100" y="7" width="10" height="18" forecolor="#000000" uuid="4b77dc80-f556-44e9-941d-0a44c51b5df6"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel 1 Diretor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="110" y="7" width="10" height="18" forecolor="#000000" uuid="94ecc334-948f-4fd8-9107-cecfd69fc077"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel 2 Diretor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="120" y="7" width="10" height="18" forecolor="#000000" uuid="04d8513e-7bf4-4284-bcdb-a15793f3dcf6"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail do Diretor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="130" y="7" width="10" height="18" forecolor="#000000" uuid="cbc639fe-b7d6-4448-8ba3-f3bbfe701b03"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula Adjunto 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="140" y="7" width="10" height="18" forecolor="#000000" uuid="f530a960-f952-423e-9d17-1b1059cc2b98"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Diretor Adjunto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="150" y="7" width="10" height="18" forecolor="#000000" uuid="878085b0-23af-4a57-92a3-741f468c5c4f"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel  Adjunto 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="160" y="7" width="10" height="18" forecolor="#000000" uuid="18ac1ba2-bdde-4038-a53c-2889b62b2174"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel 2  Adjunto 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="170" y="7" width="10" height="18" forecolor="#000000" uuid="30c3399f-796b-4c82-8a32-fd4176cfe7f8"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail Diretor Adjunto 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="180" y="7" width="10" height="18" forecolor="#000000" uuid="fbe26783-8e5b-47f5-bff2-23be1db86c97"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula Adjunto 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="190" y="7" width="10" height="18" forecolor="#000000" uuid="48c8634c-bd83-420f-b9cd-d39f17e3d099"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Diretor Adjunto 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="200" y="7" width="10" height="18" forecolor="#000000" uuid="8b15f346-05ee-497b-9415-f2a8726b03ed"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel  Adjunto 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="210" y="7" width="10" height="18" forecolor="#000000" uuid="1ad879c7-a9f9-41db-8a0c-8818bb6aee17"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail do Adjunto 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="220" y="7" width="10" height="18" forecolor="#000000" uuid="6cc992f0-605a-4985-9989-cc650166547c"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula do Secret�rio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="230" y="7" width="10" height="18" forecolor="#000000" uuid="d4a3a8e2-9292-4f00-9d59-70b5280add49"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Secret�rio Escolar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="240" y="7" width="10" height="18" forecolor="#000000" uuid="98173683-bb52-4d21-91e8-d8187df11942"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel do Secret�rio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="250" y="7" width="10" height="18" forecolor="#000000" uuid="731f5cee-e126-454b-8c55-527cc7c1ba96"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail do Secret�rio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="260" y="7" width="10" height="18" forecolor="#000000" uuid="b75a8fe6-22e2-412e-8f70-1f53e226752e"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula OE 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="270" y="7" width="10" height="18" forecolor="#000000" uuid="fc99bac0-aa14-4125-a229-2c69ebb3e9ab"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Orientador Educacional 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="280" y="7" width="10" height="18" forecolor="#000000" uuid="d1e56431-512f-41fd-bfb2-60eab5f9410c"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel OE 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="290" y="7" width="10" height="18" forecolor="#000000" uuid="c973faa9-93dc-43ac-a916-2fa0313fb734"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail OE 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="300" y="7" width="10" height="18" forecolor="#000000" uuid="4baba08b-08d9-4404-b5b5-b155b456658f"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula OE 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="310" y="7" width="10" height="18" forecolor="#000000" uuid="43e4deea-39b3-4619-bda2-bb4102d59275"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Orientador Educacional 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="320" y="7" width="10" height="18" forecolor="#000000" uuid="776dfff3-7be2-4c08-b359-46acf00e26e3"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel OE 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="330" y="7" width="10" height="18" forecolor="#000000" uuid="06bb0640-3306-4513-bb23-4e88d84307ac"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail OE 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="340" y="7" width="10" height="18" forecolor="#000000" uuid="d8abc6bf-017f-4258-93f9-44d235f106eb"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula OE 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="350" y="7" width="10" height="18" forecolor="#000000" uuid="e6b6041b-585b-4ad1-865c-df350f3e383c"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Orientador Educacional 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="360" y="7" width="10" height="18" forecolor="#000000" uuid="3c9378e4-3c94-4387-90cd-70a81ce5f841"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel OE 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="370" y="7" width="10" height="18" forecolor="#000000" uuid="b3412ec1-5ff9-4eba-9dbb-f78c4a07db0f"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail OE 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="380" y="7" width="10" height="18" forecolor="#000000" uuid="97fadd79-614c-4d14-8005-b2f56ba8034d"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula OP 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="7" width="10" height="18" forecolor="#000000" uuid="125609f8-4ce6-4968-8b00-d7f3d83fe6f3"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="7" width="10" height="18" forecolor="#000000" uuid="0e3622b7-dc73-49c8-b643-8b7f9a02d8ef"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel OP 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="410" y="7" width="10" height="18" forecolor="#000000" uuid="8d01a0a7-77d2-4cd5-b604-f367b2a4b74f"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel 2 OP 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="420" y="7" width="10" height="18" forecolor="#000000" uuid="49da0b1a-a801-452d-a77f-f4ed1a7b4d7a"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="430" y="7" width="10" height="18" forecolor="#000000" uuid="b166c9f3-03c0-4d6c-902a-d3c57a0a8c1b"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula OP 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="440" y="7" width="10" height="18" forecolor="#000000" uuid="5207532d-89b6-4300-91f2-bcca9e2ff14f"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Orientador Pedag�gico 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="450" y="7" width="10" height="18" forecolor="#000000" uuid="a4c1fabf-5143-4731-9285-e0fc776c1830"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel OP 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="7" width="10" height="18" forecolor="#000000" uuid="185b7fce-2ded-4b0f-a0ce-f9faa8ba527b"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail OP 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="470" y="7" width="10" height="18" forecolor="#000000" uuid="a957ade4-dae1-49bf-ae0a-9b49646a9cbc"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matr�cula OP 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="7" width="10" height="18" forecolor="#000000" uuid="a279cd9e-45f0-4598-a4f8-dae0865b7319"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Orientador Pedag�gico 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="490" y="7" width="10" height="18" forecolor="#000000" uuid="0a0c6539-575a-4c2c-b895-2bca82eb91f4"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel OP 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="500" y="7" width="10" height="18" forecolor="#000000" uuid="1d18468c-4b9c-41c4-9e69-394568c2d776"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail OP 3]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" uuid="b50221b5-8254-440b-8c6f-1f0b138c9259"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="10" height="18" uuid="dafc8b03-9f82-4091-af2b-5f5d95dde026"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{N}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="10" y="0" width="10" height="18" uuid="f0d6428f-94fe-4e4d-a886-20bd67a14082"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{C�digo do INEP}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="20" y="0" width="10" height="18" uuid="6c3b54dc-3945-43f4-9970-e8a41bc8c0ff"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Escola}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="30" y="0" width="10" height="18" uuid="3cf8aeb4-b051-4457-8a3c-7a5245cd671f"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel 1 Escola}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="40" y="0" width="10" height="18" uuid="dfd5414f-04f6-4ef6-a6cd-d18b8bf6cede"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel 2 Escola}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="50" y="0" width="10" height="18" uuid="7daac9be-b1ed-49ea-ae3d-c7e5149dece0"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Endere�o}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="60" y="0" width="10" height="18" uuid="2a203ae4-0b7b-4776-ba64-a32b7b02f638"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{N�mero}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="70" y="0" width="10" height="18" uuid="f333fdf4-1635-418f-82e8-5cd65ad02838"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Bairro}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="80" y="0" width="10" height="18" uuid="68abbf39-70cd-4daf-aef8-627c4c8c866e"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula do Diretor}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="90" y="0" width="10" height="18" uuid="f0617032-0f82-4731-91e1-64d6817e6c0b"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Diretor Geral}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="100" y="0" width="10" height="18" uuid="b7c5315a-c0cc-4fa2-9841-177c6a81c7dc"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel 1 Diretor}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="110" y="0" width="10" height="18" uuid="102ca62f-1e6a-4896-b5e0-a180b7f06de5"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel 2 Diretor}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="120" y="0" width="10" height="18" uuid="f6b3382c-e1c1-4f6d-a084-c372c2b97d0e"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail do Diretor}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="130" y="0" width="10" height="18" uuid="3336e023-13b1-437d-b3c2-5cb58c27a81c"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula Adjunto 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="140" y="0" width="10" height="18" uuid="a47c332a-4a70-4853-a30d-13440d441de9"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Diretor Adjunto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="150" y="0" width="10" height="18" uuid="1d07ef4c-fe4d-44dc-93be-032039fded5c"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel  Adjunto 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="160" y="0" width="10" height="18" uuid="04d4f6c2-f35c-43da-91af-c444ffaa72d9"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel 2  Adjunto 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="170" y="0" width="10" height="18" uuid="f81bb67a-b3ce-4a37-8b32-a1678129f862"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail Diretor Adjunto 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="180" y="0" width="10" height="18" uuid="e8d1255b-6430-4427-966a-56fc37c4122b"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula Adjunto 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="190" y="0" width="10" height="18" uuid="7b151cfc-4479-496a-aa71-670b30c60307"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Diretor Adjunto 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="200" y="0" width="10" height="18" uuid="a464b7a7-cf1e-4f0a-b5e7-2db46ca27765"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel  Adjunto 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="210" y="0" width="10" height="18" uuid="e4907f01-165c-4800-a890-a4321f484936"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail do Adjunto 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="220" y="0" width="10" height="18" uuid="af832c8e-fdf1-4ad8-a353-ab067a3aefcd"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula do Secret�rio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="230" y="0" width="10" height="18" uuid="d528159d-dfa9-4cd2-9f7a-c6e3485caff8"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Secret�rio Escolar}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="240" y="0" width="10" height="18" uuid="68952e99-2bb3-4158-864c-13e1e1f02251"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel do Secret�rio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="250" y="0" width="10" height="18" uuid="936b1e33-1d4c-4802-a2e4-eccf0b634e5b"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail do Secret�rio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="260" y="0" width="10" height="18" uuid="86077de1-f5bc-41d9-acba-044034be8a2a"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula OE 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="270" y="0" width="10" height="18" uuid="9c24ef61-873c-42da-84a7-0b206240e89c"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Orientador Educacional 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="280" y="0" width="10" height="18" uuid="593a345a-05c4-4e1c-8900-cefb8f59f7ed"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel OE 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="290" y="0" width="10" height="18" uuid="c71bec86-92f1-415f-847b-6d5475ef8d3f"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail OE 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="300" y="0" width="10" height="18" uuid="959f6210-b5d3-4b27-b864-c146687b2d21"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula OE 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="310" y="0" width="10" height="18" uuid="27051ae4-15f7-4dcc-b226-4f14aafc3541"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Orientador Educacional 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="320" y="0" width="10" height="18" uuid="f2ad6976-e29a-4f50-8efb-c6599c3568ba"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel OE 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="330" y="0" width="10" height="18" uuid="4e86d9aa-71d2-4f0e-b046-39bc4efa52d9"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail OE 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="340" y="0" width="10" height="18" uuid="1088cb84-8551-45be-9ac1-6b8dc744d40b"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula OE 3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="350" y="0" width="10" height="18" uuid="dccd406b-3161-43ff-8343-c287cd18ac3b"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Orientador Educacional 3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="360" y="0" width="10" height="18" uuid="2a1c5636-67a6-490e-865c-afca1a03ef89"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel OE 3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="370" y="0" width="10" height="18" uuid="648d9512-52cc-4692-aae2-a04737f93983"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail OE 3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="380" y="0" width="10" height="18" uuid="917e5197-045d-4f66-8aa6-59f7edbaa73f"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula OP 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="390" y="0" width="10" height="18" uuid="69eade32-dc94-4972-abc2-123898388e38"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Nome}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="400" y="0" width="10" height="18" uuid="3bb9f3fc-7bc2-467f-9482-cc1e87a823e2"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel OP 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="410" y="0" width="10" height="18" uuid="243b643a-cb0a-4e95-b3bb-3dc3e9938b04"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel 2 OP 1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="420" y="0" width="10" height="18" uuid="faac1745-3c58-4fd7-975d-f5442df7f9b0"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="430" y="0" width="10" height="18" uuid="04ea962d-9696-4186-ad70-c3604e36b9e1"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula OP 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="440" y="0" width="10" height="18" uuid="6c23f037-fd7c-4920-82a9-79dbd9af3160"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Orientador Pedag�gico 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="450" y="0" width="10" height="18" uuid="4624d041-af1c-4fc1-8097-0e29b2d1b480"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel OP 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="460" y="0" width="10" height="18" uuid="73a980d6-9dc5-4b16-b515-445557f35bc2"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail OP 2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="470" y="0" width="10" height="18" uuid="4ba8afc7-090e-47d5-ba1e-30011a43414a"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Matr�cula OP 3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="480" y="0" width="10" height="18" uuid="669f7ac6-8bfb-47e8-8379-890652c1c3fe"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Orientador Pedag�gico 3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="490" y="0" width="10" height="18" uuid="f4469452-3306-4455-8c1d-3b221bfd4f79"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Tel OP 3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="500" y="0" width="10" height="18" uuid="86fcbaef-bd87-476e-8c0d-eaa1cfa5f1be"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{E-mail OP 3}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="1133a906-5b71-476e-9f3e-bc97c97058c1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000" uuid="729c3539-f946-4d0e-a0a7-bda2815ea1b0"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" uuid="4834e99c-7f6c-485a-b098-50e5187f2ab4"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="9825b46e-76f1-469a-abb8-a1cc27aad685"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="137d38c7-1a83-4fc5-b156-9d5f1b1a0ddc"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

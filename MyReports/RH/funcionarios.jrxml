@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-07-18T12:23:32 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="funcionarios" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d94d21eb-8a4f-4331-885b-b06d11b54aff">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="ZXNjb2xhcy5gVEFCTEUgNGAgQVMgLDcxLDI0LGMxYWY2NzVhLTVjYWUtNGFjNy04MGZkLWIwN2Nj&#xA;MjA0MGY4Mzs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="escolas"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM escolas.`TABLE 4`]]>
+	</queryString>
+	<field name="COL 1" class="java.lang.String"/>
+	<field name="COL 2" class="java.lang.String"/>
+	<field name="COL 3" class="java.lang.String"/>
+	<field name="COL 4" class="java.lang.String"/>
+	<field name="COL 5" class="java.lang.String"/>
+	<field name="COL 6" class="java.lang.String"/>
+	<field name="COL 7" class="java.lang.String"/>
+	<field name="COL 8" class="java.lang.String"/>
+	<field name="COL 9" class="java.lang.String"/>
+	<field name="COL 10" class="java.lang.String"/>
+	<field name="COL 11" class="java.lang.Integer"/>
+	<field name="COL 12" class="java.lang.String"/>
+	<field name="COL 13" class="java.lang.String"/>
+	<field name="COL 14" class="java.lang.String"/>
+	<field name="COL 15" class="java.lang.String"/>
+	<field name="COL 16" class="java.lang.String"/>
+	<group name="COL 1">
+		<groupExpression><![CDATA[$F{COL 1}]]></groupExpression>
+	</group>
+	<group name="COL 2">
+		<groupExpression><![CDATA[$F{COL 2}]]></groupExpression>
+	</group>
+	<group name="COL 3">
+		<groupExpression><![CDATA[$F{COL 3}]]></groupExpression>
+	</group>
+	<group name="COL 4">
+		<groupExpression><![CDATA[$F{COL 4}]]></groupExpression>
+	</group>
+	<group name="COL 5">
+		<groupExpression><![CDATA[$F{COL 5}]]></groupExpression>
+	</group>
+	<group name="COL 6">
+		<groupExpression><![CDATA[$F{COL 6}]]></groupExpression>
+	</group>
+	<group name="COL 7">
+		<groupExpression><![CDATA[$F{COL 7}]]></groupExpression>
+	</group>
+	<group name="COL 8">
+		<groupExpression><![CDATA[$F{COL 8}]]></groupExpression>
+	</group>
+	<group name="COL 9">
+		<groupExpression><![CDATA[$F{COL 9}]]></groupExpression>
+	</group>
+	<group name="COL 10">
+		<groupExpression><![CDATA[$F{COL 10}]]></groupExpression>
+	</group>
+	<group name="COL 11">
+		<groupExpression><![CDATA[$F{COL 11}]]></groupExpression>
+	</group>
+	<group name="COL 12">
+		<groupExpression><![CDATA[$F{COL 12}]]></groupExpression>
+	</group>
+	<group name="COL 13">
+		<groupExpression><![CDATA[$F{COL 13}]]></groupExpression>
+	</group>
+	<group name="COL 14">
+		<groupExpression><![CDATA[$F{COL 14}]]></groupExpression>
+	</group>
+	<group name="COL 15">
+		<groupExpression><![CDATA[$F{COL 15}]]></groupExpression>
+	</group>
+	<group name="COL 16">
+		<groupExpression><![CDATA[$F{COL 16}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="79" y="7" width="493" height="65" uuid="4d045f42-7e77-47c4-b068-af8bbaa2c800"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Município de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="19" y="7" width="55" height="65" uuid="5a83fe6c-9ae9-4657-beb8-327a0f54b7b7"/>
+				<imageExpression><![CDATA["C:/Users/TI/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="79" y="50" width="631" height="30" uuid="8d36fbca-73b3-4aa7-aacf-452e435e4f71"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome_ue}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

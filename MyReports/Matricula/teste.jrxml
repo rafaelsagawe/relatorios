@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-09-15T12:52:31 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teste" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7efd7c9a-823e-456d-a181-c02826669af9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="escolas"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM escolas.`TABLE 6`
+where urg like '%IX%']]>
+	</queryString>
+	<field name="urg" class="java.lang.String"/>
+	<field name="nome_unidade" class="java.lang.String"/>
+	<field name="COL 3" class="java.lang.String"/>
+	<field name="COL 4" class="java.lang.String"/>
+	<field name="COL 5" class="java.lang.String"/>
+	<field name="COL 6" class="java.lang.String"/>
+	<field name="COL 7" class="java.lang.String"/>
+	<field name="COL 8" class="java.lang.String"/>
+	<field name="COL 9" class="java.lang.String"/>
+	<field name="COL 10" class="java.lang.String"/>
+	<field name="1T_tumas_Inf2" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_Inf2" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_Inf3" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_Inf3" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_Inf4" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_Inf4" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_Inf5" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_Inf5" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano1" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano1" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano2" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano2" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano3" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano3" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano4" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano4" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano5" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano5" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano6" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano6" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano7" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano7" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano8" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano8" class="java.math.BigDecimal"/>
+	<field name="1T_tumas_ano9" class="java.math.BigDecimal"/>
+	<field name="1T_vagas_ano9" class="java.math.BigDecimal"/>
+	<field name="COL 50" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_inf2" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_inf2" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_inf3" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_inf3" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_inf4" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_inf4" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_inf5" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_inf5" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano1" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano1" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano2" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano2" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano3" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano3" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano4" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano4" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano5" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano5" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano6" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano6" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano7" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano7" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano8" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano8" class="java.math.BigDecimal"/>
+	<field name="2T_tumas_ano9" class="java.math.BigDecimal"/>
+	<field name="2T_vagas_ano9" class="java.math.BigDecimal"/>
+	<field name="COL 90" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F1" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F1" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F2" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F2" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F3" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F3" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F4" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F4" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F5" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F5" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F6" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F6" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F7" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F7" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F8" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F8" class="java.math.BigDecimal"/>
+	<field name="3T_tumas_F9" class="java.math.BigDecimal"/>
+	<field name="3T_vagas_F9" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_Inf2" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_Inf3" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_Inf4" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_Inf5" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano1" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano2" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano3" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano4" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano5" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano6" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano7" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano8" class="java.math.BigDecimal"/>
+	<field name="1T_absorcao_ano9" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_inf2" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_inf3" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_inf4" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_inf5" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano1" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano2" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano3" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano4" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano5" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano6" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano7" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano8" class="java.math.BigDecimal"/>
+	<field name="2T_absorcao_ano9" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F1" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F2" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F3" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F4" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F5" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F6" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F7" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F8" class="java.math.BigDecimal"/>
+	<field name="3T_absorcao_F9" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="176" y="1" width="70" height="21" uuid="cb8a7d93-442a-4a6d-ace9-df97c0c82f61"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[1º Ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="1" width="70" height="21" uuid="0a31cb16-0c33-41ec-9027-3174317b73a5"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[2º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="1" width="70" height="21" uuid="5cda4456-e3da-46e1-ad4e-d3b1cf3a708b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[3º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="1" width="70" height="21" uuid="c7dc60ab-3362-4728-a7ba-4ecf7d6db419"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[4º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="1" width="70" height="21" uuid="ca656077-e7e1-432f-9ab9-968c86b1e0e1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[5º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="526" y="1" width="70" height="21" uuid="ff3f022a-88e7-4af7-bacd-13d8734b6701"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[6º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="1" width="70" height="21" uuid="7bc61dc4-c275-4148-a68b-841da12ddd3d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[7º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="1" width="70" height="21" uuid="2e9b22c1-83ea-4599-8b44-128a00a6812a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[8º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="736" y="1" width="70" height="21" uuid="9265722c-e2bb-48ce-a1ac-4aab43e630eb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[9º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="176" height="21" uuid="f90103d4-dc35-4d6b-b408-56024395feb2"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Nome da unidade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="176" y="0" width="35" height="15" uuid="6f4cbcc0-9209-49ef-9c99-f05057f6b1d9">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1T" + $F{1T_tumas_ano1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="211" y="0" width="35" height="15" uuid="48b6e1eb-6527-4246-876b-627c0eb0ede6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="246" y="0" width="35" height="15" uuid="8ebf7c8d-cc02-49e1-a80a-6946b3f44dda"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="281" y="0" width="35" height="15" uuid="34d87971-9b40-4ab3-bd19-dbdb3f1be1ca"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="316" y="0" width="35" height="15" uuid="784d853e-8e1b-479a-80b1-60d8b89adb04"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="351" y="0" width="35" height="15" uuid="d8b4ff41-654d-48e0-99c9-227269fa9624"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="386" y="0" width="35" height="15" uuid="d9f20e87-4daa-4c36-a7d6-405bfaa58d02"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="421" y="0" width="35" height="15" uuid="9bae7541-c392-4972-afb1-589ea2d4bc69"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="456" y="0" width="35" height="15" uuid="9f91fdba-f759-4f69-b7e3-16ba2d7521f6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="491" y="0" width="35" height="15" uuid="9bb1260d-0ae7-476b-80cb-2d30d2082ecd"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="526" y="0" width="35" height="15" uuid="9fc52dbd-9940-4980-8062-deba59648ef0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="561" y="0" width="35" height="15" uuid="c2818250-3b66-415d-a0cb-1e60a013e078"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="596" y="0" width="35" height="15" uuid="f8d6240d-fe91-4bab-8b8f-aa9f870c310f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="631" y="0" width="35" height="15" uuid="9e23955b-6ea9-4458-9a0b-d0b5fd0137e9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="666" y="0" width="35" height="15" uuid="61c9d7be-59ea-4f23-bbc0-c3b289a7b514"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="701" y="0" width="35" height="15" uuid="65cca54a-1e9b-4923-8fe5-825f36d9ae29"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="736" y="0" width="35" height="15" uuid="3fd313aa-bd54-4b1c-8436-d4597e4126b4"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano9}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="771" y="0" width="35" height="15" uuid="5fea9cdf-8c97-41fd-9605-71817865fdeb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano9}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="176" y="15" width="35" height="15" uuid="16a5e5f0-791c-4930-9c31-9048fd6c373c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2t" + $F{2T_tumas_ano1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="211" y="15" width="35" height="15" uuid="204b0a32-05a0-4074-a256-1cb85157869f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{2T_vagas_ano1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="246" y="15" width="35" height="15" uuid="dc1c8f22-c110-413d-8508-27e4c9f2f821"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{2T_tumas_ano2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="281" y="15" width="35" height="15" uuid="4b7c80b5-9962-4bc5-ba56-4ba5b7dd05bd"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{2T_vagas_ano2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="316" y="15" width="35" height="15" uuid="0f7d6d94-2a3f-425b-bd0c-2c54c7a46181"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="351" y="15" width="35" height="15" uuid="82ac14ca-f3f8-4473-aa98-cccfcede278a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="386" y="15" width="35" height="15" uuid="10d2777e-36b9-4bc6-b57b-f13631db4e24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="421" y="15" width="35" height="15" uuid="dd4ffb64-bf03-4c31-aa5d-65fa802179f3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="456" y="15" width="35" height="15" uuid="368012ff-39eb-4a25-a910-4f0070cedad0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="491" y="15" width="35" height="15" uuid="77d5478e-23c4-4e2b-9fd5-036c125fc99a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="526" y="15" width="35" height="15" uuid="2d4e4906-f965-4e1d-ac90-037330a0aadb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="561" y="15" width="35" height="15" uuid="5ca381f9-e32d-41b0-872e-a2b9d5f5c1f0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="596" y="15" width="35" height="15" uuid="e4006480-eb58-44b4-a222-e3f1c63b4f85"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="631" y="15" width="35" height="15" uuid="58712f11-2883-4f11-9663-474818798f59"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="666" y="15" width="35" height="15" uuid="bd3916fa-266f-4f13-a0ac-e18c9de8818e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="701" y="15" width="35" height="15" uuid="e8d7f69d-d128-41f5-8e1e-9f7cdada16ff"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="736" y="15" width="35" height="15" uuid="9513e3d7-a0fc-41b3-a462-de4b89642df9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_tumas_ano9}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="771" y="15" width="35" height="15" uuid="7a75b979-27a8-4e1c-bb71-39dc8e50d00e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1T_vagas_ano9}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="0" y="0" width="176" height="30" uuid="47fac196-d5a3-4f57-8fd1-501cf761820a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome_unidade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

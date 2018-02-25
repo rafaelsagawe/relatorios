@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="unidades" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5fd840eb-6b0e-40fa-9075-b44f0a2b016a">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[ZXNjb2xhcy5gVEFCTEUgMWAgQVMgLDE0MCw1MywyMzUyMmYwZC00NmQzLTQ4NTEtYmZiYy1mYjQ5
+OTY3YzJjNzY7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysql - escolas"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT escolas.`TABLE 1`.`URG`,
+	escolas.`TABLE 1`.`N`,
+	escolas.`TABLE 1`.`Codigo do INEP`,
+	escolas.`TABLE 1`.`Escola`,
+	escolas.`TABLE 1`.`Tel 1 Escola`,
+	escolas.`TABLE 1`.`Tel 2 Escola`,
+	escolas.`TABLE 1`.email,
+	escolas.`TABLE 1`.`Endere`,
+	escolas.`TABLE 1`.`Numero`,
+	escolas.`TABLE 1`.`Bairro`,
+	escolas.`TABLE 1`.`Matricula do Diretor`,
+	escolas.`TABLE 1`.`Diretor Geral`,
+	escolas.`TABLE 1`.`Tel 2 Diretor`,
+	escolas.`TABLE 1`.`Tel 1 Diretor`,
+	escolas.`TABLE 1`.`E-mail do Diretor`,
+	escolas.`TABLE 1`.`Matr?cula Adjunto 1`,
+	escolas.`TABLE 1`.`Diretor Adjunto`,
+	escolas.`TABLE 1`.`Tel  Adjunto 1`,
+	escolas.`TABLE 1`.`Tel 2  Adjunto 1`,
+	escolas.`TABLE 1`.`E-mail Diretor Adjunto 1`,
+	escolas.`TABLE 1`.`Matr?cula Adjunto 2`,
+	escolas.`TABLE 1`.`Diretor Adjunto 2`,
+	escolas.`TABLE 1`.`Tel  Adjunto 2`,
+	escolas.`TABLE 1`.`E-mail do Adjunto 2`,
+	escolas.`TABLE 1`.`Matr?cula do Secret?rio`,
+	escolas.`TABLE 1`.`Secret?rio Escolar`,
+	escolas.`TABLE 1`.`Tel do Secret?rio`,
+	escolas.`TABLE 1`.`E-mail do Secret?rio`,
+	escolas.`TABLE 1`.`Matr?cula OE 1`,
+	escolas.`TABLE 1`.`Orientador Educacional 1`,
+	escolas.`TABLE 1`.`Tel OE 1`,
+	escolas.`TABLE 1`.`E-mail OE 1`,
+	escolas.`TABLE 1`.`Matr?cula OE 2`,
+	escolas.`TABLE 1`.`Orientador Educacional 2`,
+	escolas.`TABLE 1`.`Tel OE 2`,
+	escolas.`TABLE 1`.`E-mail OE 2`,
+	escolas.`TABLE 1`.`Matr?cula OE 3`,
+	escolas.`TABLE 1`.`Orientador Educacional 3`,
+	escolas.`TABLE 1`.`Tel OE 3`,
+	escolas.`TABLE 1`.`E-mail OE 3`,
+	escolas.`TABLE 1`.`Matr?cula OP 1`,
+	escolas.`TABLE 1`.`Nome`,
+	escolas.`TABLE 1`.`Tel OP 1`,
+	escolas.`TABLE 1`.`Tel 2 OP 1`,
+	escolas.`TABLE 1`.`E-mail`,
+	escolas.`TABLE 1`.`Matr?cula OP 2`,
+	escolas.`TABLE 1`.`Orientador Pedag?gico 2`,
+	escolas.`TABLE 1`.`Tel OP 2`,
+	escolas.`TABLE 1`.`E-mail OP 2`,
+	escolas.`TABLE 1`.`Matr?cula OP 3`,
+	escolas.`TABLE 1`.`Orientador Pedag?gico 3`,
+	escolas.`TABLE 1`.`Tel OP 3`,
+	escolas.`TABLE 1`.`E-mail OP 3`
+FROM escolas.`TABLE 1`]]>
+	</queryString>
+	<field name="URG" class="java.lang.String"/>
+	<field name="N" class="java.lang.Integer"/>
+	<field name="Codigo do INEP" class="java.lang.String"/>
+	<field name="Escola" class="java.lang.String"/>
+	<field name="Tel 1 Escola" class="java.lang.String"/>
+	<field name="Tel 2 Escola" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="Endere" class="java.lang.String"/>
+	<field name="Numero" class="java.lang.String"/>
+	<field name="Bairro" class="java.lang.String"/>
+	<field name="Matricula do Diretor" class="java.lang.String"/>
+	<field name="Diretor Geral" class="java.lang.String"/>
+	<field name="Tel 2 Diretor" class="java.lang.String"/>
+	<field name="Tel 1 Diretor" class="java.lang.String"/>
+	<field name="E-mail do Diretor" class="java.lang.String"/>
+	<field name="Matr?cula Adjunto 1" class="java.lang.String"/>
+	<field name="Diretor Adjunto" class="java.lang.String"/>
+	<field name="Tel  Adjunto 1" class="java.lang.String"/>
+	<field name="Tel 2  Adjunto 1" class="java.lang.String"/>
+	<field name="E-mail Diretor Adjunto 1" class="java.lang.String"/>
+	<field name="Matr?cula Adjunto 2" class="java.lang.String"/>
+	<field name="Diretor Adjunto 2" class="java.lang.String"/>
+	<field name="Tel  Adjunto 2" class="java.lang.String"/>
+	<field name="E-mail do Adjunto 2" class="java.lang.String"/>
+	<field name="Matr?cula do Secret?rio" class="java.lang.String"/>
+	<field name="Secret?rio Escolar" class="java.lang.String"/>
+	<field name="Tel do Secret?rio" class="java.lang.String"/>
+	<field name="E-mail do Secret?rio" class="java.lang.String"/>
+	<field name="Matr?cula OE 1" class="java.lang.String"/>
+	<field name="Orientador Educacional 1" class="java.lang.String"/>
+	<field name="Tel OE 1" class="java.lang.String"/>
+	<field name="E-mail OE 1" class="java.lang.String"/>
+	<field name="Matr?cula OE 2" class="java.lang.String"/>
+	<field name="Orientador Educacional 2" class="java.lang.String"/>
+	<field name="Tel OE 2" class="java.lang.String"/>
+	<field name="E-mail OE 2" class="java.lang.String"/>
+	<field name="Matr?cula OE 3" class="java.lang.String"/>
+	<field name="Orientador Educacional 3" class="java.lang.String"/>
+	<field name="Tel OE 3" class="java.lang.String"/>
+	<field name="E-mail OE 3" class="java.lang.String"/>
+	<field name="Matr?cula OP 1" class="java.lang.String"/>
+	<field name="Nome" class="java.lang.String"/>
+	<field name="Tel OP 1" class="java.lang.String"/>
+	<field name="Tel 2 OP 1" class="java.lang.String"/>
+	<field name="E-mail" class="java.lang.String"/>
+	<field name="Matr?cula OP 2" class="java.lang.String"/>
+	<field name="Orientador Pedag?gico 2" class="java.lang.String"/>
+	<field name="Tel OP 2" class="java.lang.String"/>
+	<field name="E-mail OP 2" class="java.lang.String"/>
+	<field name="Matr?cula OP 3" class="java.lang.String"/>
+	<field name="Orientador Pedag?gico 3" class="java.lang.String"/>
+	<field name="Tel OP 3" class="java.lang.String"/>
+	<field name="E-mail OP 3" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="82" y="0" width="398" height="65" uuid="8d6f13e3-f919-4ca6-bf5a-797771131629"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="16" y="0" width="60" height="65" uuid="a5c1e2cd-25c0-4889-bfa7-d4c1eec1adfc"/>
+				<imageExpression><![CDATA["C:/Users/TI/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="644" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="50" width="550" height="20" uuid="14aa6f31-b48b-421f-88c6-d8dd5b7f92fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{URG} + " - Nº: " + $F{N} + " - INEP: " + $F{Codigo do INEP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="500" height="40" uuid="f362af0f-b2c1-4acc-a017-e7911e5cc07b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Escola}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="73" width="549" height="20" uuid="6017a6bb-e38c-4a77-b225-7cc3edb432b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["E-mail: " + $F{email}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="6">
+				<reportElement x="0" y="123" width="559" height="57" backcolor="rgba(255, 255, 255, 0.0)" uuid="49718dbb-bb02-480f-a927-5cf0eb293fbb">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="103" width="64" height="20" uuid="45f0db49-70ab-4658-b9fa-66b7aae30b3e"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="4" y="131" width="535" height="20" uuid="b986069c-4c7e-4815-84b2-70b8810bd8e8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Endere} + ", Nº: " + $F{Numero} + ", Bairro: " + $F{Bairro}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="6">
+				<reportElement x="1" y="203" width="559" height="60" backcolor="rgba(255, 255, 255, 0.0)" uuid="2fe3d522-1426-4dfb-b400-c74290d8fbfb">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="212" width="50" height="20" uuid="4d851b2a-f165-4177-9f0f-c5c3f2ba1539"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="52" y="212" width="274" height="20" uuid="b22a81f6-2cd6-41a7-9e82-39782d9facc7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Diretor Geral}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="183" width="64" height="20" uuid="6231604b-5922-49d5-9586-d86fac26164b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Diretor(a)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="329" y="210" width="187" height="20" uuid="969e3eca-73da-45e2-9f05-845f781d1b9f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tel.: " + $F{Tel 1 Diretor} + $F{Tel 2 Diretor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="234" width="50" height="20" uuid="a32f10c0-0ad0-47b8-bdcf-578ec7e69639"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="234" width="274" height="20" uuid="47da4cc9-fad2-4136-9564-4d02a5773bfd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{E-mail do Diretor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="329" y="235" width="55" height="20" uuid="54696eac-73c8-4074-bb97-fa3cfebbd165"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Matricula:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="389" y="235" width="128" height="20" uuid="894ce9f1-836d-47fd-a9ef-8c5b4c1322e8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+			</textField>
+			<rectangle radius="6">
+				<reportElement x="1" y="287" width="559" height="60" backcolor="rgba(255, 255, 255, 0.0)" uuid="fff7616e-3c5c-4617-b575-cb1482054b42">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="296" width="50" height="20" uuid="f7d794cf-ca63-452f-9c0e-7a6702564df8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="52" y="296" width="274" height="20" uuid="6d7cb7bf-aab4-4b4f-94d2-38b58180e9a2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Diretor Adjunto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="267" width="96" height="20" uuid="827ce447-baff-47c8-a702-e1cd3bc7e9bb"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Diretor adjunto(a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="294" width="20" height="20" uuid="05a163f3-fe90-4097-bd03-43c6d39b1dda"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tel:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="294" width="166" height="20" uuid="7e02646a-0265-47b6-817f-f8736e0b41ca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tel  Adjunto 1} + $F{Tel 2  Adjunto 1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="318" width="50" height="20" uuid="ea944d45-9cdb-4731-b463-7ad715019577"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="318" width="274" height="20" uuid="3037ed08-b34f-4728-9a32-691afb4a9b2e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{E-mail Diretor Adjunto 1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="329" y="319" width="55" height="20" uuid="7268c022-6397-4767-a2fb-378efeb6cfa8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Matricula:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="389" y="319" width="128" height="20" uuid="f03a041e-18dc-4cda-bb5a-5199e13b5a4a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Matr?cula Adjunto 2}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="6">
+				<reportElement x="1" y="369" width="559" height="60" backcolor="rgba(255, 255, 255, 0.0)" uuid="4996a817-05f8-437d-8c17-32354e705597">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="378" width="50" height="20" uuid="a18ce153-352f-4208-bce0-19168cfeb4b8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="52" y="378" width="274" height="20" uuid="0da9747d-9bd0-47f4-8a0c-cecc632a2d3d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Secret?rio Escolar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="349" width="106" height="20" uuid="c9d78726-d8e1-4cab-8eb6-6c8512e9fff9"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Secretario escolar(a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="376" width="20" height="20" uuid="55c91f5d-ebe9-4062-960b-267a27abba53"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tel:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="376" width="166" height="20" uuid="355d36ec-98a9-44b0-9fe5-52fc1dd6361c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tel do Secret?rio} + $F{Tel 2  Adjunto 1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="400" width="50" height="20" uuid="72c9f793-89e4-4ba7-85eb-434a81cb527f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="400" width="274" height="20" uuid="9d85a7f8-228e-48b3-9c2d-389313249e55"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{E-mail do Secret?rio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="329" y="401" width="55" height="20" uuid="bb7dc8c5-a55f-47eb-9e68-0cacd25911e4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Matricula:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="401" width="128" height="20" uuid="9d0c5443-a568-4101-8965-d2d4bd380253"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Matr?cula Adjunto 2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="7" y="160" width="532" height="20" uuid="bd3f9d59-f4e8-4bd4-83f9-9d5a43c2d96d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Tel.: " + $F{Tel 1 Escola} +"  " + $F{Tel 2 Escola}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

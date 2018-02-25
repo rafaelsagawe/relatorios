@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="todos os anos" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b404a72b-d76e-453f-bec7-134d0cbcc0ff">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="banco de dados - intranet"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Gabinete/Matricula/todos_os_anos___vagas_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Gabinete/Matricula/todos_os_anos___vagas"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM escolas.mapa_estatistico
+ORDER BY escolas.mapa_estatistico.nome_ue DESC]]>
+	</queryString>
+	<field name="nome_ue" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="COL 3" class="java.lang.String"/>
+	<field name="COL 4" class="java.lang.String"/>
+	<field name="COL 5" class="java.lang.String"/>
+	<field name="COL 6" class="java.lang.String"/>
+	<field name="data_inicio" class="java.lang.String"/>
+	<field name="data_final" class="java.lang.String"/>
+	<field name="COL 9" class="java.lang.String"/>
+	<field name="COL 10" class="java.lang.String"/>
+	<field name="turno_1_turma_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_turma_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninas_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_meninos_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_infreq_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_ne_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_hi_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_1_vagas_9ano" class="java.math.BigDecimal"/>
+	<field name="COL 102" class="java.math.BigDecimal"/>
+	<field name="COL 103" class="java.math.BigDecimal"/>
+	<field name="COL 104" class="java.lang.String"/>
+	<field name="turno_2_turma_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_inf2" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_inf3" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_inf4" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_inf5" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_1ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_2ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_3ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_4ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_5ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_6ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_7ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_8ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_turma_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninas_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_meninos_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_infreq_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_ne_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_hi_9ano" class="java.math.BigDecimal"/>
+	<field name="turno_2_vagas_9ano" class="java.math.BigDecimal"/>
+	<field name="COL 196" class="java.math.BigDecimal"/>
+	<field name="COL 197" class="java.math.BigDecimal"/>
+	<field name="COL 198" class="java.lang.String"/>
+	<field name="turma_eja_1" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_1" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_1" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_1" class="java.math.BigDecimal"/>
+	<field name="ne_eja_1" class="java.math.BigDecimal"/>
+	<field name="hi_eja_1" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_1" class="java.math.BigDecimal"/>
+	<field name="turma_eja_2" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_2" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_2" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_2" class="java.math.BigDecimal"/>
+	<field name="ne_eja_2" class="java.math.BigDecimal"/>
+	<field name="hi_eja_2" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_2" class="java.math.BigDecimal"/>
+	<field name="turma_eja_3" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_3" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_3" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_3" class="java.math.BigDecimal"/>
+	<field name="ne_eja_3" class="java.math.BigDecimal"/>
+	<field name="hi_eja_3" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_3" class="java.math.BigDecimal"/>
+	<field name="turma_eja_4" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_4" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_4" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_4" class="java.math.BigDecimal"/>
+	<field name="ne_eja_4" class="java.math.BigDecimal"/>
+	<field name="hi_eja_4" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_4" class="java.math.BigDecimal"/>
+	<field name="turma_eja_5" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_5" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_5" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_5" class="java.math.BigDecimal"/>
+	<field name="ne_eja_5" class="java.math.BigDecimal"/>
+	<field name="hi_eja_5" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_5" class="java.math.BigDecimal"/>
+	<field name="turma_eja_6" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_6" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_6" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_6" class="java.math.BigDecimal"/>
+	<field name="ne_eja_6" class="java.math.BigDecimal"/>
+	<field name="hi_eja_6" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_6" class="java.math.BigDecimal"/>
+	<field name="turma_eja_7" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_7" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_7" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_7" class="java.math.BigDecimal"/>
+	<field name="ne_eja_7" class="java.math.BigDecimal"/>
+	<field name="hi_eja_7" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_7" class="java.math.BigDecimal"/>
+	<field name="turma_eja_8" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_8" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_8" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_8" class="java.math.BigDecimal"/>
+	<field name="ne_eja_8" class="java.math.BigDecimal"/>
+	<field name="hi_eja_8" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_8" class="java.math.BigDecimal"/>
+	<field name="turma_eja_9" class="java.math.BigDecimal"/>
+	<field name="meninas_eja_9" class="java.math.BigDecimal"/>
+	<field name="meninos_eja_9" class="java.math.BigDecimal"/>
+	<field name="infreq_eja_9" class="java.math.BigDecimal"/>
+	<field name="ne_eja_9" class="java.math.BigDecimal"/>
+	<field name="hi_eja_9" class="java.math.BigDecimal"/>
+	<field name="vagas_eja_9" class="java.math.BigDecimal"/>
+	<field name="COL 262" class="java.math.BigDecimal"/>
+	<field name="COL 263" class="java.math.BigDecimal"/>
+	<field name="COL 264" class="java.lang.String"/>
+	<field name="cegueira" class="java.math.BigDecimal"/>
+	<field name="baixa_visao" class="java.math.BigDecimal"/>
+	<field name="surdez" class="java.math.BigDecimal"/>
+	<field name="deficiencia_fisica" class="java.math.BigDecimal"/>
+	<field name="surdocegueira" class="java.math.BigDecimal"/>
+	<field name="tgd" class="java.math.BigDecimal"/>
+	<field name="deficiencia_intelectual" class="java.math.BigDecimal"/>
+	<field name="altas_habilidades" class="java.math.BigDecimal"/>
+	<field name="autismo" class="java.math.BigDecimal"/>
+	<field name="sindrome_de_down" class="java.math.BigDecimal"/>
+	<field name="deficiencia_multipla" class="java.math.BigDecimal"/>
+	<field name="condutas_tipicas" class="java.math.BigDecimal"/>
+	<field name="outros" class="java.math.BigDecimal"/>
+	<field name="COL 278" class="java.lang.String"/>
+	<field name="numero_de_salas" class="java.math.BigDecimal"/>
+	<field name="salas_ociosas" class="java.math.BigDecimal"/>
+	<field name="sala_de_recursos" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="79" y="0" width="493" height="65" uuid="317855b0-3620-4698-87a9-c07eac1e1d22"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="19" y="0" width="55" height="65" uuid="29f61060-cb53-4676-9773-d6b24643886d"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="841" height="30" uuid="ad5cc180-c724-4982-a89d-2c76111fe08f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de Vagas por Ano de Escolaridade]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="529" y="0" width="145" height="20" backcolor="rgba(110, 164, 250, 0.63529414)" uuid="ab48248a-965d-435d-ab6c-99a41cfd26a7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="417" y="0" width="112" height="20" backcolor="rgba(73, 242, 92, 0.49803922)" uuid="541ed62a-c0a7-4854-bfed-d6032c215807"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="277" y="0" width="140" height="20" backcolor="rgba(214, 250, 147, 0.7058824)" uuid="1bc98e4b-ee64-4927-918e-5203e167463f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="167" y="0" width="110" height="20" backcolor="#FAFFAD" uuid="4a6cb9a0-1d52-4e3e-8861-cfa320fad5dc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="674" y="0" width="137" height="20" backcolor="rgba(135, 121, 237, 0.49019608)" uuid="5fd5834e-8601-475f-8e75-0c8babccdd96"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-5" y="0" width="172" height="20" uuid="9f460331-7214-4728-ac2d-89275bdc2fa3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Unidade Escolar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="0" width="22" height="20" backcolor="#FFFFFF" uuid="d16b35a2-e376-4b9e-b92b-98e14dc62a63"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[inf.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="22" height="20" backcolor="#FF0400" uuid="cb9838ef-0672-4116-96de-91f5b0525314"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[inf.2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="0" width="22" height="20" uuid="ec1a71a1-3ff6-480e-87b8-413909aaffe8"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[inf.3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="233" y="0" width="22" height="20" uuid="a2593d9f-deae-452a-ba15-69ae64e3be61"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[inf.4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="0" width="22" height="20" uuid="7c310f07-2eb1-49e8-b0dc-c02decfcc0cd"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[inf.5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="277" y="0" width="28" height="20" uuid="70841068-6d54-4c04-8ed0-bd85de4328c5"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[1º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="305" y="0" width="28" height="20" uuid="d5f15f5f-00db-40b5-839c-e38692a1e951"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[2º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="333" y="0" width="28" height="20" uuid="d185dffd-4497-4489-b6c0-d05fee112293"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[3º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="473" y="0" width="28" height="20" uuid="428c8b45-cc62-4b53-8bb1-3f8df6e9c03a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[8º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="501" y="0" width="28" height="20" uuid="3a57ddff-32c9-465d-9081-3f40d1dafced"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[9º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="445" y="0" width="28" height="20" uuid="96ceb094-dea6-4b9e-8cf4-83daba13e5ed"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[7º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="417" y="0" width="28" height="20" uuid="6086075f-7298-4ab7-ac15-ef34ff639f80"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[6º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="389" y="0" width="28" height="20" uuid="7d184217-52a7-45df-8212-4571e4a394d6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[5º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="361" y="0" width="28" height="20" uuid="c9b86eaf-f0a0-4cbd-99f6-31f0e94bd3b2"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[4º ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="529" y="0" width="29" height="20" uuid="2230ee16-1945-4461-985d-5088b0728703"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[I fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="558" y="0" width="29" height="20" uuid="36ccc39e-6196-495e-983b-f0b05a65fc2c">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[II fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="587" y="0" width="29" height="20" uuid="153aab36-9708-4828-a68b-d79e390e46ea"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[III fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="616" y="0" width="29" height="20" uuid="0f720aba-f1ac-4fee-970b-75a96d1877c1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[IV fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="674" y="0" width="29" height="20" uuid="8cd926a3-e199-444f-80ff-31ccfe00787f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[VI fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="703" y="0" width="36" height="20" uuid="e9b7b775-4593-468e-9da2-2468dde92ae3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[VII fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="739" y="0" width="36" height="20" uuid="550f1d62-4361-4503-95d1-fc8c8b372606"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[VIII fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="775" y="0" width="36" height="20" uuid="6600dfb4-a241-4fa1-839e-99ee89080d65"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[IX fase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="645" y="0" width="29" height="20" uuid="f5af7b3f-54e7-4de2-901a-8184eb61223f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[V fase]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<rectangle>
+				<reportElement x="529" y="0" width="145" height="15" backcolor="rgba(110, 164, 250, 0.63529414)" uuid="24044bd5-85b2-4310-a854-dc8eda1f9e0f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="417" y="0" width="112" height="15" backcolor="rgba(73, 242, 92, 0.49803922)" uuid="eed62704-7436-45c9-a1a9-05fb796f17be"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="277" y="0" width="140" height="15" backcolor="rgba(214, 250, 147, 0.7058824)" uuid="6bf37f96-0863-45ed-938e-8cb221b53f2e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="167" y="0" width="110" height="15" backcolor="#FAFFAD" uuid="d25b8d5c-a090-4e17-aed1-fbdb34707191"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="674" y="0" width="137" height="15" backcolor="rgba(135, 121, 237, 0.49019608)" uuid="01d4fc44-2375-4547-9c0e-0935b02a206f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="-5" y="0" width="172" height="15" uuid="503342f3-45b9-4f14-9886-acbe276177fc"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo} + " " + $F{nome_ue}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="167" y="0" width="22" height="15" uuid="8910db11-9cf4-4c3a-828c-b0e30f47384e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["0"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement key="" mode="Transparent" x="189" y="0" width="22" height="15" isPrintWhenDetailOverflows="true" backcolor="#FFFFFF" uuid="362cdcd3-db30-4853-bbb2-13e1e00b40fa"/>
+				<box>
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_inf2},$F{turno_2_vagas_inf2})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="211" y="0" width="22" height="15" uuid="2f410c28-6337-4483-bef3-a7a87e168c24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_inf3},$F{turno_2_vagas_inf3})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="233" y="0" width="22" height="15" uuid="99eafed7-0dc9-4041-b1ca-ea38e23d24b2"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_inf4},$F{turno_2_vagas_inf4})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="255" y="0" width="22" height="15" uuid="6841a2c5-c8de-4d3d-94f7-fbf06ca34713"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_inf5},$F{turno_2_vagas_inf5})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="277" y="0" width="28" height="15" uuid="a500d893-6b05-439b-87b2-6eb97bc173a5"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_1ano},$F{turno_2_vagas_1ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="305" y="0" width="28" height="15" uuid="e4e5ed95-8aa2-419d-a073-80311d8b2f1f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_2ano},$F{turno_2_vagas_2ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="333" y="0" width="28" height="15" uuid="a4b2a022-4f1b-4504-ad96-5650a72cde84"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_3ano},$F{turno_2_vagas_3ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="361" y="0" width="28" height="15" uuid="f0c9a799-fb0b-4ba4-964f-4a0c051db3c6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_4ano},$F{turno_2_vagas_4ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="389" y="0" width="28" height="15" uuid="63379950-705a-462d-b7ae-e2bf7f5397fc"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_5ano},$F{turno_2_vagas_5ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="417" y="0" width="28" height="15" uuid="ae6a626c-a822-4c4a-967e-1efaea3f65b8"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_6ano},$F{turno_2_vagas_6ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="445" y="0" width="28" height="15" uuid="8dcadbbc-03de-4130-a7e5-43dd6d491778"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_7ano},$F{turno_2_vagas_7ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="473" y="0" width="28" height="15" uuid="3aecd1b7-04f7-422c-a37a-6add3b9b3f3e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_8ano},$F{turno_2_vagas_8ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="501" y="0" width="28" height="15" uuid="0d8a079d-6629-4da2-8380-7272d2ed53e3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{turno_1_vagas_9ano},$F{turno_2_vagas_9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="529" y="0" width="29" height="15" uuid="b3e41fc7-e61e-4f2c-a0cd-2a3d5b679ead">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_1},$F{vagas_eja_1})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="587" y="0" width="29" height="15" uuid="9c35680d-960d-4d38-a8bd-5aaa3c66ee1f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_3},$F{vagas_eja_3})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="558" y="0" width="29" height="15" uuid="cdef6a89-6646-41ce-a1a2-5b61f508c3fd">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_2},$F{vagas_eja_2})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="616" y="0" width="29" height="15" uuid="e187d85a-d801-4a2a-8c94-62ea33e341d8">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_4},$F{vagas_eja_4})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="674" y="0" width="29" height="15" uuid="6b9db6f2-f001-4ac2-ae80-58b670de368d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_6},$F{vagas_eja_6})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="645" y="0" width="29" height="15" uuid="40a45ead-7761-4392-b6ff-70bc0c6930e0">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_5},$F{vagas_eja_5})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="703" y="0" width="36" height="15" uuid="fd41d27b-16e5-4f2f-a6e9-23793f94cc7d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_7},$F{vagas_eja_7})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="775" y="0" width="36" height="15" uuid="d457ae72-575c-47ef-b0ee-6a7bedd86bc3">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_9},$F{vagas_eja_9})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.###;(#,###.###-)">
+				<reportElement x="739" y="0" width="36" height="15" uuid="d303403c-40d8-4447-b202-e08c49a06148">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{vagas_eja_8},$F{vagas_eja_8})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="66" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="-21" y="0" width="843" height="30" uuid="e92b6ac0-bbe6-4a80-975a-bad302c30608"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

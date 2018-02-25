@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="diretores" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="36d433b2-d7fc-44c7-85ad-10b0b6f954e8">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[YENFTlNPXzIwMTZgLmBQcm9mZXNzb3IgY29tIGxvdGHn429gIEFTICw5Niw5NSw4YWUyMDhkNi00
+NDM1LTRhNGEtYmRiZS1jMWNhMDVhMjM2Njc7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB local"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Gabinete/RH/Relação_de_Professores_com_suas_lotação_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Gabinete/RH/Relação_de_Professores_com_suas_lotação"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `CENSO_2016`.`Professor com lotação`.`Nome do Professor`,
+	`CENSO_2016`.`Professor com lotação`.`Unidade que atua`
+FROM `CENSO_2016`.`Professor com lotação`]]>
+	</queryString>
+	<field name="Nome do Professor" class="java.lang.String"/>
+	<field name="Unidade que atua" class="java.lang.String"/>
+	<group name="Nome do Professor">
+		<groupExpression><![CDATA[$F{Nome do Professor}]]></groupExpression>
+	</group>
+	<group name="Unidade que atua">
+		<groupExpression><![CDATA[$F{Unidade que atua}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="52" y="-3" width="504" height="53" uuid="8e4ce1d8-f739-4974-89d2-fdfc0f419bc8"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Sans" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PREFEITURA DO MUNICÍPIO DE NOVA IGUAÇU
+SECRETARIA MUNICIPAL DE EDUCAÇÃO
+SUBSECRETARIA DE GESTÃO DE RECURSOS FINANCEIROS
+SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="4" y="-3" width="46" height="50" uuid="e8e56ef0-c196-46e2-aa14-b220e9d9cb7e"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="280" height="18" uuid="9b90255a-3aa1-4174-839c-8d0282f33243"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Profissional Regente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="5" width="276" height="18" uuid="c90a5b16-d37c-427a-a34e-688f2cb5f639"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Unidade de Atuação]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="280" height="20" uuid="bcab8df6-2710-43fa-9a8d-cf1a9d85fb7f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["  " + $F{Nome do Professor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="276" height="20" uuid="14c0b975-63ec-44e2-acc4-88fcfe95db59"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["  " + $F{Unidade que atua}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

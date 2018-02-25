@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio TI por Unidade" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7eafe10-0155-471e-a81e-9cb58f5cd295">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[bmV3c2NoZW1hLmBFc2NvbGFzIGNvbSBMb2NhbGl6YefjbyBlIFNpdHVh5+NvYCAsMTUsMTUsOGQ3
+NDZmYWYtNGMzNy00YjZmLTkzN2QtZDc0MTk1YWM5ZTNiOw==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="207"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="785"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB local"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Sitação_de_Funcionamento_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Sitação_de_Funcionamento"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM CENSO_2016.`Escolas com Localização e Situação`
+ORDER BY CENSO_2016.`Escolas com Localização e Situação`.`Situação de Funcionamento` DESC]]>
+	</queryString>
+	<field name="Unidade" class="java.lang.String"/>
+	<field name="Cidade" class="java.lang.String"/>
+	<field name="Estado" class="java.lang.String"/>
+	<field name="Situação de Funcionamento" class="java.lang.String"/>
+	<field name="Localização" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="76" y="-3" width="494" height="63" uuid="3af6d432-e9b4-413b-b02c-2df2b2e19883"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="1" width="70" height="74" uuid="d5368333-5b8e-4f85-af2f-88908c602784"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="380" height="19" uuid="9b751a0c-3e3a-4170-b11d-2a00af1df69b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Unidade ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="1" width="180" height="19" uuid="a77dabf1-b568-41e4-8fab-35383fa71648"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Situação de Funcionamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="1" width="240" height="19" uuid="eb6c94b0-9039-47e7-a83b-8998170e1681"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Localização]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="380" y="0" width="180" height="20" uuid="dffa50b1-b20c-4e2b-9181-311e2c1821bd"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Situação de Funcionamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="380" height="20" uuid="30976250-2300-48a6-8007-b23491019c8f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Unidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="240" height="20" uuid="ba03156e-a11d-4a34-9220-0084fb121a30"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Localização}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

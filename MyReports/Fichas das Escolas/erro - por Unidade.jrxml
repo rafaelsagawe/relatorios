@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-05-19T12:39:28 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="por Unidade" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8176951b-8a23-43c4-87bb-89dffcfcdbaa">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="ZGJfc2VtZWRfbmkuYFVuaWRhZGVzX0VkdWNhY2lvbmFpc2AgQVMgLDMzLDI0LDNlMTkzMGM4LTQw&#xA;YTktNDQ0OS1iMWE3LTJkYmJjZDNhOTVhYzs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysql - escolas"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM db_semed_ni.`Unidades_Educacionais`
+ORDER BY db_semed_ni.`Unidades_Educacionais`.`URG` ASC]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="Código" class="java.lang.Integer"/>
+	<field name="URG" class="java.lang.String"/>
+	<field name="COD INEP" class="java.lang.String"/>
+	<field name="CNPJ" class="java.lang.String"/>
+	<field name="SIGLA" class="java.lang.String"/>
+	<field name="Nome Curto" class="java.lang.String"/>
+	<field name="Nome completo" class="java.lang.String"/>
+	<field name="Unidade Educacional" class="java.lang.String"/>
+	<field name="Endereço" class="java.lang.String"/>
+	<field name="Bairro" class="java.lang.String"/>
+	<field name="Cidade" class="java.lang.String"/>
+	<field name="CEP" class="java.lang.String"/>
+	<field name="Rural/Urb" class="java.lang.String"/>
+	<field name="Telefone da UE" class="java.lang.String"/>
+	<field name="E-mail da UE" class="java.lang.String"/>
+	<field name="Diretor" class="java.lang.String"/>
+	<field name="Telefone Diretor" class="java.lang.String"/>
+	<field name="E-mail Diretor" class="java.lang.String"/>
+	<field name="Diretor - Adjunto" class="java.lang.String"/>
+	<field name="Telefone Diretor Adjunto" class="java.lang.String"/>
+	<field name="E-mail Diretor Ajunto" class="java.lang.String"/>
+	<field name="Diretor - Adjunto_2" class="java.lang.String"/>
+	<field name="Telefone Diretor Adjunto_2" class="java.lang.String"/>
+	<field name="E-mail Diretor Ajunto_2" class="java.lang.String"/>
+	<field name="Diretor - Adjunto_3" class="java.lang.String"/>
+	<field name="Telefone Diretor Adjunto_3" class="java.lang.String"/>
+	<field name="E-mail Diretor Ajunto_3" class="java.lang.String"/>
+	<field name="Secretário Escolar" class="java.lang.String"/>
+	<field name="Telefone Secretário Escolar" class="java.lang.String"/>
+	<field name="E-mail Secretário Escolar" class="java.lang.String"/>
+	<field name="op_nome" class="java.lang.String"/>
+	<field name="op_email" class="java.lang.String"/>
+	<field name="op_telefone" class="java.lang.String"/>
+	<field name="op_matricula" class="java.lang.String"/>
+	<field name="op_nome_2" class="java.lang.String"/>
+	<field name="op_email_2" class="java.lang.String"/>
+	<field name="op_telefone_2" class="java.lang.String"/>
+	<field name="op_matricula_2" class="java.lang.String"/>
+	<field name="oe_nome" class="java.lang.String"/>
+	<field name="oe_email" class="java.lang.String"/>
+	<field name="oe_telefone" class="java.lang.String"/>
+	<field name="oe_matricula" class="java.lang.String"/>
+	<field name="oe_nome_2" class="java.lang.String"/>
+	<field name="oe_email_2" class="java.lang.String"/>
+	<field name="oe_telefone_2" class="java.lang.String"/>
+	<field name="oe_matricula_2" class="java.lang.String"/>
+	<field name="PROJOVEM URBANO" class="java.lang.String"/>
+	<field name="BRASIL ALFABETIZADO" class="java.lang.String"/>
+	<field name="ESCOLA ABERTA" class="java.lang.String"/>
+	<field name="PRÉ VESTIBULAR SOCIAL" class="java.lang.String"/>
+	<field name="PRÉ TÉCNICO" class="java.lang.String"/>
+	<field name="IDEB 2011" class="java.lang.String"/>
+	<field name="pb_port_5_2011" class="java.lang.String"/>
+	<field name="pb_port_5_2013" class="java.lang.String"/>
+	<field name="pb_port_5_2015" class="java.lang.String"/>
+	<field name="pb_port_5_2017" class="java.lang.String"/>
+	<field name="pb_mat_5_2011" class="java.lang.String"/>
+	<field name="pb_mat_5_2013" class="java.lang.String"/>
+	<field name="pb_mat_5_2015" class="java.lang.String"/>
+	<field name="pb_mat_5_2017" class="java.lang.String"/>
+	<field name="pb_port_9_2011" class="java.lang.String"/>
+	<field name="pb_port_9_2013" class="java.lang.String"/>
+	<field name="pb_port_9_2015" class="java.lang.String"/>
+	<field name="pb_port_9_2017" class="java.lang.String"/>
+	<field name="pb_mat_9_2011" class="java.lang.String"/>
+	<field name="pb_mat_9_2013" class="java.lang.String"/>
+	<field name="pb_mat_9_2015" class="java.lang.String"/>
+	<field name="pb_mat_9_2017" class="java.lang.String"/>
+	<field name="Terreno" class="java.lang.String"/>
+	<field name="Esgotamento" class="java.lang.String"/>
+	<field name="Parte Hidráulica" class="java.lang.String"/>
+	<field name="Parte Elétrica" class="java.lang.String"/>
+	<field name="Iluminação" class="java.lang.String"/>
+	<field name="Tipo de Abastecimento" class="java.lang.String"/>
+	<field name="Portas" class="java.lang.String"/>
+	<field name="Janelas com ou sem Grades" class="java.lang.String"/>
+	<field name="Pintura" class="java.lang.String"/>
+	<field name="Piso" class="java.lang.String"/>
+	<field name="Parede" class="java.lang.String"/>
+	<field name="Teto" class="java.lang.String"/>
+	<field name="Telhado" class="java.lang.String"/>
+	<field name="Delimitação" class="java.lang.String"/>
+	<field name="Acesso ao Entorno" class="java.lang.String"/>
+	<field name="Área Interna" class="java.lang.String"/>
+	<field name="Área Externa" class="java.lang.String"/>
+	<field name="Área Total" class="java.lang.String"/>
+	<field name="Instalação Telefõnica" class="java.lang.String"/>
+	<field name="Rede Lógica" class="java.lang.String"/>
+	<field name="Pátio" class="java.lang.String"/>
+	<field name="DI" class="java.lang.String"/>
+	<field name="DA" class="java.lang.String"/>
+	<field name="DV" class="java.lang.String"/>
+	<field name="DF" class="java.lang.String"/>
+	<field name="AH" class="java.lang.String"/>
+	<field name="TGD" class="java.lang.String"/>
+	<field name="OUTROS" class="java.lang.String"/>
+	<field name="Dados do RX de Fevereiro de 2013" class="java.lang.String"/>
+	<field name="Número de inscrição na Light" class="java.lang.String"/>
+	<field name="QTD SALAS DE AULA" class="java.lang.String"/>
+	<field name="QUADRA COB ou DESC" class="java.lang.String"/>
+	<field name="QUADRA INT ou EXT" class="java.lang.String"/>
+	<field name="SALA MULTIMEIOS" class="java.lang.String"/>
+	<field name="SALA DE RECURSOS" class="java.lang.String"/>
+	<field name="PROINFO" class="java.lang.String"/>
+	<field name="BIBLIOTECA" class="java.lang.String"/>
+	<field name="SALA DE LEITURA" class="java.lang.String"/>
+	<field name="QTD BANHEIROS MASC" class="java.lang.Integer"/>
+	<field name="QTD BANHEIROS FEM" class="java.lang.Integer"/>
+	<field name="QTD BANHEIROS ADAPTADO" class="java.lang.Integer"/>
+	<field name="QTD BANHEIROS PROFESSORES" class="java.lang.Integer"/>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="Código">
+		<groupExpression><![CDATA[$F{Código}]]></groupExpression>
+	</group>
+	<group name="URG">
+		<groupExpression><![CDATA[$F{URG}]]></groupExpression>
+	</group>
+	<group name="COD INEP">
+		<groupExpression><![CDATA[$F{COD INEP}]]></groupExpression>
+	</group>
+	<group name="CNPJ">
+		<groupExpression><![CDATA[$F{CNPJ}]]></groupExpression>
+	</group>
+	<group name="SIGLA">
+		<groupExpression><![CDATA[$F{SIGLA}]]></groupExpression>
+	</group>
+	<group name="Nome Curto">
+		<groupExpression><![CDATA[$F{Nome Curto}]]></groupExpression>
+	</group>
+	<group name="Nome completo">
+		<groupExpression><![CDATA[$F{Nome completo}]]></groupExpression>
+	</group>
+	<group name="Unidade Educacional">
+		<groupExpression><![CDATA[$F{Unidade Educacional}]]></groupExpression>
+	</group>
+	<group name="Endereço">
+		<groupExpression><![CDATA[$F{Endereço}]]></groupExpression>
+	</group>
+	<group name="Bairro">
+		<groupExpression><![CDATA[$F{Bairro}]]></groupExpression>
+	</group>
+	<group name="Cidade">
+		<groupExpression><![CDATA[$F{Cidade}]]></groupExpression>
+	</group>
+	<group name="CEP">
+		<groupExpression><![CDATA[$F{CEP}]]></groupExpression>
+	</group>
+	<group name="Rural/Urb">
+		<groupExpression><![CDATA[$F{Rural/Urb}]]></groupExpression>
+	</group>
+	<group name="Telefone da UE">
+		<groupExpression><![CDATA[$F{Telefone da UE}]]></groupExpression>
+	</group>
+	<group name="E-mail da UE">
+		<groupExpression><![CDATA[$F{E-mail da UE}]]></groupExpression>
+	</group>
+	<group name="Diretor">
+		<groupExpression><![CDATA[$F{Diretor}]]></groupExpression>
+	</group>
+	<group name="Telefone Diretor">
+		<groupExpression><![CDATA[$F{Telefone Diretor}]]></groupExpression>
+	</group>
+	<group name="E-mail Diretor">
+		<groupExpression><![CDATA[$F{E-mail Diretor}]]></groupExpression>
+	</group>
+	<group name="Diretor - Adjunto">
+		<groupExpression><![CDATA[$F{Diretor - Adjunto}]]></groupExpression>
+	</group>
+	<group name="Telefone Diretor Adjunto">
+		<groupExpression><![CDATA[$F{Telefone Diretor Adjunto}]]></groupExpression>
+	</group>
+	<group name="E-mail Diretor Ajunto">
+		<groupExpression><![CDATA[$F{E-mail Diretor Ajunto}]]></groupExpression>
+	</group>
+	<group name="Diretor - Adjunto_2">
+		<groupExpression><![CDATA[$F{Diretor - Adjunto_2}]]></groupExpression>
+	</group>
+	<group name="Telefone Diretor Adjunto_2">
+		<groupExpression><![CDATA[$F{Telefone Diretor Adjunto_2}]]></groupExpression>
+	</group>
+	<group name="E-mail Diretor Ajunto_2">
+		<groupExpression><![CDATA[$F{E-mail Diretor Ajunto_2}]]></groupExpression>
+	</group>
+	<group name="Diretor - Adjunto_3">
+		<groupExpression><![CDATA[$F{Diretor - Adjunto_3}]]></groupExpression>
+	</group>
+	<group name="Telefone Diretor Adjunto_3">
+		<groupExpression><![CDATA[$F{Telefone Diretor Adjunto_3}]]></groupExpression>
+	</group>
+	<group name="E-mail Diretor Ajunto_3">
+		<groupExpression><![CDATA[$F{E-mail Diretor Ajunto_3}]]></groupExpression>
+	</group>
+	<group name="Secretário Escolar">
+		<groupExpression><![CDATA[$F{Secretário Escolar}]]></groupExpression>
+	</group>
+	<group name="Telefone Secretário Escolar">
+		<groupExpression><![CDATA[$F{Telefone Secretário Escolar}]]></groupExpression>
+	</group>
+	<group name="E-mail Secretário Escolar">
+		<groupExpression><![CDATA[$F{E-mail Secretário Escolar}]]></groupExpression>
+	</group>
+	<group name="op_nome">
+		<groupExpression><![CDATA[$F{op_nome}]]></groupExpression>
+	</group>
+	<group name="op_email">
+		<groupExpression><![CDATA[$F{op_email}]]></groupExpression>
+	</group>
+	<group name="op_telefone">
+		<groupExpression><![CDATA[$F{op_telefone}]]></groupExpression>
+	</group>
+	<group name="op_matricula">
+		<groupExpression><![CDATA[$F{op_matricula}]]></groupExpression>
+	</group>
+	<group name="op_nome_2">
+		<groupExpression><![CDATA[$F{op_nome_2}]]></groupExpression>
+	</group>
+	<group name="op_email_2">
+		<groupExpression><![CDATA[$F{op_email_2}]]></groupExpression>
+	</group>
+	<group name="op_telefone_2">
+		<groupExpression><![CDATA[$F{op_telefone_2}]]></groupExpression>
+	</group>
+	<group name="op_matricula_2">
+		<groupExpression><![CDATA[$F{op_matricula_2}]]></groupExpression>
+	</group>
+	<group name="oe_nome">
+		<groupExpression><![CDATA[$F{oe_nome}]]></groupExpression>
+	</group>
+	<group name="oe_email">
+		<groupExpression><![CDATA[$F{oe_email}]]></groupExpression>
+	</group>
+	<group name="oe_telefone">
+		<groupExpression><![CDATA[$F{oe_telefone}]]></groupExpression>
+	</group>
+	<group name="oe_matricula">
+		<groupExpression><![CDATA[$F{oe_matricula}]]></groupExpression>
+	</group>
+	<group name="oe_nome_2">
+		<groupExpression><![CDATA[$F{oe_nome_2}]]></groupExpression>
+	</group>
+	<group name="oe_email_2">
+		<groupExpression><![CDATA[$F{oe_email_2}]]></groupExpression>
+	</group>
+	<group name="oe_telefone_2">
+		<groupExpression><![CDATA[$F{oe_telefone_2}]]></groupExpression>
+	</group>
+	<group name="oe_matricula_2">
+		<groupExpression><![CDATA[$F{oe_matricula_2}]]></groupExpression>
+	</group>
+	<group name="PROJOVEM URBANO">
+		<groupExpression><![CDATA[$F{PROJOVEM URBANO}]]></groupExpression>
+	</group>
+	<group name="BRASIL ALFABETIZADO">
+		<groupExpression><![CDATA[$F{BRASIL ALFABETIZADO}]]></groupExpression>
+	</group>
+	<group name="ESCOLA ABERTA">
+		<groupExpression><![CDATA[$F{ESCOLA ABERTA}]]></groupExpression>
+	</group>
+	<group name="PRÉ VESTIBULAR SOCIAL">
+		<groupExpression><![CDATA[$F{PRÉ VESTIBULAR SOCIAL}]]></groupExpression>
+	</group>
+	<group name="PRÉ TÉCNICO">
+		<groupExpression><![CDATA[$F{PRÉ TÉCNICO}]]></groupExpression>
+	</group>
+	<group name="IDEB 2011">
+		<groupExpression><![CDATA[$F{IDEB 2011}]]></groupExpression>
+	</group>
+	<group name="pb_port_5_2011">
+		<groupExpression><![CDATA[$F{pb_port_5_2011}]]></groupExpression>
+	</group>
+	<group name="pb_port_5_2013">
+		<groupExpression><![CDATA[$F{pb_port_5_2013}]]></groupExpression>
+	</group>
+	<group name="pb_port_5_2015">
+		<groupExpression><![CDATA[$F{pb_port_5_2015}]]></groupExpression>
+	</group>
+	<group name="pb_port_5_2017">
+		<groupExpression><![CDATA[$F{pb_port_5_2017}]]></groupExpression>
+	</group>
+	<group name="pb_mat_5_2011">
+		<groupExpression><![CDATA[$F{pb_mat_5_2011}]]></groupExpression>
+	</group>
+	<group name="pb_mat_5_2013">
+		<groupExpression><![CDATA[$F{pb_mat_5_2013}]]></groupExpression>
+	</group>
+	<group name="pb_mat_5_2015">
+		<groupExpression><![CDATA[$F{pb_mat_5_2015}]]></groupExpression>
+	</group>
+	<group name="pb_mat_5_2017">
+		<groupExpression><![CDATA[$F{pb_mat_5_2017}]]></groupExpression>
+	</group>
+	<group name="pb_port_9_2011">
+		<groupExpression><![CDATA[$F{pb_port_9_2011}]]></groupExpression>
+	</group>
+	<group name="pb_port_9_2013">
+		<groupExpression><![CDATA[$F{pb_port_9_2013}]]></groupExpression>
+	</group>
+	<group name="pb_port_9_2015">
+		<groupExpression><![CDATA[$F{pb_port_9_2015}]]></groupExpression>
+	</group>
+	<group name="pb_port_9_2017">
+		<groupExpression><![CDATA[$F{pb_port_9_2017}]]></groupExpression>
+	</group>
+	<group name="pb_mat_9_2011">
+		<groupExpression><![CDATA[$F{pb_mat_9_2011}]]></groupExpression>
+	</group>
+	<group name="pb_mat_9_2013">
+		<groupExpression><![CDATA[$F{pb_mat_9_2013}]]></groupExpression>
+	</group>
+	<group name="pb_mat_9_2015">
+		<groupExpression><![CDATA[$F{pb_mat_9_2015}]]></groupExpression>
+	</group>
+	<group name="pb_mat_9_2017">
+		<groupExpression><![CDATA[$F{pb_mat_9_2017}]]></groupExpression>
+	</group>
+	<group name="Terreno">
+		<groupExpression><![CDATA[$F{Terreno}]]></groupExpression>
+	</group>
+	<group name="Esgotamento">
+		<groupExpression><![CDATA[$F{Esgotamento}]]></groupExpression>
+	</group>
+	<group name="Parte Hidráulica">
+		<groupExpression><![CDATA[$F{Parte Hidráulica}]]></groupExpression>
+	</group>
+	<group name="Parte Elétrica">
+		<groupExpression><![CDATA[$F{Parte Elétrica}]]></groupExpression>
+	</group>
+	<group name="Iluminação">
+		<groupExpression><![CDATA[$F{Iluminação}]]></groupExpression>
+	</group>
+	<group name="Tipo de Abastecimento">
+		<groupExpression><![CDATA[$F{Tipo de Abastecimento}]]></groupExpression>
+	</group>
+	<group name="Portas">
+		<groupExpression><![CDATA[$F{Portas}]]></groupExpression>
+	</group>
+	<group name="Janelas com ou sem Grades">
+		<groupExpression><![CDATA[$F{Janelas com ou sem Grades}]]></groupExpression>
+	</group>
+	<group name="Pintura">
+		<groupExpression><![CDATA[$F{Pintura}]]></groupExpression>
+	</group>
+	<group name="Piso">
+		<groupExpression><![CDATA[$F{Piso}]]></groupExpression>
+	</group>
+	<group name="Parede">
+		<groupExpression><![CDATA[$F{Parede}]]></groupExpression>
+	</group>
+	<group name="Teto">
+		<groupExpression><![CDATA[$F{Teto}]]></groupExpression>
+	</group>
+	<group name="Telhado">
+		<groupExpression><![CDATA[$F{Telhado}]]></groupExpression>
+	</group>
+	<group name="Delimitação">
+		<groupExpression><![CDATA[$F{Delimitação}]]></groupExpression>
+	</group>
+	<group name="Acesso ao Entorno">
+		<groupExpression><![CDATA[$F{Acesso ao Entorno}]]></groupExpression>
+	</group>
+	<group name="Área Interna">
+		<groupExpression><![CDATA[$F{Área Interna}]]></groupExpression>
+	</group>
+	<group name="Área Externa">
+		<groupExpression><![CDATA[$F{Área Externa}]]></groupExpression>
+	</group>
+	<group name="Área Total">
+		<groupExpression><![CDATA[$F{Área Total}]]></groupExpression>
+	</group>
+	<group name="Instalação Telefõnica">
+		<groupExpression><![CDATA[$F{Instalação Telefõnica}]]></groupExpression>
+	</group>
+	<group name="Rede Lógica">
+		<groupExpression><![CDATA[$F{Rede Lógica}]]></groupExpression>
+	</group>
+	<group name="Pátio">
+		<groupExpression><![CDATA[$F{Pátio}]]></groupExpression>
+	</group>
+	<group name="DI">
+		<groupExpression><![CDATA[$F{DI}]]></groupExpression>
+	</group>
+	<group name="DA">
+		<groupExpression><![CDATA[$F{DA}]]></groupExpression>
+	</group>
+	<group name="DV">
+		<groupExpression><![CDATA[$F{DV}]]></groupExpression>
+	</group>
+	<group name="DF">
+		<groupExpression><![CDATA[$F{DF}]]></groupExpression>
+	</group>
+	<group name="AH">
+		<groupExpression><![CDATA[$F{AH}]]></groupExpression>
+	</group>
+	<group name="TGD">
+		<groupExpression><![CDATA[$F{TGD}]]></groupExpression>
+	</group>
+	<group name="OUTROS">
+		<groupExpression><![CDATA[$F{OUTROS}]]></groupExpression>
+	</group>
+	<group name="Dados do RX de Fevereiro de 2013">
+		<groupExpression><![CDATA[$F{Dados do RX de Fevereiro de 2013}]]></groupExpression>
+	</group>
+	<group name="Número de inscrição na Light">
+		<groupExpression><![CDATA[$F{Número de inscrição na Light}]]></groupExpression>
+	</group>
+	<group name="QTD SALAS DE AULA">
+		<groupExpression><![CDATA[$F{QTD SALAS DE AULA}]]></groupExpression>
+	</group>
+	<group name="QUADRA COB ou DESC">
+		<groupExpression><![CDATA[$F{QUADRA COB ou DESC}]]></groupExpression>
+	</group>
+	<group name="QUADRA INT ou EXT">
+		<groupExpression><![CDATA[$F{QUADRA INT ou EXT}]]></groupExpression>
+	</group>
+	<group name="SALA MULTIMEIOS">
+		<groupExpression><![CDATA[$F{SALA MULTIMEIOS}]]></groupExpression>
+	</group>
+	<group name="SALA DE RECURSOS">
+		<groupExpression><![CDATA[$F{SALA DE RECURSOS}]]></groupExpression>
+	</group>
+	<group name="PROINFO">
+		<groupExpression><![CDATA[$F{PROINFO}]]></groupExpression>
+	</group>
+	<group name="BIBLIOTECA">
+		<groupExpression><![CDATA[$F{BIBLIOTECA}]]></groupExpression>
+	</group>
+	<group name="SALA DE LEITURA">
+		<groupExpression><![CDATA[$F{SALA DE LEITURA}]]></groupExpression>
+	</group>
+	<group name="QTD BANHEIROS MASC">
+		<groupExpression><![CDATA[$F{QTD BANHEIROS MASC}]]></groupExpression>
+	</group>
+	<group name="QTD BANHEIROS FEM">
+		<groupExpression><![CDATA[$F{QTD BANHEIROS FEM}]]></groupExpression>
+	</group>
+	<group name="QTD BANHEIROS ADAPTADO">
+		<groupExpression><![CDATA[$F{QTD BANHEIROS ADAPTADO}]]></groupExpression>
+	</group>
+	<group name="QTD BANHEIROS PROFESSORES">
+		<groupExpression><![CDATA[$F{QTD BANHEIROS PROFESSORES}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="398" height="100" uuid="24e8c18a-14f6-4199-8437-0a8214de4464"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação
+Subsecretaria de Gestão de Recursos Financeiro
+Setor de Tecnologia da Informação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="5" y="0" width="70" height="74" uuid="0f2950ef-e259-408c-a564-ddf1ae9d4431"/>
+				<imageExpression><![CDATA["C:/Users/TI/Desktop/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="24" width="380" height="30" uuid="90c30419-520d-4ab9-961b-6a5a96078b37"/>
+				<textFieldExpression><![CDATA[$F{Unidade Educacional}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

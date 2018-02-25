@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio TI por Unidade" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7eafe10-0155-471e-a81e-9cb58f5cd295">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[bmV3c2NoZW1hLmBFc2NvbGFzIGVxdWlwYW1lbnRvcyBkZSBUSWAgLDE1LDE1LDJkMWFkYTY0LTFj
+M2YtNGVmYy1hYTA4LTY5NGE5YTI1NzA4NTs=]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="207"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="785"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB local"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT SUM(*),
+	newschema.`Escolas equipamentos de TI`.`Quantiade de Retroprojetor`,
+	newschema.`Escolas equipamentos de TI`.`Total de computadores da Unidade`,
+	newschema.`Escolas equipamentos de TI`.`Quantiade de copiadoras`,
+	newschema.`Escolas equipamentos de TI`.`Quantiade de impressoras`,
+	newschema.`Escolas equipamentos de TI`.`Quantiade de multifuncional?`
+FROM newschema.`Escolas equipamentos de TI`]]>
+	</queryString>
+	<field name="CO_ENTIDADE" class="java.lang.Integer"/>
+	<field name="NO_ENTIDADE" class="java.lang.String"/>
+	<field name="Localização" class="java.lang.String"/>
+	<field name="A unidade possui retroprojetor?" class="java.lang.String"/>
+	<field name="Quantiade de Retroprojetor" class="java.lang.String"/>
+	<field name="Computadores para uso dos alunos" class="java.lang.String"/>
+	<field name="Computadores para uso administrativo" class="java.lang.String"/>
+	<field name="Total de computadores da Unidade" class="java.lang.String"/>
+	<field name="Internet" class="java.lang.String"/>
+	<field name="Banda larga" class="java.lang.String"/>
+	<field name="A unidade possui copiadora?" class="java.lang.String"/>
+	<field name="Quantiade de copiadoras" class="java.lang.String"/>
+	<field name="A unidade possui impressora?" class="java.lang.String"/>
+	<field name="Quantiade de impressoras" class="java.lang.String"/>
+	<field name="A unidade possui multifuncional?" class="java.lang.String"/>
+	<field name="Quantiade de multifuncional?" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="503" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="138" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
