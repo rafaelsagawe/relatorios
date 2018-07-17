@@ -74,12 +74,12 @@ SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
 				<text><![CDATA[Nome do Professor]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="185" y="0" width="185" height="20" uuid="f33a78fe-d6b6-49d2-adae-1b4fde44cbed"/>
+				<reportElement x="200" y="0" width="150" height="20" uuid="f33a78fe-d6b6-49d2-adae-1b4fde44cbed"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Turma]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="370" y="0" width="185" height="20" uuid="46dfa4a1-54c5-4f15-b0db-7ab873b2eb02"/>
+				<reportElement x="350" y="0" width="204" height="20" uuid="46dfa4a1-54c5-4f15-b0db-7ab873b2eb02"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Unidade]]></text>
 			</staticText>

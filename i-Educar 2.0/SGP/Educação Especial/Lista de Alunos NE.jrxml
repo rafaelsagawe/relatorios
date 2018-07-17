@@ -26,7 +26,22 @@ join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes]]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="50" splitType="Stretch">
+			<image>
+				<reportElement x="4" y="-3" width="46" height="50" uuid="872f1ddc-b08c-44a1-b2ed-66452e62b015"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="52" y="-3" width="504" height="53" uuid="96c39943-e041-49c4-8f87-cb6a37bf389b"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Sans" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PREFEITURA DO MUNICÍPIO DE NOVA IGUAÇU
+SECRETARIA MUNICIPAL DE EDUCAÇÃO
+SUBSECRETARIA DE GESTÃO DE RECURSOS FINANCEIROS
+SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
+			</staticText>
+		</band>
 	</title>
 	<pageHeader>
 		<band height="35" splitType="Stretch"/>

@@ -253,7 +253,7 @@ Secretaria Municipal de Educação]]></text>
 				</crosstabCell>
 			</crosstab>
 			<staticText>
-				<reportElement x="-20" y="64" width="841" height="30" uuid="ad5cc180-c724-4982-a89d-2c76111fe08f"/>
+				<reportElement x="-10" y="64" width="1069" height="30" uuid="ad5cc180-c724-4982-a89d-2c76111fe08f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="16" isBold="true"/>
 				</textElement>
@@ -267,7 +267,7 @@ Secretaria Municipal de Educação]]></text>
 	<pageFooter>
 		<band height="30" splitType="Stretch">
 			<textField>
-				<reportElement x="-21" y="0" width="843" height="30" uuid="e92b6ac0-bbe6-4a80-975a-bad302c30608"/>
+				<reportElement x="-21" y="0" width="1098" height="30" uuid="e92b6ac0-bbe6-4a80-975a-bad302c30608"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
