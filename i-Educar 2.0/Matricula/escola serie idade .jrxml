@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="escola serie idade " pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60b95ea5-9d6c-4768-bf92-9c49a50f37f2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="85b7f797-810e-4969-8ddd-991799cabedf">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[-- idade dos alunos
+select distinct
+alunos.Idade, alunos.serie, cadastro.pessoa.nome
+from 
+	(
+	-- Listagem de alunos com data de nascimento e idade
+	select
+	cadastro.pessoa.nome as nm_aluno,
+	--cadastro.fisica.idpes,
+	cadastro.fisica.data_nasc as DataNascimento,
+	cast (extract (year from age(cadastro.fisica.data_nasc)) as integer) as Idade,
+	pmieducar.serie.nm_serie as serie,
+	pmieducar.matricula.ref_ref_cod_escola
+	--pmieducar.aluno.cod_aluno
+	--extract (year from age(cadastro.fisica.data_nasc)) -- cria a idade com ponto flutuante
+	from cadastro.fisica
+	join cadastro.pessoa on cadastro.pessoa.idpes=cadastro.fisica.idpes
+	join pmieducar.aluno on pmieducar.aluno.ref_idpes=cadastro.fisica.idpes
+	join pmieducar.matricula on pmieducar.matricula.ref_cod_aluno=pmieducar.aluno.cod_aluno
+	join pmieducar.serie on pmieducar.serie.cod_serie=pmieducar.matricula.ref_ref_cod_serie
+	)
+as alunos
+join pmieducar.escola on pmieducar.escola.cod_escola=alunos.ref_ref_cod_escola
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.escola.ref_idpes]]>
+		</queryString>
+		<field name="idade" class="java.lang.Integer"/>
+		<field name="serie" class="java.lang.String"/>
+		<field name="nome" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[-- idade dos alunos
+select distinct
+alunos.Idade, alunos.serie, cadastro.pessoa.nome
+from 
+	(
+	-- Listagem de alunos com data de nascimento e idade
+	select
+	cadastro.pessoa.nome as nm_aluno,
+	--cadastro.fisica.idpes,
+	cadastro.fisica.data_nasc as DataNascimento,
+	cast (extract (year from age(cadastro.fisica.data_nasc)) as integer) as Idade,
+	pmieducar.serie.nm_serie as serie,
+	pmieducar.matricula.ref_ref_cod_escola
+	--pmieducar.aluno.cod_aluno
+	--extract (year from age(cadastro.fisica.data_nasc)) -- cria a idade com ponto flutuante
+	from cadastro.fisica
+	join cadastro.pessoa on cadastro.pessoa.idpes=cadastro.fisica.idpes
+	join pmieducar.aluno on pmieducar.aluno.ref_idpes=cadastro.fisica.idpes
+	join pmieducar.matricula on pmieducar.matricula.ref_cod_aluno=pmieducar.aluno.cod_aluno
+	join pmieducar.serie on pmieducar.serie.cod_serie=pmieducar.matricula.ref_ref_cod_serie
+	)
+as alunos
+join pmieducar.escola on pmieducar.escola.cod_escola=alunos.ref_ref_cod_escola
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.escola.ref_idpes]]>
+	</queryString>
+	<field name="idade" class="java.lang.Integer"/>
+	<field name="serie" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="253" splitType="Stretch">
+			<crosstab>
+				<reportElement x="0" y="0" width="800" height="200" uuid="cee80fff-f3d2-448b-9240-a944f6386204">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+					<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+					<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+					<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+				</reportElement>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="Dataset1" uuid="083f24fd-b341-4e9b-a38f-8f63a3c24105">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="nome" width="60" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nome}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CH">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="20" uuid="141f0451-b974-4f98-a9f4-3c0a48159eed"/>
+								<textFieldExpression><![CDATA[$V{nome}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="5de4d489-9f0a-4228-bc2c-321d8e1e1dc9"/>
+								<text><![CDATA[Total nome]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="serie" height="20" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{serie}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CH">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="20" uuid="82f1dfa4-4d68-4289-a996-5e78aaa8b9f7"/>
+								<textFieldExpression><![CDATA[$V{serie}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="7ac78d2e-8c04-4dff-ad31-53c57c72cf47"/>
+								<text><![CDATA[Total serie]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="idade_MEASURE" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[$F{idade}]]></measureExpression>
+				</measure>
+				<crosstabCell width="60" height="20">
+					<cellContents mode="Opaque" style="Crosstab_CD">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" uuid="3f8c4e8f-bfd7-4e29-9ea5-a3e887ac8ab6"/>
+							<textFieldExpression><![CDATA[$V{idade_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" columnTotalGroup="serie">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="61653c5b-725a-45bc-bb16-e98f3fc7d9d8"/>
+							<textFieldExpression><![CDATA[$V{idade_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="nome">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="0969d0fa-9e58-42cd-be00-a7ed050d7f1a"/>
+							<textFieldExpression><![CDATA[$V{idade_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="nome" columnTotalGroup="serie">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="3f8b05f3-fb16-4b81-b563-0f15113b5559"/>
+							<textFieldExpression><![CDATA[$V{idade_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

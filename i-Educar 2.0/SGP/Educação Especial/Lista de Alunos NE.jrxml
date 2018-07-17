@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Lista de Alunos NE" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc518395-ab5b-4689-9354-909b14ac6308">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/SGP/Educação_Especial/Lista_de_Alunos_NE_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/SGP/Educação_Especial/Lista_de_Alunos_NE"/>
+	<queryString language="SQL">
+		<![CDATA[select  
+--cadastro.fisica_deficiencia.ref_idpes,
+cadastro.pessoa.nome,
+pmieducar.aluno.ref_idpes,
+cadastro.deficiencia.nm_deficiencia
+from cadastro.fisica_deficiencia
+join cadastro.deficiencia on cadastro.deficiencia.cod_deficiencia=cadastro.fisica_deficiencia.ref_cod_deficiencia
+-- Filtro para sá aparecer os alunos
+join pmieducar.aluno on pmieducar.aluno.ref_idpes=cadastro.fisica_deficiencia.ref_idpes
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="ref_idpes" class="java.lang.Integer"/>
+	<field name="nm_deficiencia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="260" height="30" uuid="0cdd5c5d-d334-46de-80b5-e7053d0e493c"/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="0" width="295" height="30" uuid="dcd3cf12-be17-4264-a248-da6c0a77f355"/>
+				<text><![CDATA[nm_deficiencia]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="260" height="30" uuid="5a09ecd3-56b8-4a11-bcbc-e0196612314a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5" spacingBefore="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="295" height="30" uuid="f52485c7-ed48-4639-9f93-3417983f3b8a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5" spacingBefore="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_deficiencia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

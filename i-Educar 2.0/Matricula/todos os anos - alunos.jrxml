@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="todos os anos" pageWidth="1097" pageHeight="595" orientation="Landscape" columnWidth="1057" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b404a72b-d76e-453f-bec7-134d0cbcc0ff">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Matricula/Todos_os_alunos_por_ano_de_Escolaridade_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Matricula/Todos_os_alunos_por_ano_de_Escolaridade"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#85BEBE">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#CFE6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#598080">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="8343dac4-9530-48f1-b2d8-12228bf4a874">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[select 
+pmieducar.matricula.ref_cod_aluno as "QTD aluno",
+pmieducar.serie.nm_serie,
+cadastro.juridica.fantasia as ue
+from pmieducar.matricula
+join pmieducar.serie
+on pmieducar.serie.cod_serie=pmieducar.matricula.ref_ref_cod_serie
+join pmieducar.escola
+on pmieducar.matricula.ref_ref_cod_escola=pmieducar.escola.cod_escola
+join cadastro.juridica
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes
+order by 
+pmieducar.serie.nm_serie]]>
+		</queryString>
+		<field name="QTD aluno" class="java.lang.Integer"/>
+		<field name="nm_serie" class="java.lang.String"/>
+		<field name="ue" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select  distinct
+pmieducar.matricula.ref_cod_aluno as "QTD aluno",
+pmieducar.serie.nm_serie,
+cadastro.juridica.fantasia as ue
+from pmieducar.matricula
+join pmieducar.serie
+on pmieducar.serie.cod_serie=pmieducar.matricula.ref_ref_cod_serie
+join pmieducar.escola
+on pmieducar.matricula.ref_ref_cod_escola=pmieducar.escola.cod_escola
+join cadastro.juridica
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes
+order by 
+pmieducar.serie.nm_serie]]>
+	</queryString>
+	<field name="QTD aluno" class="java.lang.Integer"/>
+	<field name="nm_serie" class="java.lang.String"/>
+	<field name="ue" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="488" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="79" y="0" width="493" height="65" uuid="317855b0-3620-4698-87a9-c07eac1e1d22"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="19" y="0" width="55" height="65" uuid="29f61060-cb53-4676-9773-d6b24643886d"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<crosstab>
+				<reportElement x="-10" y="106" width="1070" height="98" uuid="882b0453-43dc-4222-abc0-cee58e7b0e20">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab 1_CH"/>
+					<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab 1_CG"/>
+					<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab 1_CT"/>
+					<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab 1_CD"/>
+				</reportElement>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="Dataset1" uuid="bf98c4bc-59f6-4e67-b2ce-a1a823d6e7db">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="ue" width="220" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{ue}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 1_CH">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="220" height="20" uuid="3447301a-960b-4355-b598-384ca338ef11"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<paragraph firstLineIndent="3"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{ue}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 1_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="220" height="20" forecolor="#FFFFFF" uuid="135647d6-5127-44f7-9663-3ad242737ed9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total de alunos na seire]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="nm_serie" height="20" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{nm_serie}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab 1_CG">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="60" height="20" uuid="8af26b87-fde3-49eb-b699-8df9eb42daa6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph firstLineIndent="3"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{nm_serie}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab 1_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="83affec2-7fc2-450d-86f3-d36be42d4a68"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total nm_serie]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="QTD aluno_MEASURE" class="java.lang.Integer" calculation="DistinctCount">
+					<measureExpression><![CDATA[$F{QTD aluno}]]></measureExpression>
+				</measure>
+				<crosstabCell width="60" height="20">
+					<cellContents mode="Opaque" style="Crosstab 1_CD">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" uuid="96f933dc-9fa0-4fee-ac8f-586d6714640b"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{QTD aluno_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" columnTotalGroup="nm_serie">
+					<cellContents mode="Opaque" style="Crosstab 1_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="f5e53607-bfe7-45f8-a499-abe118d717eb"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{QTD aluno_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="ue">
+					<cellContents mode="Opaque" style="Crosstab 1_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="99338f44-b9b5-487c-8d76-6b07b022d0b4"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{QTD aluno_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="ue" columnTotalGroup="nm_serie">
+					<cellContents mode="Opaque" style="Crosstab 1_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="647bd243-c8c0-4ddb-8428-1ae5b24ce3ed"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{QTD aluno_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+			<staticText>
+				<reportElement x="-20" y="64" width="841" height="30" uuid="ad5cc180-c724-4982-a89d-2c76111fe08f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de Alunos por Ano de Escolaridade]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch"/>
+	</pageHeader>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="-21" y="0" width="843" height="30" uuid="e92b6ac0-bbe6-4a80-975a-bad302c30608"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="60" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</summary>
+</jasperReport>

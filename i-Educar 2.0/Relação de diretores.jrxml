@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relação de diretores" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad23da24-075f-47a8-b270-221222f1dee8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Relação_de_diretores_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Relação_de_diretores"/>
+	<queryString language="SQL">
+		<![CDATA[-- Relação de diretores inep - Escola - Nome do Diretor - Telefone diretor
+select distinct
+modules.educacenso_cod_escola.cod_escola_inep as INEP,
+cadastro.juridica.fantasia,
+cadastro.pessoa.nome,
+pmieducar.escola.email_gestor
+from pmieducar.escola
+join cadastro.juridica
+on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join modules.educacenso_cod_escola
+on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola
+join cadastro.pessoa
+on cadastro.pessoa.idpes=pmieducar.escola.ref_idpes_gestor
+order by cadastro.juridica.fantasia]]>
+	</queryString>
+	<field name="inep" class="java.lang.Long"/>
+	<field name="fantasia" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="email_gestor" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="52" y="-3" width="504" height="53" uuid="f534a65f-ec9f-4340-8a2f-7f1dbc406d4a"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Sans" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PREFEITURA DO MUNICÍPIO DE NOVA IGUAÇU
+SECRETARIA MUNICIPAL DE EDUCAÇÃO
+SUBSECRETARIA DE GESTÃO DE RECURSOS FINANCEIROS
+SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="4" y="-3" width="46" height="50" uuid="0fa1a33b-0789-4637-8a04-afddd09ee4b3"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="320" height="20" uuid="b5cef8c9-cc3f-49d8-b3b2-e8ef4456a3c0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Unidade Escolar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="320" y="0" width="236" height="20" uuid="bdfda5f3-2c4f-4300-a965-215e523e779e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nome do Diretor(a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="556" y="0" width="236" height="20" uuid="a9add7c4-1049-486e-9abf-df50878523fe"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="320" height="20" uuid="36124217-1936-4f5b-943b-e690ebe3322c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inep} + " - " + $F{fantasia}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="320" y="0" width="236" height="20" uuid="9b4f3e35-4621-4f3e-abeb-96edf8b239ff"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph firstLineIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="556" y="0" width="236" height="20" uuid="c4ec7a74-054b-4af8-ad12-3b5e81b1a604"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph firstLineIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email_gestor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

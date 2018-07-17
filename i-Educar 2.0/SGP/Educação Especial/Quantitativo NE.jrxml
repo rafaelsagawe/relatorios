@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Quantitativo NE" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47679c83-cb89-43fd-886c-5670d16e531f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/SGP/Educação_Especial/Quantitativo_NE_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/SGP/Educação_Especial/Quantitativo_NE"/>
+	<queryString language="SQL">
+		<![CDATA[select  
+count (pmieducar.aluno.ref_idpes),
+cadastro.deficiencia.nm_deficiencia
+from cadastro.fisica_deficiencia
+join cadastro.deficiencia on cadastro.deficiencia.cod_deficiencia=cadastro.fisica_deficiencia.ref_cod_deficiencia
+-- Filtro para sá aparecer os alunos
+join pmieducar.aluno on pmieducar.aluno.ref_idpes=cadastro.fisica_deficiencia.ref_idpes
+group by cadastro.deficiencia.nm_deficiencia]]>
+	</queryString>
+	<field name="count" class="java.lang.Long"/>
+	<field name="nm_deficiencia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="0" width="138" height="30" uuid="0b85fecd-ab82-4644-ae04-d0e07c24a3ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="202" height="30" uuid="ae335aaa-6f9b-49d2-9532-cc9dcc0cd6a5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Necessidade ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="0" width="138" height="20" uuid="b56c3824-6a20-46ea-ae72-a217e565cfe6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="202" height="20" uuid="c899eb4e-7e27-45e2-a978-d79a23d9ed36"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nm_deficiencia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,1775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="mapa_matricula_estatistica" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df83ba13-e9ee-4aff-93a1-6c4f5d08b104">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="banco de dados - intranet"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Gabinete/Matricula/idade_ano_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Gabinete/Matricula/idade_ano"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM escolas.distorcao]]>
+	</queryString>
+	<field name="nome_ue" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="cnpj" class="java.lang.String"/>
+	<field name="inep" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="situcao" class="java.lang.String"/>
+	<field name="COL 7" class="java.lang.String"/>
+	<field name="data_finalizacao" class="java.lang.String"/>
+	<field name="duração" class="java.lang.String"/>
+	<field name="COL 14" class="java.lang.String"/>
+	<field name="idade2-inf2" class="java.math.BigDecimal"/>
+	<field name="idade2-inf3" class="java.math.BigDecimal"/>
+	<field name="idade2-inf4" class="java.math.BigDecimal"/>
+	<field name="idade2-inf5" class="java.math.BigDecimal"/>
+	<field name="idade2-1ano" class="java.math.BigDecimal"/>
+	<field name="idade2-2ano" class="java.math.BigDecimal"/>
+	<field name="idade2-3ano" class="java.math.BigDecimal"/>
+	<field name="idade2-4ano" class="java.math.BigDecimal"/>
+	<field name="idade2-5ano" class="java.math.BigDecimal"/>
+	<field name="idade2-6ano" class="java.math.BigDecimal"/>
+	<field name="idade2-7ano" class="java.math.BigDecimal"/>
+	<field name="idade2-8ano" class="java.math.BigDecimal"/>
+	<field name="idade2-9ano" class="java.math.BigDecimal"/>
+	<field name="idade3-inf2" class="java.math.BigDecimal"/>
+	<field name="idade3-inf3" class="java.math.BigDecimal"/>
+	<field name="idade3-inf4" class="java.math.BigDecimal"/>
+	<field name="idade3-inf5" class="java.math.BigDecimal"/>
+	<field name="idade3-1ano" class="java.math.BigDecimal"/>
+	<field name="idade3-2ano" class="java.math.BigDecimal"/>
+	<field name="idade3-3ano" class="java.math.BigDecimal"/>
+	<field name="idade3-4ano" class="java.math.BigDecimal"/>
+	<field name="idade3-5ano" class="java.math.BigDecimal"/>
+	<field name="idade3-6ano" class="java.math.BigDecimal"/>
+	<field name="idade3-7ano" class="java.math.BigDecimal"/>
+	<field name="idade3-8ano" class="java.math.BigDecimal"/>
+	<field name="idade3-9ano" class="java.math.BigDecimal"/>
+	<field name="idade4-inf2" class="java.math.BigDecimal"/>
+	<field name="idade4-inf3" class="java.math.BigDecimal"/>
+	<field name="idade4-inf4" class="java.math.BigDecimal"/>
+	<field name="idade4-inf5" class="java.math.BigDecimal"/>
+	<field name="idade4-1ano" class="java.math.BigDecimal"/>
+	<field name="idade4-2ano" class="java.math.BigDecimal"/>
+	<field name="idade4-3ano" class="java.math.BigDecimal"/>
+	<field name="idade4-4ano" class="java.math.BigDecimal"/>
+	<field name="idade4-5ano" class="java.math.BigDecimal"/>
+	<field name="idade4-6ano" class="java.math.BigDecimal"/>
+	<field name="idade4-7ano" class="java.math.BigDecimal"/>
+	<field name="idade4-8ano" class="java.math.BigDecimal"/>
+	<field name="idade4-9ano" class="java.math.BigDecimal"/>
+	<field name="5ano-inf2" class="java.math.BigDecimal"/>
+	<field name="5ano-inf3" class="java.math.BigDecimal"/>
+	<field name="5ano-inf4" class="java.math.BigDecimal"/>
+	<field name="5ano-inf5" class="java.math.BigDecimal"/>
+	<field name="idade5-1ano" class="java.math.BigDecimal"/>
+	<field name="idade5-2ano" class="java.math.BigDecimal"/>
+	<field name="idade5-3ano" class="java.math.BigDecimal"/>
+	<field name="idade5-4ano" class="java.math.BigDecimal"/>
+	<field name="idade5-5ano" class="java.math.BigDecimal"/>
+	<field name="idade5-6ano" class="java.math.BigDecimal"/>
+	<field name="idade5-7ano" class="java.math.BigDecimal"/>
+	<field name="idade5-8ano" class="java.math.BigDecimal"/>
+	<field name="idade5-9ano" class="java.math.BigDecimal"/>
+	<field name="idade6-inf2" class="java.math.BigDecimal"/>
+	<field name="idade6-inf3" class="java.math.BigDecimal"/>
+	<field name="idade6-inf4" class="java.math.BigDecimal"/>
+	<field name="idade6-inf5" class="java.math.BigDecimal"/>
+	<field name="idade6-1ano" class="java.math.BigDecimal"/>
+	<field name="idade6-2ano" class="java.math.BigDecimal"/>
+	<field name="idade6-3ano" class="java.math.BigDecimal"/>
+	<field name="idade6-4ano" class="java.math.BigDecimal"/>
+	<field name="idade6-5ano" class="java.math.BigDecimal"/>
+	<field name="idade6-6ano" class="java.math.BigDecimal"/>
+	<field name="idade6-7ano" class="java.math.BigDecimal"/>
+	<field name="idade6-8ano" class="java.math.BigDecimal"/>
+	<field name="idade6-9ano" class="java.math.BigDecimal"/>
+	<field name="idade7-inf2" class="java.math.BigDecimal"/>
+	<field name="idade7-inf3" class="java.math.BigDecimal"/>
+	<field name="idade7-inf4" class="java.math.BigDecimal"/>
+	<field name="idade7-inf5" class="java.math.BigDecimal"/>
+	<field name="idade7-1ano" class="java.math.BigDecimal"/>
+	<field name="idade7-2ano" class="java.math.BigDecimal"/>
+	<field name="idade7-3ano" class="java.math.BigDecimal"/>
+	<field name="idade7-4ano" class="java.math.BigDecimal"/>
+	<field name="idade7-5ano" class="java.math.BigDecimal"/>
+	<field name="idade7-6ano" class="java.math.BigDecimal"/>
+	<field name="idade7-7ano" class="java.math.BigDecimal"/>
+	<field name="idade7-8ano" class="java.math.BigDecimal"/>
+	<field name="idade7-9ano" class="java.math.BigDecimal"/>
+	<field name="idade8-inf2" class="java.math.BigDecimal"/>
+	<field name="idade8-inf3" class="java.math.BigDecimal"/>
+	<field name="idade8-inf4" class="java.math.BigDecimal"/>
+	<field name="idade8-inf5" class="java.math.BigDecimal"/>
+	<field name="idade8-1ano" class="java.math.BigDecimal"/>
+	<field name="idade8-2ano" class="java.math.BigDecimal"/>
+	<field name="idade8-3ano" class="java.math.BigDecimal"/>
+	<field name="idade8-4ano" class="java.math.BigDecimal"/>
+	<field name="idade8-5ano" class="java.math.BigDecimal"/>
+	<field name="idade8-6ano" class="java.math.BigDecimal"/>
+	<field name="idade8-7ano" class="java.math.BigDecimal"/>
+	<field name="idade8-8ano" class="java.math.BigDecimal"/>
+	<field name="idade8-9ano" class="java.math.BigDecimal"/>
+	<field name="idade9-inf2" class="java.math.BigDecimal"/>
+	<field name="idade9-inf3" class="java.math.BigDecimal"/>
+	<field name="idade9-inf4" class="java.math.BigDecimal"/>
+	<field name="idade9-inf5" class="java.math.BigDecimal"/>
+	<field name="idade9-1ano" class="java.math.BigDecimal"/>
+	<field name="idade9-2ano" class="java.math.BigDecimal"/>
+	<field name="idade9-3ano" class="java.math.BigDecimal"/>
+	<field name="idade9-4ano" class="java.math.BigDecimal"/>
+	<field name="idade9-5ano" class="java.math.BigDecimal"/>
+	<field name="idade9-6ano" class="java.math.BigDecimal"/>
+	<field name="idade9-7ano" class="java.math.BigDecimal"/>
+	<field name="idade9-8ano" class="java.math.BigDecimal"/>
+	<field name="idade9-9ano" class="java.math.BigDecimal"/>
+	<field name="idade10-inf2" class="java.math.BigDecimal"/>
+	<field name="idade10-inf3" class="java.math.BigDecimal"/>
+	<field name="idade10-inf4" class="java.math.BigDecimal"/>
+	<field name="idade10-inf5" class="java.math.BigDecimal"/>
+	<field name="idade10-1ano" class="java.math.BigDecimal"/>
+	<field name="idade10-2ano" class="java.math.BigDecimal"/>
+	<field name="idade10-3ano" class="java.math.BigDecimal"/>
+	<field name="idade10-4ano" class="java.math.BigDecimal"/>
+	<field name="idade10-5ano" class="java.math.BigDecimal"/>
+	<field name="idade10-6ano" class="java.math.BigDecimal"/>
+	<field name="idade10-7ano" class="java.math.BigDecimal"/>
+	<field name="idade10-8ano" class="java.math.BigDecimal"/>
+	<field name="idade10-9ano" class="java.math.BigDecimal"/>
+	<field name="idade11-inf2" class="java.math.BigDecimal"/>
+	<field name="idade11-inf3" class="java.math.BigDecimal"/>
+	<field name="idade11-inf4" class="java.math.BigDecimal"/>
+	<field name="idade11-inf5" class="java.math.BigDecimal"/>
+	<field name="idade11-1ano" class="java.math.BigDecimal"/>
+	<field name="idade11-2ano" class="java.math.BigDecimal"/>
+	<field name="idade11-3ano" class="java.math.BigDecimal"/>
+	<field name="idade11-4ano" class="java.math.BigDecimal"/>
+	<field name="idade11-5ano" class="java.math.BigDecimal"/>
+	<field name="idade11-6ano" class="java.math.BigDecimal"/>
+	<field name="idade11-7ano" class="java.math.BigDecimal"/>
+	<field name="idade11-8ano" class="java.math.BigDecimal"/>
+	<field name="idade11-9ano" class="java.math.BigDecimal"/>
+	<field name="idade12-inf2" class="java.math.BigDecimal"/>
+	<field name="idade12-inf3" class="java.math.BigDecimal"/>
+	<field name="idade12-inf4" class="java.math.BigDecimal"/>
+	<field name="idade12-inf5" class="java.math.BigDecimal"/>
+	<field name="idade12-1ano" class="java.math.BigDecimal"/>
+	<field name="idade12-2ano" class="java.math.BigDecimal"/>
+	<field name="idade12-3ano" class="java.math.BigDecimal"/>
+	<field name="idade12-4ano" class="java.math.BigDecimal"/>
+	<field name="idade12-5ano" class="java.math.BigDecimal"/>
+	<field name="idade12-6ano" class="java.math.BigDecimal"/>
+	<field name="idade12-7ano" class="java.math.BigDecimal"/>
+	<field name="idade12-8ano" class="java.math.BigDecimal"/>
+	<field name="idade12-9ano" class="java.math.BigDecimal"/>
+	<field name="idade13-inf2" class="java.math.BigDecimal"/>
+	<field name="idade13-inf3" class="java.math.BigDecimal"/>
+	<field name="idade13-inf4" class="java.math.BigDecimal"/>
+	<field name="idade13-inf5" class="java.math.BigDecimal"/>
+	<field name="idade13-1ano" class="java.math.BigDecimal"/>
+	<field name="idade13-2ano" class="java.math.BigDecimal"/>
+	<field name="idade13-3ano" class="java.math.BigDecimal"/>
+	<field name="idade13-4ano" class="java.math.BigDecimal"/>
+	<field name="idade13-5ano" class="java.math.BigDecimal"/>
+	<field name="idade13-6ano" class="java.math.BigDecimal"/>
+	<field name="idade13-7ano" class="java.math.BigDecimal"/>
+	<field name="idade13-8ano" class="java.math.BigDecimal"/>
+	<field name="idade13-9ano" class="java.math.BigDecimal"/>
+	<field name="idade14-inf2" class="java.math.BigDecimal"/>
+	<field name="idade14-inf3" class="java.math.BigDecimal"/>
+	<field name="idade14-inf4" class="java.math.BigDecimal"/>
+	<field name="idade14-inf5" class="java.math.BigDecimal"/>
+	<field name="idade14-1ano" class="java.math.BigDecimal"/>
+	<field name="idade14-2ano" class="java.math.BigDecimal"/>
+	<field name="idade14-3ano" class="java.math.BigDecimal"/>
+	<field name="idade14-4ano" class="java.math.BigDecimal"/>
+	<field name="idade14-5ano" class="java.math.BigDecimal"/>
+	<field name="idade14-6ano" class="java.math.BigDecimal"/>
+	<field name="idade14-7ano" class="java.math.BigDecimal"/>
+	<field name="idade14-8ano" class="java.math.BigDecimal"/>
+	<field name="idade14-9ano" class="java.math.BigDecimal"/>
+	<field name="idade15-inf2" class="java.math.BigDecimal"/>
+	<field name="idade15-inf3" class="java.math.BigDecimal"/>
+	<field name="idade15-inf4" class="java.math.BigDecimal"/>
+	<field name="idade15-inf5" class="java.math.BigDecimal"/>
+	<field name="idade15-1ano" class="java.math.BigDecimal"/>
+	<field name="idade15-2ano" class="java.math.BigDecimal"/>
+	<field name="idade15-3ano" class="java.math.BigDecimal"/>
+	<field name="idade15-4ano" class="java.math.BigDecimal"/>
+	<field name="idade15-5ano" class="java.math.BigDecimal"/>
+	<field name="idade15-6ano" class="java.math.BigDecimal"/>
+	<field name="idade15-7ano" class="java.math.BigDecimal"/>
+	<field name="idade15-8ano" class="java.math.BigDecimal"/>
+	<field name="idade15-9ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-inf2" class="java.math.BigDecimal"/>
+	<field name="idade+15-inf3" class="java.math.BigDecimal"/>
+	<field name="idade+15-inf4" class="java.math.BigDecimal"/>
+	<field name="idade+15-inf5" class="java.math.BigDecimal"/>
+	<field name="idade+15-1ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-2ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-3ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-4ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-5ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-6ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-7ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-8ano" class="java.math.BigDecimal"/>
+	<field name="idade+15-9ano" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="76" y="-3" width="494" height="63" uuid="53682509-1522-4acb-a035-144ca4faca3c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="1" width="70" height="74" uuid="c62999e1-2ccb-4e08-8e2a-0f5c652270f1"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="76" y="55" width="494" height="30" uuid="566867d4-7dd9-4e87-9824-d23014b16e50"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo} + " " +$F{nome_ue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="4" width="190" height="26" uuid="b8ba21e4-bf4e-4a12-857d-8bad56821608"/>
+				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="34" width="190" height="26" uuid="dafe37b9-2c40-40c9-9333-4be8e3e6a183"/>
+				<textFieldExpression><![CDATA["Data de entrega: " + $F{data_finalizacao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="195" y="0" width="44" height="21" uuid="6784c46b-e168-4897-8e64-626ecdb3ee7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Infantil 4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="0" width="41" height="21" uuid="79156386-26a4-472b-a980-ac70f4c004bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Infantil 5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="0" width="35" height="21" uuid="b7e07a78-3c97-47b9-b811-97d21b9b9eb8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[1º Ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="0" width="35" height="21" uuid="e8ccedbe-a8e6-464b-ac74-2ba2aecf30db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[2º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="0" width="35" height="21" uuid="4c201f6d-a25a-4e65-bf4a-45db1bb94968"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[3º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="1" width="35" height="21" uuid="5dec11a8-6629-41a2-9d21-6497d39a7d67"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[4º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="1" width="35" height="21" uuid="8384e280-6465-4517-b96b-9f077ec4bb9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[5º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="516" y="1" width="35" height="21" uuid="4646fb94-ae2c-476f-b7c6-ba4fe9528fac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[6º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="3" width="35" height="21" uuid="0f424606-1150-4eb6-849b-487cf5c1c538"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[7º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="609" y="3" width="35" height="21" uuid="94c15b63-35e9-4f2d-9773-623b5a30aaaa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[8º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="1" width="35" height="21" uuid="c2e30cb8-6524-45ed-87f4-f2ec787d0f62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[9º Ano ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="705" y="2" width="41" height="21" uuid="302f3b52-bba7-465d-b373-9437d228be87"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="0" width="41" height="21" uuid="b8abb1c1-5f0e-488e-858c-bd645b1be475"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Infantil 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="0" width="41" height="21" uuid="0126761e-1514-482d-9019-0726c0c0671f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Infantil 2]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="389" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="83" height="20" uuid="ffbe69be-a6d5-4eaf-807a-9f51465a36e7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["2 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="83" height="23" uuid="ddc5cc37-25ff-43a0-8cf5-7e01969bc04c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["3 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="43" width="83" height="20" uuid="e618b97d-6e14-491d-9e9e-a8a0ce5bd5c5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["4 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="63" width="83" height="23" uuid="71092998-aba8-4b52-994c-4bf50b81bc84"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["5 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="86" width="83" height="23" uuid="cc429cd7-c0bd-422a-94f9-2917a8c35c23"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["6 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="199" width="83" height="23" uuid="56551f44-1e42-443e-87fe-6d98211a7c61"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["11 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="129" width="83" height="23" uuid="ad4f6ad6-85a9-4be7-a11c-4f831ee2f183"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["8 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="109" width="83" height="20" uuid="41583f71-aa2f-4019-844c-139e86bcb905"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["7 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="176" width="83" height="23" uuid="fe05a9d9-82aa-4ad8-9d63-029c0b8b386d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["10 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="152" width="83" height="20" uuid="6c68111e-16e1-4032-a130-284699585e8b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["9 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="291" width="83" height="23" uuid="e17744ac-0159-4a22-8e6a-48d03386a245"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["15 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="225" width="83" height="23" uuid="a6610588-be07-4b87-a810-a50ccffaa567"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["12 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="268" width="83" height="23" uuid="3a8dfb76-ec6f-4c50-8e65-f299e9195466"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["14 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="248" width="83" height="20" uuid="34f52183-dfa1-4b1e-9b92-c9ed6def8cc9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["13 anos"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-6" y="175" width="815" height="1" uuid="ddb852e8-b9dd-4312-b091-1de2fa9f0e71"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="223" width="815" height="1" uuid="836ab2f3-9e60-4423-9bd4-f503e435e37d"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="103" y="-24" width="1" height="389" uuid="9d1fea01-e794-41be-b983-fc0a99902d49"/>
+			</line>
+			<line>
+				<reportElement x="239" y="-24" width="1" height="389" uuid="ad70295e-b57c-493d-bfd2-3e947a36b2c3"/>
+			</line>
+			<line>
+				<reportElement x="327" y="-24" width="1" height="389" uuid="23d92c43-e5b4-4284-a9dc-0d7a9bf52178"/>
+			</line>
+			<line>
+				<reportElement x="283" y="-24" width="1" height="389" uuid="e9945048-17d9-43e6-ade5-b99f1343e47f"/>
+			</line>
+			<line>
+				<reportElement x="418" y="-24" width="1" height="389" uuid="2ea3846b-cfe7-4b18-865d-cd57b5ed89b5"/>
+			</line>
+			<line>
+				<reportElement x="372" y="-24" width="1" height="389" uuid="584f8996-f7f4-475c-9cf7-c1a38f752d34"/>
+			</line>
+			<line>
+				<reportElement x="461" y="-24" width="1" height="389" uuid="9a8babf4-3a54-4b16-af3f-51aec578ed10"/>
+			</line>
+			<line>
+				<reportElement x="-6" y="130" width="815" height="1" uuid="32e47ee7-8d6a-4b9b-b4e6-1ea7c891c911"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="153" width="815" height="1" uuid="79bda2b8-597a-482d-812b-0f168bcee83b"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="87" width="815" height="1" uuid="98c8966c-386f-4d1a-88f8-96c72d81693b"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="110" width="815" height="1" uuid="05289c89-2925-4c1a-8785-c3c8c2fcf2a8"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="43" width="815" height="1" uuid="846e1d9d-5a68-40a5-83a7-28e45c53ac9e"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="63" width="815" height="1" uuid="7e621f9b-37b1-471a-b3f0-9655191ad338"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="21" width="815" height="1" uuid="05d16f90-f1c1-49b0-a726-cda54f20b71c"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="200" width="815" height="1" uuid="7a037c8d-8a3d-4381-b353-6c73c3e3801c"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="292" width="815" height="1" uuid="8d79ca64-af1f-42c0-b80a-a8135e6437bd"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="269" width="815" height="1" uuid="cdf07d32-f63c-40be-bfc7-333a1a7bf406"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-6" y="250" width="815" height="1" uuid="c924a11c-35d1-4e96-beac-dbca6d23f590"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="0" width="840" height="1" uuid="47cdf592-cf25-49bc-8354-42ed5e407255"/>
+			</line>
+			<line>
+				<reportElement x="-6" y="314" width="813" height="1" uuid="99b7ddd4-60f1-4e38-bad8-c0b31af03486"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="192" y="-24" width="1" height="389" uuid="1f3943a5-0857-427f-9261-0b0a4797a360"/>
+			</line>
+			<line>
+				<reportElement x="148" y="-24" width="1" height="389" uuid="c4433267-497d-42a9-92d8-87b60c7dc976"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="315" width="83" height="23" uuid="49bc5edb-fcbc-48ee-a95d-99f3e0cc7d91"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Mais de 15 anos"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="0" width="40" height="20" forecolor="#0E3800" uuid="126ae608-4095-4306-9b00-b599ae3b9025"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-inf2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-6" y="340" width="813" height="1" uuid="ef639165-5e70-40f6-afdb-086babe3ae12"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="341" width="83" height="23" uuid="b3cfe8d6-0404-43f8-9d5a-129adaf9cee9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Total de alunos: "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="21" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="5f6b2806-98b4-45be-b55e-00141df5bc7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="44" width="40" height="20" forecolor="#FF0900" uuid="92233399-0e47-4006-bcec-c2de4d6e8e78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="65" width="40" height="20" forecolor="#FF0900" uuid="1854aa44-616a-406e-8ece-61e16fd9084c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{5ano-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="131" width="40" height="20" forecolor="#FF0900" uuid="08023872-060a-4425-ac0e-b94261e0651c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="152" width="40" height="20" forecolor="#FF0900" uuid="2f8ea232-9246-4a7d-8191-f8012bf2386b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="108" width="40" height="20" forecolor="#FF0900" uuid="12050ca8-2c0f-4990-9311-6950ab1baf25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="87" width="48" height="20" forecolor="#FF0900" uuid="47ca6c28-1d3e-4e21-a16d-2fe9027e22fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idade6-inf2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="106" y="340" width="40" height="20" forecolor="#FF0900" uuid="f6bcf4fa-79bb-41ea-a6c2-d18bd2abb8b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-inf2},$F{idade3-inf2},$F{idade4-inf2},$F{idade6-inf2},$F{5ano-inf2},$F{idade8-inf2},$F{idade7-inf2},$F{idade9-inf2},$F{idade10-inf2},$F{idade11-inf2},$F{idade12-inf2},$F{idade13-inf2},$F{idade14-inf2},$F{idade14-inf2},$F{idade15-inf2},$F{idade+15-inf2})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="315" width="40" height="20" forecolor="#FF0900" uuid="5c547f9c-c8a6-4f01-a496-7fa4f8972e33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="292" width="40" height="20" forecolor="#FF0900" uuid="7eb3535f-1d6a-45bf-8285-431280756d79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="270" width="40" height="20" forecolor="#FF0900" uuid="98de4bb0-29b3-412a-90e6-d8b5b12b1abf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="248" width="40" height="20" forecolor="#FF0900" uuid="3f2de1f6-4ac4-445e-9474-9e2864349fc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="226" width="40" height="20" forecolor="#FF0900" uuid="67d68650-0c52-4ed8-bc70-10199ae97acc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="201" width="40" height="20" forecolor="#FF0900" uuid="8dfc144a-830f-4261-a0a9-28338cd04b55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="179" width="40" height="20" forecolor="#FF0900" uuid="1b220d75-e294-46ff-bd59-3f6c4dea8e24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-inf2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="40" height="20" forecolor="#0E3800" uuid="328d618b-b61a-4220-bf35-b76df4138b34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="21" width="40" height="20" forecolor="#0E3800" uuid="25565cef-bcb8-4205-a5d3-49b985cae12f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="44" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="beb17688-383e-4d16-8a19-909216ad1a9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="65" width="40" height="20" forecolor="#FF0900" uuid="195ef876-d5a0-4ba0-823e-6c88137c0af4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{5ano-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="87" width="40" height="20" forecolor="#FF0900" uuid="996f0ffc-4464-4798-a508-0aea035375b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="108" width="40" height="20" forecolor="#FF0900" uuid="2275d614-43ca-4e3e-a45e-0f633f8dd6b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="131" width="40" height="20" forecolor="#FF0900" uuid="eb0def8b-884e-4947-91e5-153a87c2e2d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="152" width="40" height="20" forecolor="#FF0900" uuid="9f9e3841-9ecf-4bad-abe3-8da166567656"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="179" width="40" height="20" forecolor="#FF0900" uuid="cf7e0208-951d-443e-ad1e-37631deb6230"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="201" width="40" height="20" forecolor="#FF0900" uuid="7e13029e-6224-48f5-891d-4cf669a34ae4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="226" width="40" height="20" forecolor="#FF0900" uuid="14f76837-517f-499b-94d8-f2958ec8ce61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="248" width="40" height="20" forecolor="#FF0900" uuid="9a21d4b1-848d-47b7-a7b2-13890f744bf3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="270" width="40" height="20" forecolor="#FF0900" uuid="3c7c97e5-1072-42cf-8e45-c1fc5783d443"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="292" width="40" height="20" forecolor="#FF0900" uuid="304c00a1-dc0b-4cf9-ae75-293a1ae5d404"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-inf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="315" width="40" height="20" forecolor="#FF0900" uuid="2a90435e-1f00-4093-a7ce-6f360025fb0e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-inf3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="150" y="340" width="40" height="20" forecolor="#FF0900" uuid="437112f3-f845-4e92-b3b7-af21bb00cb45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-inf3},$F{idade3-inf3},$F{idade4-inf3},$F{idade6-inf3},$F{5ano-inf3},$F{idade8-inf3},$F{idade7-inf3},$F{idade9-inf3},$F{idade10-inf3},$F{idade11-inf3},$F{idade12-inf3},$F{idade13-inf3},$F{idade14-inf3},$F{idade14-inf3},$F{idade15-inf3},$F{idade+15-inf3})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="239" y="340" width="40" height="20" forecolor="#FF0900" uuid="48758d4f-0db3-4ae8-93a5-9c8708e1737d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-inf5},$F{idade3-inf5},$F{idade4-inf5},$F{idade6-inf5},$F{5ano-inf5},$F{idade8-inf5},$F{idade7-inf5},$F{idade9-inf5},$F{idade10-inf5},$F{idade11-inf5},$F{idade12-inf5},$F{idade13-inf5},$F{idade14-inf5},$F{idade14-inf5},$F{idade15-inf5},$F{idade+15-inf5})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="195" y="340" width="40" height="20" forecolor="#FF0900" uuid="e5ccf7e2-d483-46c1-baf2-7d88fd93e611"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-inf4},$F{idade3-inf4},$F{idade4-inf4},$F{idade6-inf4},$F{5ano-inf4},$F{idade8-inf4},$F{idade7-inf4},$F{idade9-inf4},$F{idade10-inf4},$F{idade11-inf4},$F{idade12-inf4},$F{idade13-inf4},$F{idade14-inf4},$F{idade14-inf4},$F{idade15-inf4},$F{idade+15-inf4})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="315" width="40" height="20" isPrintWhenDetailOverflows="true" forecolor="#FF0900" uuid="7ea89c0f-6ad0-44bb-be82-2d6665d77158"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="315" width="40" height="20" forecolor="#FF0900" uuid="c9fa6b66-b355-468a-b4c8-daf22c3d24be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="292" width="40" height="20" forecolor="#FF0900" uuid="386118f3-291e-44c4-8007-54107bc75644"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="292" width="40" height="20" forecolor="#FF0900" uuid="3d3f0bea-e7eb-432b-bcb2-5ee7997c1fc7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="270" width="40" height="20" forecolor="#FF0900" uuid="21fae070-00f0-4a8f-83c5-0f20325d1d27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="270" width="40" height="20" forecolor="#FF0900" uuid="fb7f9ce8-aaee-4e0d-9050-8e339ad2846c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="248" width="40" height="20" forecolor="#FF0900" uuid="8deb5695-842e-4eb3-ba64-6a43d7d5e560"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="248" width="40" height="20" forecolor="#FF0900" uuid="63467d6e-82ec-444b-841b-ff952ee9df54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="226" width="40" height="20" forecolor="#FF0900" uuid="3d7fd2f3-3094-4662-9cfb-b328d9b74aad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="226" width="40" height="20" forecolor="#FF0900" uuid="34ee59ad-c403-4fbb-837f-658ac63c8150"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="201" width="40" height="20" forecolor="#FF0900" uuid="c591b15a-9ba6-450e-a8bd-3e0b0df28516"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="201" width="40" height="20" forecolor="#FF0900" uuid="ffcaee30-145e-4664-aea7-f30d1713bbe0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="179" width="40" height="20" forecolor="#FF0900" uuid="9bb29372-670e-4663-bb73-a251079f1b15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="179" width="40" height="20" forecolor="#FF0900" uuid="4833d9f5-9eeb-417e-b35a-8196f0eab38c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="152" width="40" height="20" forecolor="#FF0900" uuid="8a836e8b-0821-430b-b6d8-781f7d1865ab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="152" width="40" height="20" forecolor="#FF0900" uuid="694e5b7e-f402-4f8a-95a0-96f859021f23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="131" width="40" height="20" forecolor="#FF0900" uuid="6b968ae3-1266-4bb6-b20f-15690073f889"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="131" width="40" height="20" forecolor="#FF0900" uuid="b5c0991f-886e-46b8-aa0e-ba462a116a95"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="108" width="40" height="20" forecolor="#FF0900" uuid="95a6115b-1934-4f0a-afbe-fa443c7f0b13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="108" width="40" height="20" forecolor="#FF0900" uuid="57a2f66c-15a9-4fa9-bdf0-f533035460f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="87" width="40" height="20" forecolor="#FF0900" uuid="93a8c74d-db5d-4728-9101-913113c3d68b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="87" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="5dda1425-806c-42d4-b04f-549b50c94137"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="65" width="40" height="20" forecolor="#0E3800" uuid="45181f49-af97-4a41-bbdb-09c4d86d8913"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{5ano-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="65" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="2bfc9266-a89f-4c8d-a0b5-2e2de868c4ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{5ano-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="44" width="40" height="20" forecolor="#0E3800" uuid="1b7e75f1-34de-4780-a31b-ccb3721f0ba3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="44" width="40" height="20" forecolor="#0E3800" uuid="f2b83836-91bc-45bc-8c47-a0407a6f2b24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="21" width="40" height="20" forecolor="#0E3800" uuid="8a6443fa-de6f-4e85-b2ab-6be6532568a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-inf5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="21" width="40" height="20" forecolor="#0E3800" uuid="7ec10a2b-a2b3-4f87-8e8b-bbd24297842c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="0" width="40" height="20" forecolor="#0E3800" uuid="84bcd82e-b0bc-4761-bb80-ae41bf62605a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-inf4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="0" width="40" height="20" forecolor="#0E3800" uuid="8308f6a9-d5c5-4ef1-9cf0-b9a550df47a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-inf5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="329" y="340" width="40" height="20" forecolor="#FF0900" uuid="8caf518e-126c-408c-869b-978ca0cd705a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-2ano},$F{idade3-2ano},$F{idade4-2ano},$F{idade6-2ano},$F{idade5-2ano},$F{idade8-2ano},$F{idade7-2ano},$F{idade9-2ano},$F{idade10-2ano},$F{idade11-2ano},$F{idade12-2ano},$F{idade13-2ano},$F{idade14-2ano},$F{idade14-2ano},$F{idade15-2ano},$F{idade+15-2ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="286" y="340" width="40" height="20" forecolor="#FF0900" uuid="091e7529-e4e9-493d-b742-c297c182450a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-1ano},$F{idade3-1ano},$F{idade4-1ano},$F{idade6-1ano},$F{idade5-1ano},$F{idade8-1ano},$F{idade7-1ano},$F{idade9-1ano},$F{idade10-1ano},$F{idade11-1ano},$F{idade12-1ano},$F{idade13-1ano},$F{idade14-1ano},$F{idade14-1ano},$F{idade15-1ano},$F{idade+15-1ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="315" width="40" height="20" forecolor="#FF0900" uuid="156327e9-bd52-4f91-9974-0fb1a8cbb5a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="315" width="40" height="20" forecolor="#FF0900" uuid="37400d3e-228d-432e-9cf1-48746548702e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="292" width="40" height="20" forecolor="#FF0900" uuid="b7176a67-5d2a-432d-bd28-e6fcc5664c5b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="292" width="40" height="20" forecolor="#FF0900" uuid="7bc297fd-d312-43f4-bdce-e23d1390c1ab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="270" width="40" height="20" forecolor="#FF0900" uuid="ca684be6-648b-44f0-a46c-80cbe417699c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="270" width="40" height="20" forecolor="#FF0900" uuid="0460a1dc-cee9-4aca-921e-05bed9d5fdbb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="248" width="40" height="20" forecolor="#FF0900" uuid="c58e1110-cdd2-4131-ab1e-02761ce60f70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="248" width="40" height="20" forecolor="#FF0900" uuid="c26ace75-6269-4c80-a30d-1a539ff1a31d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="226" width="40" height="20" forecolor="#FF0900" uuid="f1733928-ecc0-4201-b260-71fc9ea5d684"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="226" width="40" height="20" forecolor="#FF0900" uuid="53a7bc4e-d096-4dab-946d-930927ff3682"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="201" width="40" height="20" forecolor="#FF0900" uuid="dc38cf5d-d177-4e79-8015-d342145b6e31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="201" width="40" height="20" forecolor="#FF0900" uuid="90aeb93d-fc02-4e0e-9283-e8f0332c65b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="179" width="40" height="20" forecolor="#FF0900" uuid="7a72c3bc-5ad5-496a-af33-d86a8a77d201"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="179" width="40" height="20" forecolor="#FF0900" uuid="18bcaf05-fe4f-4530-9df0-85ab067bac70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="152" width="40" height="20" forecolor="#FF0900" uuid="5af3d751-e24e-4d21-bc39-ba230cadf22c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="152" width="40" height="20" forecolor="#FF0900" uuid="8ea3c34f-2380-4807-b87c-408b0fd10081"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="131" width="40" height="20" forecolor="#FF0900" uuid="b19824d2-9639-45c2-b13e-b3f9ffed1ed5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="131" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="8771897d-09fb-409b-8b27-aad8cdfbc97f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="108" width="40" height="20" forecolor="#0E3800" uuid="b36e291a-e15b-43f6-be2b-8777b1e71424"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="108" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="2d5ed004-9aed-402f-a355-b8fc334de8c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="87" width="40" height="20" forecolor="#0E3800" uuid="60993afb-c00d-41c5-a156-66bd48b3a0db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="87" width="40" height="20" forecolor="#0E3800" uuid="842395d4-c31c-4586-af0e-6f34eff62c2f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="65" width="40" height="20" forecolor="#0E3800" uuid="cbf81aa6-197b-4ea0-b1f1-4f9a4d4320af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idade5-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="65" width="40" height="20" forecolor="#0E3800" uuid="191a1552-ff32-414f-9559-f743160d7c8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="44" width="40" height="20" forecolor="#0E3800" uuid="f7909a2b-b9e0-4fd9-858a-328616e1034c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="44" width="40" height="20" forecolor="#0E3800" uuid="48943867-0480-44b2-9bd5-4186290d0f0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="21" width="40" height="20" forecolor="#0E3800" uuid="fbaf11df-5219-4657-a5db-aa73cfcf938b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-2ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="21" width="40" height="20" forecolor="#0E3800" uuid="154596ec-4f47-456a-8f13-cc4a8285c9fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="0" width="40" height="20" forecolor="#0E3800" uuid="8fa8ba26-2990-4670-86d2-e9f08fc24caf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-1ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="0" width="40" height="20" forecolor="#0E3800" uuid="19d2e779-b740-4c5f-b803-ae27d5a4890b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-2ano}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="421" y="340" width="40" height="20" forecolor="#FF0900" uuid="8f4ad4e5-d824-4844-b2ba-cf3b68c1f228"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-4ano},$F{idade3-4ano},$F{idade4-4ano},$F{idade6-4ano},$F{idade5-4ano},$F{idade8-4ano},$F{idade7-4ano},$F{idade9-4ano},$F{idade10-4ano},$F{idade11-4ano},$F{idade12-4ano},$F{idade13-4ano},$F{idade14-4ano},$F{idade14-4ano},$F{idade15-4ano},$F{idade+15-4ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="377" y="340" width="40" height="20" forecolor="#FF0900" uuid="8a1b8066-0597-4872-acbf-3c27459a14f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-3ano},$F{idade3-3ano},$F{idade4-3ano},$F{idade6-3ano},$F{idade5-3ano},$F{idade8-3ano},$F{idade7-3ano},$F{idade9-3ano},$F{idade10-3ano},$F{idade11-3ano},$F{idade12-3ano},$F{idade13-3ano},$F{idade14-3ano},$F{idade14-3ano},$F{idade15-3ano},$F{idade+15-3ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="315" width="40" height="20" forecolor="#FF0900" uuid="cffe9b49-d695-4cce-ae2b-d32bc82bafa2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="315" width="40" height="20" forecolor="#FF0900" uuid="77b154ed-12b5-441e-83ad-c9fc32e6ea48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="292" width="40" height="20" forecolor="#FF0900" uuid="edac17f3-cad8-486b-be23-b93240d12226"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="292" width="40" height="20" forecolor="#FF0900" uuid="19e0f177-34f8-4625-824f-f05b26ac5f6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="270" width="40" height="20" forecolor="#FF0900" uuid="c7389087-77ee-4cce-9a33-58e93db27368"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="270" width="40" height="20" forecolor="#FF0900" uuid="376c5c8c-1194-4a20-bda0-06cdd2946b0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="248" width="40" height="20" forecolor="#FF0900" uuid="78f44b58-e74d-460e-b784-d1499f78b75a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="248" width="40" height="20" forecolor="#FF0900" uuid="958ab27b-a510-446c-9d36-a2993e460ad7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="226" width="40" height="20" forecolor="#FF0900" uuid="bd0f4749-defd-40db-a95b-8d01643fad42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="226" width="40" height="20" forecolor="#FF0900" uuid="a76b0a1d-7db7-48ab-8bb1-971e73f36d11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="201" width="40" height="20" forecolor="#FF0900" uuid="19908a5c-cf41-41c1-89f1-2c5a731d195b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="201" width="40" height="20" forecolor="#FF0900" uuid="6e037e30-5bec-4c46-b95e-8ea3913e526d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="179" width="40" height="20" forecolor="#FF0900" uuid="235b9d8b-e679-40fb-b972-354ec31d857a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="179" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="170e675f-c54b-4fca-8d5f-103f1beea876"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="152" width="40" height="20" forecolor="#0E3800" uuid="bf3471b0-5583-4f76-a860-2dd2c82ab0b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="152" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="e9eab234-c45f-4a05-ac38-35e9a576220a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="131" width="40" height="20" forecolor="#0E3800" uuid="ff022190-449f-4224-a69c-7cefa1653c3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="131" width="40" height="20" forecolor="#0E3800" uuid="37151a98-87b3-45f8-931c-b389f80bf21e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="108" width="40" height="20" forecolor="#0E3800" uuid="be9b59cb-fa8a-40cc-aa77-76bdb4a106ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="108" width="40" height="20" forecolor="#0E3800" uuid="5ce1b668-3a45-439f-a822-8b5673c267cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="87" width="40" height="20" forecolor="#0E3800" uuid="a74978b7-6e87-4230-be7c-5c855185d655"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="87" width="40" height="20" forecolor="#0E3800" uuid="413ee1e3-dde9-41de-8864-87b14f304c90"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="65" width="40" height="20" forecolor="#0E3800" uuid="d6fdd146-d2c7-41d7-ac4d-a2d9d2465e07"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="65" width="40" height="20" forecolor="#0E3800" uuid="bcc7d9f4-c4fe-42d8-aa8c-21fd02a1ea2d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="44" width="40" height="20" forecolor="#0E3800" uuid="d1a5bd91-5154-4b85-a467-04017fb09b06"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="44" width="40" height="20" forecolor="#0E3800" uuid="a3646ff3-61f4-4fc7-a9a2-118f86cef27b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="21" width="40" height="20" forecolor="#0E3800" uuid="4adae439-277b-4cd3-81f4-c551631a3d60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-4ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="21" width="40" height="20" forecolor="#0E3800" uuid="d3881c65-41ea-41a6-b5b9-6467d50d06cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="0" width="40" height="20" forecolor="#0E3800" uuid="1760f39f-eaaa-414b-a3e3-c570084dc30d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-3ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="40" height="20" forecolor="#0E3800" uuid="b1b26523-4f5b-4090-a1f6-9fd6455a19a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-4ano}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="514" y="342" width="40" height="20" forecolor="#FF0900" uuid="be864f33-2290-45d8-8e5b-869876d888db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-6ano},$F{idade3-6ano},$F{idade4-6ano},$F{idade6-6ano},$F{idade5-6ano},$F{idade8-6ano},$F{idade7-6ano},$F{idade9-6ano},$F{idade10-6ano},$F{idade11-6ano},$F{idade12-6ano},$F{idade13-6ano},$F{idade14-6ano},$F{idade14-6ano},$F{idade15-6ano},$F{idade+15-6ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="466" y="342" width="40" height="20" forecolor="#FF0900" uuid="95c39877-d473-4873-8813-1b734b4872dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-5ano},$F{idade3-5ano},$F{idade4-5ano},$F{idade6-5ano},$F{idade5-5ano},$F{idade8-5ano},$F{idade7-5ano},$F{idade9-5ano},$F{idade10-5ano},$F{idade11-5ano},$F{idade12-5ano},$F{idade13-5ano},$F{idade14-5ano},$F{idade14-5ano},$F{idade15-5ano},$F{idade+15-5ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="317" width="40" height="20" forecolor="#FF0900" uuid="f57cc133-4b55-4a75-af94-4c01b5faaa56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="317" width="40" height="20" forecolor="#FF0900" uuid="c44cd4ab-2afd-411f-aa6c-9688ab5e6485"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="294" width="40" height="20" forecolor="#FF0900" uuid="a3c45ec8-3d82-4fa0-be1e-b2730a49d338"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="294" width="40" height="20" forecolor="#FF0900" uuid="a305cc66-96d3-44ba-9272-46aa2d6e7caf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="272" width="40" height="20" forecolor="#FF0900" uuid="16ca94a8-ab29-4333-8c89-114ce71f278b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="272" width="40" height="20" forecolor="#FF0900" uuid="61c12e96-76f3-4122-b6b2-fcea95a13df6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="250" width="40" height="20" forecolor="#FF0900" uuid="f5e28eb9-0f6c-4efa-92af-c77def400eaa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="250" width="40" height="20" forecolor="#FF0900" uuid="392a2aee-2130-47b2-b010-8cb177de97a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="228" width="40" height="20" forecolor="#FF0900" uuid="1918eba5-952d-404b-a46a-b75980d907eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="228" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="d1f7e076-22fa-44be-a5e6-0ae5db84ca0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="203" width="40" height="20" forecolor="#0E3800" uuid="33244374-ed7c-408d-87c2-4aaef6f0c8b4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="203" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="4416df39-2955-4df7-a5ab-0c740ff57eb8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="181" width="40" height="20" forecolor="#0E3800" uuid="72aceb03-8070-46f5-8197-3099c71dd817"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="181" width="40" height="20" forecolor="#0E3800" uuid="a4e2ee05-fdf5-484a-bd2a-262d4a42bf89"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="154" width="40" height="20" forecolor="#0E3800" uuid="6c3a050b-f500-4152-bed2-5dc487e176a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="154" width="40" height="20" forecolor="#0E3800" uuid="18d9e4da-0958-4219-b1d3-a74fc7eede3b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="133" width="40" height="20" forecolor="#0E3800" uuid="3069af56-8b1a-4170-9a3c-ff6d68cb0a28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="133" width="40" height="20" forecolor="#0E3800" uuid="5a88e8ee-887d-47c5-9ea8-5a10b9536877"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="110" width="40" height="20" forecolor="#0E3800" uuid="56aecb7a-9f49-44d8-a7e5-aaf3b3bd745f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="110" width="40" height="20" forecolor="#0E3800" uuid="e5ad4a03-847d-4e5e-808c-11b7a0312b26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="89" width="40" height="20" forecolor="#0E3800" uuid="e9a8e85d-f4a1-4cdd-84ac-7a9b5175c69f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="89" width="40" height="20" forecolor="#0E3800" uuid="a4e9f403-8fed-4910-a7a9-d50db57f2ea3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="67" width="40" height="20" forecolor="#0E3800" uuid="3d98b456-a431-46b8-93b5-4e00fdf4a529"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="67" width="40" height="20" forecolor="#0E3800" uuid="6e51fc03-a62d-4aa5-8bf4-f005aa7c0c15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="46" width="40" height="20" forecolor="#0E3800" uuid="777b04ab-e318-4230-b1ae-13d37068b3fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="46" width="40" height="20" forecolor="#0E3800" uuid="f6efd0ef-cd27-490b-a259-ca352e2ebb60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="23" width="40" height="20" forecolor="#0E3800" uuid="1f8910c5-fa7e-4b66-88e2-bc6754f30852"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-6ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="23" width="40" height="20" forecolor="#0E3800" uuid="dc812d4d-c024-4300-95af-9b0b7201fa78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="2" width="40" height="20" forecolor="#0E3800" uuid="020c99a2-7944-4c33-86cc-df5301b755bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-5ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="2" width="40" height="20" forecolor="#0E3800" uuid="c3e2d018-543f-46ba-84a2-3d46b346b2f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-6ano}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="509" y="-24" width="1" height="389" uuid="c99816af-8276-4e54-aaf8-4a0e1512483b"/>
+			</line>
+			<line>
+				<reportElement x="556" y="-24" width="1" height="389" uuid="02beddab-80f7-469e-979c-964f5aba3bca"/>
+			</line>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="561" y="341" width="40" height="20" forecolor="#FF0900" uuid="f85cb965-9c33-42b8-b2a7-c10303aeaaae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-7ano},$F{idade3-7ano},$F{idade4-7ano},$F{idade6-7ano},$F{idade5-7ano},$F{idade8-7ano},$F{idade7-7ano},$F{idade9-7ano},$F{idade10-7ano},$F{idade11-7ano},$F{idade12-7ano},$F{idade13-7ano},$F{idade14-7ano},$F{idade14-7ano},$F{idade15-7ano},$F{idade+15-7ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="317" width="40" height="20" forecolor="#FF0900" uuid="c69ea8cd-e8dc-4909-bbef-edca219e1964"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="294" width="40" height="20" forecolor="#FF0900" uuid="c794e64a-8f26-4b9b-b78e-436fd82dc82d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="272" width="40" height="20" forecolor="#FF0900" uuid="02f7f6a0-d089-4400-83d6-facb1c2ca335"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="250" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="052d572d-ade7-4264-8c9d-b72c8b8b5b3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="228" width="40" height="20" forecolor="#0E3800" uuid="4d05fe89-7ca6-4de7-900c-d80217c9d25e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="203" width="40" height="20" forecolor="#0E3800" uuid="769f0c69-39d0-4822-a780-c34f31af1dc0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="181" width="40" height="20" forecolor="#0E3800" uuid="27e23880-8d97-42ee-ba02-9e61ef3645f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="154" width="40" height="20" forecolor="#0E3800" uuid="ffb7cf5a-6bb6-472c-be3e-024b450a7425"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="133" width="40" height="20" forecolor="#0E3800" uuid="c67de495-dc3d-46c1-ac00-174f8850fce8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="110" width="40" height="20" forecolor="#0E3800" uuid="a869177f-0529-4e3a-b708-f9348028d46f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="89" width="40" height="20" forecolor="#0E3800" uuid="87fc5413-e9a0-4d0c-be08-10f303753587"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="67" width="40" height="20" forecolor="#0E3800" uuid="12136acd-27f6-4c76-b6d3-a4fefb65efc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="46" width="40" height="20" forecolor="#0E3800" uuid="42cc55d9-f91a-46aa-8f69-b4f2dbbccd79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="23" width="40" height="20" forecolor="#0E3800" uuid="5651fd48-d805-4c15-a926-f495a7469f2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-7ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="561" y="2" width="40" height="20" forecolor="#0E3800" uuid="3735d5d2-8584-4e78-9225-d2c2b2cdc237"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-7ano}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="609" y="341" width="40" height="20" forecolor="#FF0900" uuid="441f091f-5fd9-4756-be15-b392db0ab089"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-8ano},$F{idade3-8ano},$F{idade4-8ano},$F{idade6-8ano},$F{idade5-8ano},$F{idade8-8ano},$F{idade7-8ano},$F{idade9-8ano},$F{idade10-8ano},$F{idade11-8ano},$F{idade12-8ano},$F{idade13-8ano},$F{idade14-8ano},$F{idade14-8ano},$F{idade15-8ano},$F{idade+15-8ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="317" width="40" height="20" forecolor="#FF0900" uuid="00df0613-f865-464d-89d2-0948df00f5c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="294" width="40" height="20" forecolor="#FF0900" uuid="e9f2fac3-283e-4b85-be36-37a4e2a4ba68"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="272" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="299f4b13-01aa-414c-b760-77ab5c21605e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="250" width="40" height="20" forecolor="#0E3800" uuid="cc7dfd12-e0c1-4ba5-8f09-0115972f34b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="228" width="40" height="20" forecolor="#0E3800" uuid="27138eca-91f1-4f70-952d-003aced62cca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="203" width="40" height="20" forecolor="#0E3800" uuid="a414990b-35ef-4794-b425-ac9a91bd7545"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="181" width="40" height="20" forecolor="#0E3800" uuid="17b66935-8d5f-4b82-8e61-e735d1d9c2e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="154" width="40" height="20" forecolor="#0E3800" uuid="f89bde48-da8f-4be8-aca4-ffd426d07223"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="133" width="40" height="20" forecolor="#0E3800" uuid="c94b8e5f-d9fe-449a-96b5-c6d8b3f6f126"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="110" width="40" height="20" forecolor="#0E3800" uuid="21fcbf0f-e10d-4bad-a3f9-819ec8a6f060"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="89" width="40" height="20" forecolor="#0E3800" uuid="c001cb0f-3e3f-45d7-8b6e-712e30df51ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="67" width="40" height="20" forecolor="#0E3800" uuid="5f3d7fe7-c812-467c-9543-fd5a72c54e74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="46" width="40" height="20" forecolor="#0E3800" uuid="5e80ff08-3181-4546-8378-f72b818434de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="23" width="40" height="20" forecolor="#0E3800" uuid="88c6d3c0-4476-4df2-b4b8-b4f31dfc56c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-8ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="2" width="40" height="20" forecolor="#0E3800" uuid="b4288177-6ecc-4fc5-bbd6-b86c6635e8f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-8ano}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="605" y="-24" width="1" height="389" uuid="a36abee5-bd9e-4483-ba76-3ddf177eeb4e"/>
+			</line>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="656" y="341" width="40" height="20" forecolor="#FF0900" uuid="ba1c3108-d689-45ad-b891-1393bdfb1fab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-9ano},$F{idade3-9ano},$F{idade4-9ano},$F{idade6-9ano},$F{idade5-9ano},$F{idade8-9ano},$F{idade7-9ano},$F{idade9-9ano},$F{idade10-9ano},$F{idade11-9ano},$F{idade12-9ano},$F{idade13-9ano},$F{idade14-9ano},$F{idade14-9ano},$F{idade15-9ano},$F{idade+15-9ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="317" width="40" height="20" forecolor="#FF0900" uuid="9aa8a808-435d-4c5b-a096-78007e780a92"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade+15-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="294" width="40" height="20" forecolor="#808200" backcolor="#000000" uuid="4286727c-3b68-4b62-9b2f-b3d9dacd1cb9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade15-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="272" width="40" height="20" forecolor="#0E3800" uuid="13eb121e-054c-467b-8db7-11a224081beb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade14-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="250" width="40" height="20" forecolor="#0E3800" uuid="f7903194-d0e1-46dc-9b4f-cb6b4da528e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade13-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="228" width="40" height="20" forecolor="#0E3800" uuid="342833b0-c785-4704-a98c-745641c83acf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade12-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="203" width="40" height="20" forecolor="#0E3800" uuid="f7d5559d-b84c-43fd-abda-f3932f4a32eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade11-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="181" width="40" height="20" forecolor="#0E3800" uuid="9bc17c5b-a70f-4598-8d02-4a5f77fceaf1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade10-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="154" width="40" height="20" forecolor="#0E3800" uuid="adade2de-6246-4c64-b51f-9b6c2990863d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade9-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="133" width="40" height="20" forecolor="#0E3800" uuid="46554555-1315-415f-99fa-ffa6d2ce737a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade8-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="110" width="40" height="20" forecolor="#0E3800" uuid="9191ed24-6b4e-40c5-b2ce-6f9e3755aa23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade7-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="89" width="40" height="20" forecolor="#0E3800" uuid="38a43ab0-b739-4be2-9021-b8e16831a066"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade6-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="67" width="40" height="20" forecolor="#0E3800" uuid="b9fba9e4-08b4-4c3e-91ae-1196f5965e8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade5-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="46" width="40" height="20" forecolor="#0E3800" uuid="aa6f1fc5-04d6-49c9-acc8-357f2e24cde3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade4-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="23" width="40" height="20" forecolor="#0E3800" uuid="092b1957-2540-4bc6-94cb-063d0dbc169a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade3-9ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="2" width="40" height="20" forecolor="#0E3800" uuid="d6760948-f9a5-4b9d-8963-cee2f7cf3899"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idade2-9ano}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="651" y="-24" width="1" height="389" uuid="17eb86b3-b7e7-416a-8774-937e3615adb5"/>
+			</line>
+			<line>
+				<reportElement x="700" y="-24" width="1" height="389" uuid="9bcfad42-f61c-434a-be6a-209c4b7fe3db"/>
+			</line>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="2" width="40" height="20" uuid="f018a4d4-1dbd-4ce9-8756-9bcf1ac94629"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade2-inf2},$F{idade2-inf3},$F{idade2-inf4},$F{idade2-inf5},$F{idade2-1ano},$F{idade2-2ano},$F{idade2-3ano},$F{idade2-4ano},$F{idade2-5ano},$F{idade2-6ano},$F{idade2-7ano},$F{idade2-8ano},$F{idade2-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="23" width="40" height="20" uuid="d6907216-8931-4932-8556-9321818325ad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade3-inf2},$F{idade3-inf3},$F{idade3-inf4},$F{idade3-inf5},$F{idade3-1ano},$F{idade3-2ano},$F{idade3-3ano},$F{idade3-4ano},$F{idade3-5ano},$F{idade3-6ano},$F{idade3-7ano},$F{idade3-8ano},$F{idade3-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="46" width="40" height="20" uuid="4f5b4fd3-d5ee-45db-9d37-46ab450bfa47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade4-inf2},$F{idade4-inf3},$F{idade4-inf4},$F{idade4-inf5},$F{idade4-1ano},$F{idade4-2ano},$F{idade4-3ano},$F{idade4-4ano},$F{idade4-5ano},$F{idade4-6ano},$F{idade4-7ano},$F{idade4-8ano},$F{idade4-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="67" width="40" height="20" uuid="86c376bd-15da-4fdb-8876-6f8c258fa5ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{5ano-inf2},$F{5ano-inf3},$F{5ano-inf4},$F{5ano-inf5},$F{idade5-1ano},$F{idade5-2ano},$F{idade5-3ano},$F{idade5-4ano},$F{idade5-5ano},$F{idade5-6ano},$F{idade5-7ano},$F{idade5-8ano},$F{idade5-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="89" width="40" height="20" uuid="46acf43a-7081-40eb-a572-b467469944e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade6-inf2},$F{idade6-inf3},$F{idade6-inf4},$F{idade6-inf5},$F{idade6-1ano},$F{idade6-2ano},$F{idade6-3ano},$F{idade6-4ano},$F{idade6-5ano},$F{idade6-6ano},$F{idade6-7ano},$F{idade6-8ano},$F{idade6-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="110" width="40" height="20" uuid="d4ccdba9-2cb3-44f6-982d-e6f8505e2f25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{idade7-inf2},$F{idade7-inf3},$F{idade7-inf4},$F{idade7-inf5},$F{idade7-1ano},$F{idade7-2ano},$F{idade7-3ano},$F{idade7-4ano},$F{idade7-5ano},$F{idade7-6ano},$F{idade7-7ano},$F{idade7-8ano},$F{idade7-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="133" width="40" height="20" uuid="e186b683-ad3d-4ab2-86e5-a09f57c308a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade8-inf2},$F{idade8-inf3},$F{idade8-inf4},$F{idade8-inf5},$F{idade8-1ano},$F{idade8-2ano},$F{idade8-3ano},$F{idade8-4ano},$F{idade8-5ano},$F{idade8-6ano},$F{idade8-7ano},$F{idade8-8ano},$F{idade8-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="154" width="40" height="20" uuid="fb05a590-bcf0-4b50-9a35-86647f563c50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade9-inf2},$F{idade9-inf3},$F{idade9-inf4},$F{idade9-inf5},$F{idade9-1ano},$F{idade9-2ano},$F{idade9-3ano},$F{idade9-4ano},$F{idade9-5ano},$F{idade9-6ano},$F{idade9-7ano},$F{idade9-8ano},$F{idade9-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="181" width="40" height="20" uuid="99d59998-5958-4c4d-9a18-a11133992eec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade10-inf2},$F{idade10-inf3},$F{idade10-inf4},$F{idade10-inf5},$F{idade10-1ano},$F{idade10-2ano},$F{idade10-3ano},$F{idade10-4ano},$F{idade10-5ano},$F{idade10-6ano},$F{idade10-7ano},$F{idade10-8ano},$F{idade10-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="203" width="40" height="20" uuid="0894acca-f43b-43da-845c-709971bcd1bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade11-inf2},$F{idade11-inf3},$F{idade11-inf4},$F{idade11-inf5},$F{idade11-1ano},$F{idade11-2ano},$F{idade11-3ano},$F{idade11-4ano},$F{idade11-5ano},$F{idade11-6ano},$F{idade11-7ano},$F{idade11-8ano},$F{idade11-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="228" width="40" height="20" uuid="c07213bd-2b31-47ba-b98d-9a28d7ce5a2b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade12-inf2},$F{idade12-inf3},$F{idade12-inf4},$F{idade12-inf5},$F{idade12-1ano},$F{idade12-2ano},$F{idade12-3ano},$F{idade12-4ano},$F{idade12-5ano},$F{idade12-6ano},$F{idade12-7ano},$F{idade12-8ano},$F{idade12-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="250" width="40" height="20" uuid="d332000c-0c1e-422a-a7f3-a88e722de1ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade13-inf2},$F{idade13-inf3},$F{idade13-inf4},$F{idade13-inf5},$F{idade13-1ano},$F{idade13-2ano},$F{idade13-3ano},$F{idade13-4ano},$F{idade13-5ano},$F{idade13-6ano},$F{idade13-7ano},$F{idade13-8ano},$F{idade13-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="272" width="40" height="20" uuid="f8d146d5-0cda-48f3-bf1a-017d4838adc0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade14-inf2},$F{idade14-inf3},$F{idade14-inf4},$F{idade14-inf5},$F{idade14-1ano},$F{idade14-2ano},$F{idade14-3ano},$F{idade14-4ano},$F{idade14-5ano},$F{idade14-6ano},$F{idade14-7ano},$F{idade14-8ano},$F{idade14-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="294" width="40" height="20" forecolor="#000000" uuid="0959a0aa-46a9-4ec0-a5b0-12f8ecc1042c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade15-inf2},$F{idade15-inf3},$F{idade15-inf4},$F{idade15-inf5},$F{idade15-1ano},$F{idade15-2ano},$F{idade15-3ano},$F{idade15-4ano},$F{idade15-5ano},$F{idade15-6ano},$F{idade15-7ano},$F{idade15-8ano},$F{idade15-9ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="705" y="317" width="40" height="20" forecolor="#FF0900" uuid="87f3f4f4-ffbc-41b1-9f12-729e8e75222b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade+15-inf2},$F{idade+15-inf3},$F{idade+15-inf4},$F{idade+15-inf5},$F{idade+15-1ano},$F{idade+15-2ano},$F{idade+15-3ano},$F{idade+15-4ano},$F{idade+15-5ano},$F{idade+15-6ano},$F{idade+15-7ano},$F{idade+15-8ano},$F{idade+15-9ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="705" y="341" width="40" height="20" forecolor="#FF0900" uuid="69e8036e-7030-443d-8366-cffe18b8aebf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COL 14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="366" width="83" height="23" uuid="5842225b-45b7-4f81-8d30-66bf167b58c1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Distorção: "]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="106" y="365" width="40" height="20" forecolor="#FF0900" uuid="c5693655-1abd-4063-b659-ceea5c40b8ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade3-inf2},$F{idade4-inf2},$F{idade6-inf2},$F{5ano-inf2},$F{idade8-inf2},$F{idade7-inf2},$F{idade9-inf2},$F{idade10-inf2},$F{idade11-inf2},$F{idade12-inf2},$F{idade13-inf2},$F{idade14-inf2},$F{idade15-inf2},$F{idade+15-inf2})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="150" y="365" width="40" height="20" forecolor="#FF0900" uuid="91de7f7c-5213-498f-ad0a-cf5d6cec3361"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade4-inf3},$F{idade6-inf3},$F{5ano-inf3},$F{idade8-inf3},$F{idade7-inf3},$F{idade9-inf3},$F{idade10-inf3},$F{idade11-inf3},$F{idade12-inf3},$F{idade13-inf3},$F{idade14-inf3},$F{idade15-inf3},$F{idade+15-inf3})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="239" y="365" width="40" height="20" forecolor="#FF0900" uuid="c58af904-a694-4bf2-9ea0-990eb15e114f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade6-inf5},$F{idade8-inf5},$F{idade7-inf5},$F{idade9-inf5},$F{idade10-inf5},$F{idade11-inf5},$F{idade12-inf5},$F{idade13-inf5},$F{idade14-inf5})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="195" y="365" width="40" height="20" forecolor="#FF0900" uuid="77f401c0-ba08-44fe-ab83-83ad46746e58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade6-inf4},$F{5ano-inf4},$F{idade8-inf4},$F{idade7-inf4},$F{idade9-inf4},$F{idade10-inf4},$F{idade11-inf4},$F{idade12-inf4},$F{idade13-inf4},$F{idade14-inf4},$F{idade15-inf4},$F{idade+15-inf4})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="329" y="365" width="40" height="20" forecolor="#FF0900" uuid="2f247bbc-38eb-4b3e-b748-dc9f46852b1c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade8-2ano},$F{idade9-2ano},$F{idade10-2ano},$F{idade11-2ano},$F{idade12-2ano},$F{idade13-2ano},$F{idade14-2ano},$F{idade15-2ano},$F{idade+15-2ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="286" y="365" width="40" height="20" forecolor="#FF0900" uuid="a7e41756-fbbb-4717-a1d4-ba7b39b8b91c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade8-1ano},$F{idade7-1ano},$F{idade9-1ano},$F{idade10-1ano},$F{idade11-1ano},$F{idade12-1ano},$F{idade13-1ano},$F{idade14-1ano},$F{idade15-1ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="421" y="365" width="40" height="20" forecolor="#FF0900" uuid="d145c4c2-c47e-4ae8-a910-437afb45fe2f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade10-4ano},$F{idade11-4ano},$F{idade12-4ano},$F{idade13-4ano},$F{idade14-4ano},$F{idade15-4ano},$F{idade+15-4ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="377" y="365" width="40" height="20" forecolor="#FF0900" uuid="99acfe78-75d2-444a-9945-20722d44e696"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade9-3ano},$F{idade10-3ano},$F{idade11-3ano},$F{idade12-3ano},$F{idade13-3ano},$F{idade14-3ano},$F{idade15-3ano},$F{idade+15-3ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="514" y="367" width="40" height="20" forecolor="#FF0900" uuid="f8fc5d0b-9620-42e7-8a12-0406ba94ca70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade13-6ano},$F{idade14-6ano},$F{idade15-6ano},$F{idade+15-6ano},$F{idade12-6ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="466" y="367" width="40" height="20" forecolor="#FF0900" uuid="d3567269-b2e8-4a22-a9b4-e9b5d1b52dfa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade11-5ano},$F{idade12-5ano},$F{idade13-5ano},$F{idade14-5ano},$F{idade15-5ano},$F{idade+15-5ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="561" y="366" width="40" height="20" forecolor="#FF0900" uuid="bfefef74-22f7-48aa-aee2-0fa38de84740"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade13-7ano},$F{idade14-7ano},$F{idade15-7ano},$F{idade+15-7ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="609" y="366" width="40" height="20" forecolor="#FF0900" uuid="91d5879c-de74-469f-960c-dd86ccbf062b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade14-8ano},$F{idade15-8ano},$F{idade+15-8ano})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="656" y="366" width="40" height="20" forecolor="#FF0900" uuid="0f283bb8-ec49-4c6c-8e23-63c6c42cf3e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SUM($F{idade15-9ano},$F{idade+15-9ano})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="705" y="366" width="40" height="20" forecolor="#FF0900" uuid="9acd1bd4-bd51-447f-aaf6-9dfd26c51bd1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COL 14}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-6" y="365" width="813" height="1" uuid="c878c596-caf3-4cc6-aeee-b35dcd833e5a"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch"/>
+	</summary>
+</jasperReport>

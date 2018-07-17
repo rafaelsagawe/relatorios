@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>Ieducar_DB</name><driver>org.postgresql.Driver</driver><username>postgres</username><password>postgres</password><savePassword>true</savePassword><url>jdbc:postgresql://ieducar.semed-ni.intra:5434/ieducar</url><database></database><serverAddress></serverAddress></jdbcDataAdapter>

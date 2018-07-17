@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Alocação" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e03ab859-7889-46ae-a906-72acd2e96c33">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cG1pZWR1Y2FyLnNlcnZpZG9yICwxNSwxNSwxYTI0MmY1Ni0wODg4LTQyZWEtOWNjNi0wNzAzZDU4
+NzVjODc7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/RH/Alocação_de_Professores_na_escola_e_turma_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/RH/Alocação_de_Professores_na_escola_e_turma"/>
+	<queryString language="SQL">
+		<![CDATA[select servidor.nm, servidor.nm_Turma, cadastro.pessoa.nome
+from
+(select
+cadastro.pessoa.nome as nm,
+pmieducar.turma.nm_turma as nm_Turma,
+pmieducar.turma.ref_ref_cod_escola,
+pmieducar.escola.ref_idpes,
+cadastro.juridica.idpes as cod_ue
+from pmieducar.servidor
+join cadastro.pessoa
+on cadastro.pessoa.idpes=pmieducar.servidor.cod_servidor
+join modules.professor_turma
+on modules.professor_turma.servidor_id=pmieducar.servidor.cod_servidor
+join pmieducar.turma
+on pmieducar.turma.cod_turma=modules.professor_turma.turma_id
+join pmieducar.escola
+on pmieducar.escola.cod_escola=pmieducar.turma.ref_ref_cod_escola
+join cadastro.juridica
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes) as servidor
+join cadastro.pessoa on cadastro.pessoa.idpes=servidor.cod_ue
+order by servidor.nm, servidor.cod_ue, servidor.nm_Turma]]>
+	</queryString>
+	<field name="nm" class="java.lang.String"/>
+	<field name="nm_turma" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="52" y="-3" width="504" height="53" uuid="efa1e9aa-5f9b-4d73-80bb-26c15a51356d"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Sans" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PREFEITURA DO MUNICÍPIO DE NOVA IGUAÇU
+SECRETARIA MUNICIPAL DE EDUCAÇÃO
+SUBSECRETARIA DE GESTÃO DE RECURSOS FINANCEIROS
+SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="4" y="-3" width="46" height="50" uuid="c67f1434-3813-4f53-8cfb-f7cc16da4351"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="554" height="30" uuid="32d4389c-5e57-4a3b-9c19-960fc0f21689"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Alocação de Professores na escola e turma]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="8658cb23-ad21-41ed-9da9-89ac91407eb2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nome do Professor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="f33a78fe-d6b6-49d2-adae-1b4fde44cbed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Turma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" uuid="46dfa4a1-54c5-4f15-b0db-7ab873b2eb02"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Unidade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="200" height="30" uuid="12841800-630a-4363-912b-c3e06466fe29"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5" leftIndent="5" spacingAfter="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="150" height="30" uuid="1ddb3dc7-1bde-40b3-b182-ff13f3397aad"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_turma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="204" height="30" uuid="80767c0b-6199-42eb-b917-a002d17355c3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5" leftIndent="5" spacingAfter="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="279" height="19" uuid="007398b7-cf3c-45f3-b918-e4bf2687893a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="279" y="0" width="273" height="19" uuid="d2fffb10-d34a-423f-9336-6f455b047841"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

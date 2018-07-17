@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="grafico de alunos por serie" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="87d747d9-af9e-4bec-8c6a-72fde7931aa3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Matricula/grafico_de_alunos_por_serie_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Matricula/grafico_de_alunos_por_serie"/>
+	<subDataset name="Dataset1" uuid="362d0daa-f614-4efe-acb7-7afe68e24a68">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[select 
+count (distinct pmieducar.matricula.ref_cod_aluno) as "QTD aluno",
+pmieducar.serie.nm_serie as series
+--cadastro.juridica.fantasia
+from  pmieducar.matricula
+join pmieducar.serie
+on pmieducar.serie.cod_serie=pmieducar.matricula.ref_ref_cod_serie
+join pmieducar.escola
+on pmieducar.matricula.ref_ref_cod_escola=pmieducar.escola.cod_escola
+join cadastro.juridica
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes
+--where pmieducar.serie.nm_serie like '1%'
+group by 
+pmieducar.serie.nm_serie,
+cadastro.juridica.fantasia
+order by 
+pmieducar.serie.nm_serie]]>
+		</queryString>
+		<field name="QTD aluno" class="java.lang.Long"/>
+		<field name="series" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[--total de alunos por serie em escola
+select 
+count (distinct pmieducar.matricula.ref_cod_aluno) as "QTD aluno",
+pmieducar.serie.nm_serie as series
+--cadastro.juridica.fantasia
+from  pmieducar.matricula
+join pmieducar.serie
+on pmieducar.serie.cod_serie=pmieducar.matricula.ref_ref_cod_serie
+join pmieducar.escola
+on pmieducar.matricula.ref_ref_cod_escola=pmieducar.escola.cod_escola
+join cadastro.juridica
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes
+--where pmieducar.serie.nm_serie like '1%'
+group by 
+pmieducar.serie.nm_serie]]>
+	</queryString>
+	<field name="QTD aluno" class="java.lang.Long"/>
+	<field name="series" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="407" splitType="Stretch">
+			<barChart>
+				<chart evaluationTime="Report" renderType="svg" theme="aegean">
+					<reportElement x="-10" y="119" width="820" height="288" uuid="6f32e65b-be78-4347-9284-7938bbf25caf"/>
+					<chartTitle>
+						<titleExpression><![CDATA["Grafico de alunos por serie"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{series}]]></seriesExpression>
+						<categoryExpression><![CDATA[0]]></categoryExpression>
+						<valueExpression><![CDATA[$F{QTD aluno}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot isShowTickLabels="true" isShowTickMarks="true">
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<image>
+				<reportElement x="0" y="-2" width="55" height="65" uuid="64f06ee1-6a0a-4968-ad04-5aecfd10ab72"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="60" y="-2" width="493" height="65" uuid="71e7e5d4-8bf2-4312-bd9b-57d59e7458d3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+			<textField pattern="dd - MMMMM - yyyy">
+				<reportElement x="630" y="0" width="168" height="30" uuid="92562387-479f-4a32-beb6-3ae87c5f7e0e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
