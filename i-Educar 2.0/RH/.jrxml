@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name=".jrxml" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6258674a-52f5-496f-8db4-104ce6a56756">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/RH/atuacao_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/RH/atuacao"/>
+	<queryString language="SQL">
+		<![CDATA[-- Função do Servidor
+select servidor.nm, cadastro.pessoa.nome, servidor.nm_Turma, servidor.nome as Disciplina
+from
+	(select
+	cadastro.pessoa.nome as nm,
+	pmieducar.turma.nm_turma as nm_Turma,
+	modules.componente_curricular.nome,
+	pmieducar.turma.ref_ref_cod_escola,
+	pmieducar.escola.ref_idpes,
+	cadastro.juridica.idpes as cod_ue
+	from pmieducar.servidor
+	join cadastro.pessoa
+	on cadastro.pessoa.idpes=pmieducar.servidor.cod_servidor
+	join modules.professor_turma
+	on modules.professor_turma.servidor_id=pmieducar.servidor.cod_servidor
+	join pmieducar.turma
+	on pmieducar.turma.cod_turma=modules.professor_turma.turma_id
+	join pmieducar.escola
+	on pmieducar.escola.cod_escola=pmieducar.turma.ref_ref_cod_escola
+	join cadastro.juridica
+	on cadastro.juridica.idpes=pmieducar.escola.ref_idpes
+	join pmieducar.servidor_disciplina 
+	on pmieducar.servidor.cod_servidor=pmieducar.servidor_disciplina.ref_cod_servidor
+	join modules.componente_curricular 
+	on modules.componente_curricular.id=pmieducar.servidor_disciplina.ref_cod_disciplina)
+as servidor
+join cadastro.pessoa on cadastro.pessoa.idpes=servidor.cod_ue
+order by servidor.nm, servidor.cod_ue, servidor.nm_Turma]]>
+	</queryString>
+	<field name="nm" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="nm_turma" class="java.lang.String"/>
+	<field name="disciplina" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="4" y="-3" width="46" height="50" uuid="95f80d9b-3470-4381-8f6c-4f7982c7eed3"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="52" y="-3" width="504" height="53" uuid="6792c137-05f7-4013-ab79-a3b42f368c70"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Sans" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PREFEITURA DO MUNICÍPIO DE NOVA IGUAÇU
+SECRETARIA MUNICIPAL DE EDUCAÇÃO
+SUBSECRETARIA DE GESTÃO DE RECURSOS FINANCEIROS
+SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="800" height="30" uuid="775d4797-4911-4675-aea3-98cf95ac3ca9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Atuação dos professores]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="202" height="30" uuid="443c3be5-e33a-4dc2-ad70-35c51ed9d521"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Servidor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="0" width="298" height="30" uuid="48509a7e-8b15-4572-bd6c-aeb4dbe16dce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Unidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="101" height="30" uuid="39452577-d523-4992-b337-b66a1a4439a4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Turma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="601" y="0" width="200" height="30" uuid="e603e11f-ce01-4409-8336-034fa5be1cf6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Disciplina]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="202" height="30" uuid="d66fdf2a-0334-4e7d-a177-b345c3c9d71d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="0" width="298" height="30" uuid="cbd8a76c-4916-484b-887d-87b8a43cef0b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="101" height="30" uuid="e95c63de-2700-4520-ad3c-1b56dd4250de"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_turma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="601" y="0" width="200" height="30" uuid="ec612b51-7545-4745-a173-064f6e182406"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{disciplina}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="33" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="30" splitType="Stretch"/>
+	</summary>
+</jasperReport>

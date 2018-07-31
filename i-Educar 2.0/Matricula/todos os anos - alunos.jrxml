@@ -194,7 +194,7 @@ Secretaria Municipal de Educação]]></text>
 					<crosstabColumnHeader>
 						<cellContents mode="Opaque" style="Crosstab 1_CG">
 							<textField isStretchWithOverflow="true">
-								<reportElement x="0" y="0" width="60" height="20" uuid="8af26b87-fde3-49eb-b699-8df9eb42daa6"/>
+								<reportElement x="0" y="0" width="50" height="20" uuid="8af26b87-fde3-49eb-b699-8df9eb42daa6"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<paragraph firstLineIndent="3"/>
 								</textElement>
@@ -215,10 +215,10 @@ Secretaria Municipal de Educação]]></text>
 				<measure name="QTD aluno_MEASURE" class="java.lang.Integer" calculation="DistinctCount">
 					<measureExpression><![CDATA[$F{QTD aluno}]]></measureExpression>
 				</measure>
-				<crosstabCell width="60" height="20">
+				<crosstabCell width="50" height="20">
 					<cellContents mode="Opaque" style="Crosstab 1_CD">
 						<textField>
-							<reportElement x="0" y="0" width="60" height="20" uuid="96f933dc-9fa0-4fee-ac8f-586d6714640b"/>
+							<reportElement x="0" y="0" width="50" height="20" uuid="96f933dc-9fa0-4fee-ac8f-586d6714640b"/>
 							<textElement textAlignment="Center" verticalAlignment="Middle"/>
 							<textFieldExpression><![CDATA[$V{QTD aluno_MEASURE}]]></textFieldExpression>
 						</textField>
@@ -233,10 +233,10 @@ Secretaria Municipal de Educação]]></text>
 						</textField>
 					</cellContents>
 				</crosstabCell>
-				<crosstabCell width="60" height="20" rowTotalGroup="ue">
+				<crosstabCell width="50" height="20" rowTotalGroup="ue">
 					<cellContents mode="Opaque" style="Crosstab 1_CT">
 						<textField>
-							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="99338f44-b9b5-487c-8d76-6b07b022d0b4"/>
+							<reportElement x="0" y="0" width="50" height="20" forecolor="#FFFFFF" uuid="99338f44-b9b5-487c-8d76-6b07b022d0b4"/>
 							<textElement textAlignment="Center" verticalAlignment="Middle"/>
 							<textFieldExpression><![CDATA[$V{QTD aluno_MEASURE}]]></textFieldExpression>
 						</textField>

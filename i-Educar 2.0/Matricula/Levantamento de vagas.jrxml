@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Levantamento de vagas" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a94f22f-f6ce-480e-b84a-435b8da2f57a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/Matricula/Levantamento_de_vagas_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/Matricula/Levantamento_de_vagas"/>
+	<subDataset name="Dataset1" uuid="ef22cd71-6318-4a26-9628-24a5fced0e6b">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[-- listagem de quantitativo de alunos por turma e vagas 
+select turmas.ue, turmas.series, 
+--turmas.turma, 
+sum (turmas.qtdAlunos) as qtdAlunos, 
+sum (turmas.lotacaoMax) as maximo,
+(sum (turmas.lotacaoMax) - sum (turmas.qtdAlunos)) as vagas,
+turmas.ano
+from
+			(select cadastro.juridica.fantasia as ue,
+			pmieducar.serie.nm_serie as series,
+			pmieducar.turma.nm_turma as turma,
+			count (pmieducar.matricula_turma.ref_cod_turma) as qtdAlunos, 
+			pmieducar.turma.max_aluno as lotacaoMax,
+			pmieducar.turma.ano as ano
+			from pmieducar.turma
+			join pmieducar.matricula_turma on pmieducar.matricula_turma.ref_cod_turma=pmieducar.turma.cod_turma
+			join pmieducar.escola on pmieducar.escola.cod_escola=pmieducar.turma.ref_ref_cod_escola
+			join cadastro.juridica on cadastro.juridica.idpes=pmieducar.escola.ref_idpes
+			join pmieducar.serie on pmieducar.serie.cod_serie=pmieducar.turma.ref_ref_cod_serie
+			group by cadastro.juridica.fantasia, pmieducar.turma.nm_turma, pmieducar.turma.cod_turma, 
+			pmieducar.turma.max_aluno,pmieducar.matricula_turma.ref_cod_turma, pmieducar.serie.nm_serie)
+as turmas
+group by  turmas.ue, turmas.series, turmas.ano]]>
+		</queryString>
+		<field name="ue" class="java.lang.String"/>
+		<field name="series" class="java.lang.String"/>
+		<field name="qtdalunos" class="java.math.BigDecimal"/>
+		<field name="maximo" class="java.lang.Long"/>
+		<field name="vagas" class="java.math.BigDecimal"/>
+		<field name="ano" class="java.lang.Integer"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[-- listagem de quantitativo de alunos por turma e vagas 
+select turmas.ue, turmas.series, 
+--turmas.turma, 
+sum (turmas.qtdAlunos) as qtdAlunos, 
+sum (turmas.lotacaoMax) as maximo,
+(sum (turmas.lotacaoMax) - sum (turmas.qtdAlunos)) as vagas,
+turmas.ano
+from
+			(select cadastro.juridica.fantasia as ue,
+			pmieducar.serie.nm_serie as series,
+			pmieducar.turma.nm_turma as turma,
+			count (pmieducar.matricula_turma.ref_cod_turma) as qtdAlunos, 
+			pmieducar.turma.max_aluno as lotacaoMax,
+			pmieducar.turma.ano as ano
+			from pmieducar.turma
+			join pmieducar.matricula_turma on pmieducar.matricula_turma.ref_cod_turma=pmieducar.turma.cod_turma
+			join pmieducar.escola on pmieducar.escola.cod_escola=pmieducar.turma.ref_ref_cod_escola
+			join cadastro.juridica on cadastro.juridica.idpes=pmieducar.escola.ref_idpes
+			join pmieducar.serie on pmieducar.serie.cod_serie=pmieducar.turma.ref_ref_cod_serie
+			group by cadastro.juridica.fantasia, pmieducar.turma.nm_turma, pmieducar.turma.cod_turma, 
+			pmieducar.turma.max_aluno,pmieducar.matricula_turma.ref_cod_turma, pmieducar.serie.nm_serie)
+as turmas
+group by  turmas.ue, turmas.series, turmas.ano]]>
+	</queryString>
+	<field name="ue" class="java.lang.String"/>
+	<field name="series" class="java.lang.String"/>
+	<field name="qtdalunos" class="java.math.BigDecimal"/>
+	<field name="maximo" class="java.lang.Long"/>
+	<field name="vagas" class="java.math.BigDecimal"/>
+	<field name="ano" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="55" height="65" uuid="06f90c28-3d22-4d3d-8fde-d76542f95c00"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="60" y="0" width="493" height="65" uuid="ef5b62dd-c67b-417e-919a-c5fce7dbba1b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Estado do Rio de Janeiro
+Prefeitura do Municipio de Nova Iguaçu
+Secretaria Municipal de Educação]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="799" height="30" uuid="367f5bd0-b061-4996-95d0-444ceb73c1f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Levantamento de Lotação das Escolas]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<textField pattern="dd - MMMMM - yyyy">
+				<reportElement x="631" y="-119" width="168" height="30" uuid="096f7f0b-c7e9-4ebb-95e1-313591565239"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="248" height="20" uuid="69157c2f-7cc9-41aa-9110-c72949906f81"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Cod INEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="0" width="150" height="20" uuid="ace751bd-0ed9-49d7-aeb4-0d936fee3260"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="0" width="122" height="20" uuid="2985dde3-db7f-4ccc-807a-14f2e46249f1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Quantidade de Alunos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="520" y="0" width="110" height="20" uuid="a3514f64-94dc-46fd-bbe7-164c702f4c2f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Quantidade Maxima]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="630" y="0" width="76" height="20" uuid="2238c9c0-1f73-4bc4-a442-36d3117fb4ac"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Vagas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="706" y="0" width="92" height="20" uuid="d1d6c884-82ad-4e98-824a-a65108179b97"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[UF]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="248" height="30" uuid="6a5ccf5c-9305-446e-83e7-048093fc7c9b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ue}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="248" y="0" width="150" height="30" uuid="04ace532-cccc-4a10-87a7-67440ed21e3d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<paragraph firstLineIndent="5" leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{series}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="398" y="0" width="122" height="30" uuid="15391d04-f36d-45aa-8ee7-4d4382122a9d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtdalunos}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="520" y="0" width="110" height="30" uuid="17c72de6-26d5-427c-a9c3-41cbf6cfed5d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph firstLineIndent="5" leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maximo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="630" y="0" width="76" height="30" uuid="a50f059f-3d56-4dd7-9146-d941aba4a08e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph firstLineIndent="5" leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vagas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="706" y="0" width="92" height="30" uuid="6b4477c0-9e83-4ee2-be2a-d11b967fcaf0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="38" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="28" splitType="Stretch"/>
+	</summary>
+</jasperReport>
