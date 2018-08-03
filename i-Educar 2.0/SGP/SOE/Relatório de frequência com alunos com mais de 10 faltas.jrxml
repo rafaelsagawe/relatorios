@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Frequncia" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18185fda-f5e2-4dbf-b317-581bc011d4b8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/SGP/SOE/Relatório_de_frequência_com_alunos_com_mais_de_10_faltas_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/SGP/SOE/Relatório_de_frequência_com_alunos_com_mais_de_10_faltas"/>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="23ad133e-e310-465f-a5a8-1386e59e830b">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[select cadastro.pessoa.nome as aluno,
+modules.falta_componente_curricular.etapa as bimestre,
+modules.falta_componente_curricular.quantidade as faltas
+from modules.falta_componente_curricular
+join modules.falta_aluno on modules.falta_aluno.id=modules.falta_componente_curricular.falta_aluno_id
+join pmieducar.matricula on pmieducar.matricula.cod_matricula=modules.falta_aluno.matricula_id
+join pmieducar.aluno on pmieducar.aluno.cod_aluno=pmieducar.matricula.ref_cod_aluno
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes
+where modules.falta_componente_curricular.quantidade > 10]]>
+		</queryString>
+		<field name="aluno" class="java.lang.String"/>
+		<field name="bimestre" class="java.lang.String"/>
+		<field name="faltas" class="java.lang.Integer"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select cadastro.pessoa.nome as aluno,
+modules.falta_componente_curricular.etapa as bimestre,
+modules.falta_componente_curricular.quantidade as faltas
+from modules.falta_componente_curricular
+join modules.falta_aluno on modules.falta_aluno.id=modules.falta_componente_curricular.falta_aluno_id
+join pmieducar.matricula on pmieducar.matricula.cod_matricula=modules.falta_aluno.matricula_id
+join pmieducar.aluno on pmieducar.aluno.cod_aluno=pmieducar.matricula.ref_cod_aluno
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes
+where modules.falta_componente_curricular.quantidade > 0]]>
+	</queryString>
+	<field name="aluno" class="java.lang.String"/>
+	<field name="bimestre" class="java.lang.String"/>
+	<field name="faltas" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="232" splitType="Stretch">
+			<crosstab>
+				<reportElement x="0" y="113" width="800" height="97" uuid="c49d3469-7b2e-4582-b9d4-8db489b4569d">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+					<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+					<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+					<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+				</reportElement>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="Dataset1" uuid="e6bffb8d-97cf-434a-9bd7-5459502d1621">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="aluno" width="300" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{aluno}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CH">
+							<textField>
+								<reportElement x="0" y="0" width="300" height="20" uuid="de4d6809-a7a9-4b97-ad01-c12da974b5f5"/>
+								<textElement verticalAlignment="Middle">
+									<paragraph firstLineIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{aluno}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="300" height="20" forecolor="#FFFFFF" uuid="30a0d5b9-a98a-4632-b1e0-08fab45daa45"/>
+								<textElement verticalAlignment="Middle"/>
+								<text><![CDATA[Total aluno]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="bimestre" height="20" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{bimestre}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CH">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="d90f6aa6-e4a9-48bd-960a-57aeb3aa296c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$V{bimestre} + "° Bimestre"]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="4e24a8a4-2efa-4974-bb43-39ac2402ac88"/>
+								<text><![CDATA[Total bimestre]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="faltas_MEASURE" class="java.lang.Integer" calculation="Sum">
+					<measureExpression><![CDATA[$F{faltas}]]></measureExpression>
+				</measure>
+				<crosstabCell width="90" height="20">
+					<cellContents mode="Opaque" style="Crosstab_CD">
+						<textField>
+							<reportElement x="0" y="0" width="90" height="20" uuid="fdf76784-c815-4ec5-9d35-58c7a5014235"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{faltas_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" columnTotalGroup="bimestre">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="a880d6f4-e51d-47ef-92ec-9917be045af4"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{faltas_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="90" height="20" rowTotalGroup="aluno">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="90" height="20" forecolor="#FFFFFF" uuid="5529e2f7-ce67-447f-88a4-6fa61a278076"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{faltas_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="aluno" columnTotalGroup="bimestre">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="23bd7463-7442-462f-90ef-b32353368bf6"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{faltas_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+			<image>
+				<reportElement x="4" y="-3" width="46" height="50" uuid="719d0cbc-2aa0-401c-a494-bd445eb3973d"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="52" y="-3" width="504" height="53" uuid="fc71cb1a-c5aa-43af-ab10-f48cc3d46e93"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Sans" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PREFEITURA DO MUNICÍPIO DE NOVA IGUAÇU
+SECRETARIA MUNICIPAL DE EDUCAÇÃO
+SUBSECRETARIA DE GESTÃO DE RECURSOS FINANCEIROS
+SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="800" height="30" uuid="19b4d26a-75a1-486a-b843-127a728836db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Relatório de frequência com alunos com mais de 10 faltas]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>
