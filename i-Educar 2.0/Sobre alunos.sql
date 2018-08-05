@@ -130,19 +130,8 @@ as alunos
 join pmieducar.escola on pmieducar.escola.cod_escola=alunos.ref_ref_cod_escola
 join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.escola.ref_idpes
 
--- Vagas
-select ano,
-cadastro.pessoa.nome as ue,
-pmieducar.serie.nm_serie,
-pmieducar.turma_turno.nome as turno,
-vagas
-from pmieducar.serie_vaga
-join pmieducar.serie on pmieducar.serie.cod_serie=pmieducar.serie_vaga.ref_cod_serie
-join pmieducar.turma_turno on pmieducar.turma_turno.id=pmieducar.serie_vaga.turno
-join pmieducar.escola on pmieducar.escola.cod_escola=pmieducar.serie_vaga.ref_cod_escola
-join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.escola.ref_idpes
-
 -- Relatório de Freguência para geração da FICAI
+-- Ira aparecer somente alunos com mais de 10 faltas
 select cadastro.pessoa.nome as aluno,
 modules.falta_componente_curricular.etapa as bimestre,
 modules.falta_componente_curricular.quantidade as faltas
@@ -154,6 +143,7 @@ join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes
 where modules.falta_componente_curricular.quantidade > 10
 
 -- Levantamento de notas
+-- Para a criação desse Relatório foi usado o crosstab do jasperreporte
 select
 cadastro.pessoa.nome as aluno,
 modules.componente_curricular.nome as disciplina,
