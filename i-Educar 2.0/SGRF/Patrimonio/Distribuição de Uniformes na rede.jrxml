@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Distribuição de Uniformes na rede" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="40bed5b8-72d2-4269-9da2-b87fb18e72bb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<subDataset name="Dataset1" uuid="ca8dcd67-bc1b-4605-980d-d3ebcec22f7e">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[select 
+cadastro.juridica.fantasia as unidade,
+cadastro.pessoa.nome,
+ano,
+kit_completo,
+agasalho_qtd,
+camiseta_curta_qtd,
+camiseta_longa_qtd,
+meias_qtd,
+bermudas_tectels_qtd,
+bermudas_coton_qtd,
+tenis_qtd,
+data,
+agasalho_tm,
+camiseta_curta_tm,
+camiseta_longa_tm,
+meias_tm,
+bermudas_tectels_tm,
+bermudas_coton_tm,
+tenis_tm
+from pmieducar.distribuicao_uniforme
+join pmieducar.escola on pmieducar.escola.cod_escola=pmieducar.distribuicao_uniforme.ref_cod_escola
+join cadastro.juridica on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join pmieducar.aluno on pmieducar.aluno.cod_aluno=pmieducar.distribuicao_uniforme.ref_cod_aluno
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes]]>
+		</queryString>
+		<field name="unidade" class="java.lang.String"/>
+		<field name="agasalho_qtd" class="java.lang.Integer"/>
+		<field name="camiseta_curta_qtd" class="java.lang.Integer"/>
+		<field name="camiseta_longa_qtd" class="java.lang.Integer"/>
+		<field name="meias_qtd" class="java.lang.Integer"/>
+		<field name="bermudas_tectels_qtd" class="java.lang.Integer"/>
+		<field name="bermudas_coton_qtd" class="java.lang.Integer"/>
+		<field name="tenis_qtd" class="java.lang.Integer"/>
+		<field name="agasalho_tm" class="java.lang.String"/>
+		<field name="camiseta_curta_tm" class="java.lang.String"/>
+		<field name="camiseta_longa_tm" class="java.lang.String"/>
+		<field name="meias_tm" class="java.lang.String"/>
+		<field name="bermudas_tectels_tm" class="java.lang.String"/>
+		<field name="bermudas_coton_tm" class="java.lang.String"/>
+		<field name="tenis_tm" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select 
+cadastro.juridica.fantasia as unidade,
+cadastro.pessoa.nome,
+ano,
+kit_completo,
+agasalho_qtd,
+camiseta_curta_qtd,
+camiseta_longa_qtd,
+meias_qtd,
+bermudas_tectels_qtd,
+bermudas_coton_qtd,
+tenis_qtd,
+data,
+agasalho_tm,
+camiseta_curta_tm,
+camiseta_longa_tm,
+meias_tm,
+bermudas_tectels_tm,
+bermudas_coton_tm,
+tenis_tm
+from pmieducar.distribuicao_uniforme
+join pmieducar.escola on pmieducar.escola.cod_escola=pmieducar.distribuicao_uniforme.ref_cod_escola
+join cadastro.juridica on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join pmieducar.aluno on pmieducar.aluno.cod_aluno=pmieducar.distribuicao_uniforme.ref_cod_aluno
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="360" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

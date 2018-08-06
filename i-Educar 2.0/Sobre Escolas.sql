@@ -3,6 +3,7 @@
 -- Usar o ID de pessoa juridica para pegar os nomes
 -- Usar o ID de Escola para Pegar o INEP
 
+<<<<<<< HEAD
 -- Codigo para a criação do formulario com numeros de cadastros das escolas
 -- Usar como base a tabela escola
 -- Usar o ID de pessoa juridica para pegar os nomes
@@ -15,6 +16,8 @@ on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
 join modules.educacenso_cod_escola
 on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola
 
+=======
+>>>>>>> cd16d4eea3674f66868608ce3cc86ec8d571a119
 -- Lista de nomes das escolas
 select
 cadastro.juridica.fantasia
@@ -125,7 +128,7 @@ order by cadastro.juridica.fantasia
 -- Infraestrutura
 select cadastro.juridica.fantasia, cadastro.juridica.cnpj,
 modules.educacenso_cod_escola.cod_escola_inep,
-pmieducar.escola.condicao,
+pmieducar.escola.condicao, -- Forma de ocupação
 pmieducar.escola.area_terreno_total,
 pmieducar.escola.area_construida,
 pmieducar.escola.area_disponivel,
@@ -135,3 +138,15 @@ join cadastro.juridica
 on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
 join modules.educacenso_cod_escola
 on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola
+
+-- Tamanho das Salas de aula
+select cadastro.juridica.fantasia,
+pmieducar.infra_predio.nm_predio,
+nm_comodo, area
+from pmieducar.infra_predio_comodo
+join pmieducar.infra_predio
+on pmieducar.infra_predio.cod_infra_predio=pmieducar.infra_predio_comodo.ref_cod_infra_predio
+join pmieducar.escola
+on pmieducar.escola.cod_escola=pmieducar.infra_predio.ref_cod_escola
+join cadastro.juridica
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes

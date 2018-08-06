@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Salas de aula" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="573144f4-c169-423d-9716-f1c1632f93d9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<subDataset name="Dataset1" uuid="ba90c576-2f75-40fe-82d1-4d333f6ab757">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[select cadastro.juridica.fantasia,
+pmieducar.infra_predio.nm_predio,
+nm_comodo, area
+from pmieducar.infra_predio_comodo
+join pmieducar.infra_predio
+on pmieducar.infra_predio.cod_infra_predio=pmieducar.infra_predio_comodo.ref_cod_infra_predio
+join pmieducar.escola 
+on pmieducar.escola.cod_escola=pmieducar.infra_predio.ref_cod_escola
+join cadastro.juridica 
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes]]>
+		</queryString>
+		<field name="fantasia" class="java.lang.String"/>
+		<field name="nm_predio" class="java.lang.String"/>
+		<field name="nm_comodo" class="java.lang.String"/>
+		<field name="area" class="java.lang.Double"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select cadastro.juridica.fantasia,
+pmieducar.infra_predio.nm_predio,
+nm_comodo, area
+from pmieducar.infra_predio_comodo
+join pmieducar.infra_predio
+on pmieducar.infra_predio.cod_infra_predio=pmieducar.infra_predio_comodo.ref_cod_infra_predio
+join pmieducar.escola 
+on pmieducar.escola.cod_escola=pmieducar.infra_predio.ref_cod_escola
+join cadastro.juridica 
+on cadastro.juridica.idpes=pmieducar.escola.ref_idpes]]>
+	</queryString>
+	<field name="fantasia" class="java.lang.String"/>
+	<field name="nm_predio" class="java.lang.String"/>
+	<field name="nm_comodo" class="java.lang.String"/>
+	<field name="area" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="294" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

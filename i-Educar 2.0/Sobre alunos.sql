@@ -130,19 +130,8 @@ as alunos
 join pmieducar.escola on pmieducar.escola.cod_escola=alunos.ref_ref_cod_escola
 join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.escola.ref_idpes
 
--- Vagas
-select ano,
-cadastro.pessoa.nome as ue,
-pmieducar.serie.nm_serie,
-pmieducar.turma_turno.nome as turno,
-vagas
-from pmieducar.serie_vaga
-join pmieducar.serie on pmieducar.serie.cod_serie=pmieducar.serie_vaga.ref_cod_serie
-join pmieducar.turma_turno on pmieducar.turma_turno.id=pmieducar.serie_vaga.turno
-join pmieducar.escola on pmieducar.escola.cod_escola=pmieducar.serie_vaga.ref_cod_escola
-join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.escola.ref_idpes
-
 -- Relatório de Freguência para geração da FICAI
+-- Ira aparecer somente alunos com mais de 10 faltas
 select cadastro.pessoa.nome as aluno,
 modules.falta_componente_curricular.etapa as bimestre,
 modules.falta_componente_curricular.quantidade as faltas
@@ -154,6 +143,7 @@ join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes
 where modules.falta_componente_curricular.quantidade > 10
 
 -- Levantamento de notas
+-- Para a criação desse Relatório foi usado o crosstab do jasperreporte
 select
 cadastro.pessoa.nome as aluno,
 modules.componente_curricular.nome as disciplina,
@@ -165,3 +155,30 @@ join pmieducar.matricula on pmieducar.matricula.cod_matricula=modules.nota_aluno
 join pmieducar.aluno on pmieducar.aluno.cod_aluno=pmieducar.matricula.ref_cod_aluno
 join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes
 join modules.componente_curricular on modules.componente_curricular.id=modules.nota_componente_curricular.componente_curricular_id
+
+-- distribuicao de uniformes
+select
+cadastro.juridica.fantasia as unidade,
+cadastro.pessoa.nome,
+ano,
+kit_completo,
+agasalho_qtd,
+camiseta_curta_qtd,
+camiseta_longa_qtd,
+meias_qtd,
+bermudas_tectels_qtd,
+bermudas_coton_qtd,
+tenis_qtd,
+data,
+agasalho_tm,
+camiseta_curta_tm,
+camiseta_longa_tm,
+meias_tm,
+bermudas_tectels_tm,
+bermudas_coton_tm,
+tenis_tm
+from pmieducar.distribuicao_uniforme
+join pmieducar.escola on pmieducar.escola.cod_escola=pmieducar.distribuicao_uniforme.ref_cod_escola
+join cadastro.juridica on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join pmieducar.aluno on pmieducar.aluno.cod_aluno=pmieducar.distribuicao_uniforme.ref_cod_aluno
+join cadastro.pessoa on cadastro.pessoa.idpes=pmieducar.aluno.ref_idpes

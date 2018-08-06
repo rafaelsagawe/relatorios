@@ -3,31 +3,280 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Infraestrutura" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c8cb3cf5-6443-4749-af0b-dac8ae356197">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+	<property name="ireport.jasperserver.url" value="http://relatorios.semed-ni.intra:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/SEMED/SGRF/Patrimonio/Infraestrutura_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/SEMED/SGRF/Patrimonio/Infraestrutura"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="7b766e1f-7cd5-473a-846d-41ccfa3b75b4">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ieducar"/>
+		<queryString language="SQL">
+			<![CDATA[select cadastro.juridica.fantasia, cadastro.juridica.cnpj,
+modules.educacenso_cod_escola.cod_escola_inep,
+pmieducar.escola.condicao, -- Forma de ocupação
+pmieducar.escola.area_terreno_total,
+pmieducar.escola.area_construida,
+pmieducar.escola.area_disponivel,
+pmieducar.escola.num_pavimentos
+from pmieducar.escola
+join cadastro.juridica
+on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join modules.educacenso_cod_escola
+on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola]]>
+		</queryString>
+		<field name="fantasia" class="java.lang.String"/>
+		<field name="cnpj" class="java.math.BigDecimal"/>
+		<field name="cod_escola_inep" class="java.lang.Long"/>
+		<field name="condicao" class="java.lang.Integer"/>
+		<field name="area_terreno_total" class="java.lang.String"/>
+		<field name="area_construida" class="java.lang.String"/>
+		<field name="area_disponivel" class="java.lang.String"/>
+		<field name="num_pavimentos" class="java.lang.Integer"/>
+	</subDataset>
 	<queryString language="SQL">
-		<![CDATA[]]>
+		<![CDATA[select cadastro.juridica.fantasia, cadastro.juridica.cnpj,
+modules.educacenso_cod_escola.cod_escola_inep,
+pmieducar.escola.condicao, -- Forma de ocupação
+pmieducar.escola.area_terreno_total,
+pmieducar.escola.area_construida,
+pmieducar.escola.area_disponivel,
+pmieducar.escola.num_pavimentos
+from pmieducar.escola
+join cadastro.juridica
+on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join modules.educacenso_cod_escola
+on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola]]>
 	</queryString>
+	<field name="fantasia" class="java.lang.String"/>
+	<field name="cnpj" class="java.math.BigDecimal"/>
+	<field name="cod_escola_inep" class="java.lang.Long"/>
+	<field name="condicao" class="java.lang.Integer"/>
+	<field name="area_terreno_total" class="java.lang.String"/>
+	<field name="area_construida" class="java.lang.String"/>
+	<field name="area_disponivel" class="java.lang.String"/>
+	<field name="num_pavimentos" class="java.lang.Integer"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="293" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="140" width="750" height="147" uuid="b956dfb4-9039-4ab2-a678-427037afda0c">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="5e266311-4a50-4830-b078-06308f828591">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="260" uuid="b5f1b3f9-2734-4169-bbb5-3f38e127267c">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="260" height="30" uuid="f8abe1b3-6269-4312-baaa-f9af6429334c"/>
+								<textElement verticalAlignment="Middle" markup="styled">
+									<paragraph firstLineIndent="5"/>
+								</textElement>
+								<text><![CDATA[Unidade]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="260" height="30" uuid="79b24fdd-1884-4a47-bd40-57604cedccfd"/>
+								<textElement verticalAlignment="Middle">
+									<paragraph firstLineIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{fantasia}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="d0ee05e4-94a9-49bd-b3f4-c4a61ac463c6">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="d3cf1f43-921d-4916-8f69-9605e3a04ff4"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[CNPJ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="e90200eb-ebef-4a85-b44c-d75fc53f7fad"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="75" uuid="3775971e-f4ca-42ef-b8fb-4f940ebf4905">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="75" height="30" uuid="a7763869-66f7-4226-86f5-cc377916db66"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[INEP]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="75" height="30" uuid="72e84798-cd9c-4ae4-bbdc-b423104d89c6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{cod_escola_inep}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="75" uuid="fc86322b-05f8-4a4b-9be2-07537bf46b8d">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="75" height="30" uuid="1627ff47-720a-45cd-b310-5b09769b745b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[condicao]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="75" height="30" uuid="a7725932-f06f-4a37-ae00-a65ac5155d22"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{condicao}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="953b1cb6-d80a-45c8-b5b7-28ff21aada93">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="63f3b31c-debd-4893-a0ce-40702dd9056d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Terreno]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="3ff366d8-86ce-4253-bde7-8f2fa40d668b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{area_terreno_total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="0eb097e6-fbec-417c-9491-81bd0d76839b">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="790b455a-adc1-4cf5-9230-6a30206551c8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Area Construida]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="fc04db6c-db90-42e5-b753-bf447ac46b3f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{area_construida}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="b09c34f6-93f2-4e6a-82f5-7526a3468a9a">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="bfb6f0c4-084d-4b35-8db4-e6ace83dea3b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Area Disponivel]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="575be714-e0ba-43a5-aa12-f6a5c0a055b4"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{area_disponivel}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="544e0983-aebd-4f3c-ba91-f5f8e30460a8">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="88b2374b-34d8-4df1-bbb7-d1b1c9cdcc3a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Pavimentos]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="c040dc68-1ebd-4c98-b0ef-b6ea8603a057"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{num_pavimentos}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<image>
+				<reportElement x="4" y="-3" width="46" height="50" uuid="a3a1fa15-f6ed-4cb4-8dc0-1c17b8bfd384"/>
+				<imageExpression><![CDATA["/home/ti/ownCloud/Documentos Setor de TI/Brasão_de_Nova_Iguaçu.svg.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="52" y="-3" width="504" height="53" uuid="fe24848c-4959-4f12-b95e-bb953756b529"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Sans" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PREFEITURA DO MUNICÍPIO DE NOVA IGUAÇU
+SECRETARIA MUNICIPAL DE EDUCAÇÃO
+SUBSECRETARIA DE GESTÃO DE RECURSOS FINANCEIROS
+SETOR DE TECNOLOGIA DA INFORMAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="750" height="30" uuid="e518ed64-8690-4668-b12e-daca067a6086"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Infraestrutura das Unidades]]></text>
+			</staticText>
+		</band>
 	</title>
-	<pageHeader>
-		<band height="35" splitType="Stretch"/>
-	</pageHeader>
-	<columnHeader>
-		<band height="61" splitType="Stretch"/>
-	</columnHeader>
-	<detail>
-		<band height="125" splitType="Stretch"/>
-	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
-	<pageFooter>
-		<band height="54" splitType="Stretch"/>
-	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
 </jasperReport>
