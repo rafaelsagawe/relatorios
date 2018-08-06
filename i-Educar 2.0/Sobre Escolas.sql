@@ -1,18 +1,46 @@
 -- Codigo para a criação do formulario com numeros de cadastros das escolas
--- Usar como base a tabela escola 
+-- Usar como base a tabela escola
 -- Usar o ID de pessoa juridica para pegar os nomes
 -- Usar o ID de Escola para Pegar o INEP
 
--- Lista de nomes das escolas 
-select 
+-- Codigo para a criação do formulario com numeros de cadastros das escolas
+-- Usar como base a tabela escola
+-- Usar o ID de pessoa juridica para pegar os nomes
+-- Usar o ID de Escola para Pegar o INEP
+select cadastro.juridica.fantasia, cadastro.juridica.cnpj,
+modules.educacenso_cod_escola.cod_escola_inep
+from pmieducar.escola
+join cadastro.juridica
+on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join modules.educacenso_cod_escola
+on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola
+
+-- Lista de nomes das escolas
+select
 cadastro.juridica.fantasia
 from pmieducar.escola
 join cadastro.juridica
 on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
 
+-- Endereço das escola
+select cadastro.juridica.fantasia as UE,
+public.logradouro.nome as logradouro,
+cadastro.endereco_pessoa.numero,
+public.bairro.nome as bairro,
+cadastro.endereco_pessoa.cep
+from pmieducar.escola
+join cadastro.juridica
+on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+join cadastro.endereco_pessoa
+on cadastro.endereco_pessoa.idpes=cadastro.juridica.idpes
+join public.bairro
+on cadastro.endereco_pessoa.idbai=public.bairro.idbai
+join public.logradouro
+on cadastro.endereco_pessoa.idlog=public.logradouro.idlog
+
 --Dados de identificação das escolas
-select 
-cadastro.juridica.fantasia, 
+select
+cadastro.juridica.fantasia,
 cadastro.juridica.cnpj,
 modules.educacenso_cod_escola.cod_escola_inep
 from pmieducar.escola
@@ -21,8 +49,40 @@ on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
 join modules.educacenso_cod_escola
 on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola
 
+-- Relatorio de TI das escolas
+-- Caso a acesso_internet = 0 'Não' senão 'Sim'
+select cadastro.juridica.fantasia,
+pmieducar.escola.dependencia_laboratorio_informatica as Lab,
+pmieducar.escola.copiadoras,
+pmieducar.escola.retroprojetores,
+pmieducar.escola.impressoras,
+pmieducar.escola.projetores_digitais,
+pmieducar.escola.computadores,
+pmieducar.escola.computadores_administrativo,
+pmieducar.escola.computadores_alunos,
+--pmieducar.escola.acesso_internet,
+	case pmieducar.escola.acesso_internet
+		when '0' then 'Não'
+		else 'Sim'
+	end
+from pmieducar.escola
+join cadastro.juridica
+on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
+
+-- Relatorio municipal
+select
+sum(pmieducar.escola.computadores_alunos) as pc_aluno,
+sum(pmieducar.escola.dependencia_laboratorio_informatica) as lab,
+sum(pmieducar.escola.copiadoras) as cop,
+sum(pmieducar.escola.retroprojetores) as retro,
+sum(pmieducar.escola.impressoras) as imp,
+sum(pmieducar.escola.projetores_digitais) as projetor,
+sum(pmieducar.escola.computadores_administrativo) as pc_adm,
+sum(pmieducar.escola.acesso_internet) as net
+from pmieducar.escola
+
 -- Numero de funcionarios
-select 
+select
 modules.educacenso_cod_escola.cod_escola_inep as INEP,
 cadastro.juridica.fantasia,
 pmieducar.escola.total_funcionario
@@ -64,7 +124,7 @@ order by cadastro.juridica.fantasia
 
 -- Infraestrutura
 select cadastro.juridica.fantasia, cadastro.juridica.cnpj,
-modules.educacenso_cod_escola.cod_escola_inep, 
+modules.educacenso_cod_escola.cod_escola_inep,
 pmieducar.escola.condicao,
 pmieducar.escola.area_terreno_total,
 pmieducar.escola.area_construida,
@@ -75,5 +135,3 @@ join cadastro.juridica
 on pmieducar.escola.ref_idpes=cadastro.juridica.idpes
 join modules.educacenso_cod_escola
 on pmieducar.escola.cod_escola=modules.educacenso_cod_escola.cod_escola
-
-
